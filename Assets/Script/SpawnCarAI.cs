@@ -13,6 +13,9 @@ public class SpawnCarAI : MonoBehaviour
     //number of cars to spawn - set in the inspector
     public int hubCarNum;
 
+    //don't spawn on grass
+    public LayerMask grassMask;
+
     void Start()
     {
         hubCarSpawn = new GameObject[hubCarNum];
@@ -46,7 +49,7 @@ public class SpawnCarAI : MonoBehaviour
         Vector3 secondVertexPosition = navMeshData.vertices[navMeshData.indices[secondVertexSelected]];
 
         // eliminate points that share a similar X or Z position to stop spawining in square grid line formations
-        if ((int)firstVertexPosition.x == (int)secondVertexPosition.x || (int)firstVertexPosition.z == (int)secondVertexPosition.z)
+        if ((int)firstVertexPosition.x == (int)secondVertexPosition.x || (int)firstVertexPosition.z == (int)secondVertexPosition.z || grassMask.Equals("grassMask"))
         {
             point = GetRandomSpawn(); // re-roll a position - I'm not happy with this recursion it could be better
         }
