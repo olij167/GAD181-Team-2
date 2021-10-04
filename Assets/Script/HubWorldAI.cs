@@ -10,9 +10,12 @@ public class HubWorldAI : MonoBehaviour
 
     public List<GameObject> checkpoints;
 
-    public float speed = 1000f;
+    public float speed = 1000f, stopDistance, walkPointTimer, walkPointTimerReset; 
+    //stop distance = distance from checkpoint before a new point is chosen
+    //walkpoint timer = time ai has to reach walkpoint before finding a new one
+    //walkpoint timer reset = time for timer to reset to
 
-    public Vector3 walkPoint;
+    public Vector3 walkPoint, lastPosition;
     public bool walkPointSet;
 
 
@@ -24,6 +27,10 @@ public class HubWorldAI : MonoBehaviour
 
     void Update()
     {
+
+        if (walkPointTimer > 0)
+            walkPointTimer -= Time.deltaTime;
+
         Patroling();
     }
 
@@ -36,12 +43,18 @@ public class HubWorldAI : MonoBehaviour
         if (walkPointSet)
             agent.SetDestination(walkPoint);
 
+        lastPosition = transform.position;  // remember the last position so we can check if we are staying still
+        
         // Speed controls - maybe where to look to change handling?
         Vector3 distanceToWalkPoint = (transform.position - walkPoint) * speed * Time.deltaTime;
 
-        //walk point reached
-        if (distanceToWalkPoint.magnitude < 1f)
+
+        // get a new target point if you reach the target or you stopped moving
+        if (distanceToWalkPoint.magnitude < stopDistance || walkPointTimer <= 0)
+        {
             walkPointSet = false;
+            walkPointTimer = walkPointTimerReset;
+        }
     }
     private void SearchWalkPoint()
     {
