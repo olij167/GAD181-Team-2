@@ -4,8 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Checkpoint
   - Road
+  - CarCheckpoint
+  - CivCheckpoint
+  - Checkpoint
+  - HubWorldCar
+  - Pedestrian
   layers:
   - Default
   - TransparentFX

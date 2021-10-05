@@ -10,7 +10,7 @@ public class PlayerCar : MonoBehaviour
     //click to drive
     [SerializeField] float acceleration = 8;
     //this is to set the speed of which the car follows the mouse
-    [SerializeField] float turnSpeed = 5;
+    [SerializeField] float turnSpeed = 5; // 100 feels pretty good for this ~~ Oli
 
     Quaternion targetRotation;
     Rigidbody _rigidBody;

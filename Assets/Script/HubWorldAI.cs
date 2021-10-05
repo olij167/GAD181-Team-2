@@ -5,24 +5,27 @@ using UnityEngine.AI;
 
 public class HubWorldAI : MonoBehaviour
 {
-    //Call pathfinding agent
+    // pathfinding variables
     public NavMeshAgent agent;
 
-    public List<GameObject> checkpoints;
+    public string checkpointType; // write checkpoint type's tag in here
 
-    public float speed = 1000f, stopDistance, walkPointTimer, walkPointTimerReset; 
-    //stop distance = distance from checkpoint before a new point is chosen
-    //walkpoint timer = time ai has to reach walkpoint before finding a new one
-    //walkpoint timer reset = time for timer to reset to
+    public List<GameObject> checkpoints;
 
     public Vector3 walkPoint, lastPosition;
     public bool walkPointSet;
 
+    public float speed = 1000f, stopDistance, walkPointTimer, walkPointTimerReset;
+                //stop distance is the distance from checkpoint before a new point is chosen
+
+                //walkpoint timer is the time ai has to reach walkpoint before finding a new one
+
+                //walkpoint timer reset is the time for timer to reset to
 
     void Start()
     {
         //fill list with all checkpoints in scene
-        checkpoints.AddRange(GameObject.FindGameObjectsWithTag("Checkpoint"));
+        checkpoints.AddRange(GameObject.FindGameObjectsWithTag(checkpointType));
     }
 
     void Update()
@@ -59,7 +62,7 @@ public class HubWorldAI : MonoBehaviour
     private void SearchWalkPoint()
     {
         // choose random checkpoint
-        float newCheckpoint = Random.Range(0, GameObject.FindGameObjectsWithTag("Checkpoint").Length + 1);
+        float newCheckpoint = Random.Range(0, GameObject.FindGameObjectsWithTag(checkpointType).Length + 1);
 
         //assign walkpoint to chosen checkpoint
         for (int i = 0; i < newCheckpoint; i++)
