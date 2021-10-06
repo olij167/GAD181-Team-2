@@ -7,7 +7,7 @@ public class Wheelskid : MonoBehaviour
     [SerializeField] float intensityModifier = 1.5f;
 
     Skidmarks skidMarkcontroller;
-    PlayerCar playerCar;
+    PlayerCar Car;
 
     int LastSkidId = -1;
 
@@ -15,14 +15,14 @@ public class Wheelskid : MonoBehaviour
     void Start()
     {
         skidMarkcontroller = FindObjectOfType<Skidmarks>();
-        playerCar = GetComponentInParent<PlayerCar>();
+        Car = GetComponentInParent<PlayerCar>();
     }
 
     // Update is called once per frame
     void lateupdate()
     {
 
-        float intensity = playerCar.SideSlipAmount;
+        float intensity = Car.SideSlipAmount;
         if (intensity < 0)
             intensity = -intensity;
 
