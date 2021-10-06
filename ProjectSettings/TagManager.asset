@@ -10,13 +10,9 @@ TagManager:
   - Checkpoint
   - HubWorldCar
   - Pedestrian
-<<<<<<< Updated upstream
   - KHABSOIVHBAISDJBV
   - Fuel
   - BadCar
-=======
-  - RaceTrigger
->>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX

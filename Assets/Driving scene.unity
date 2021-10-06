@@ -183,14 +183,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (11)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1 &39883717
@@ -221,13 +213,13 @@ Transform:
   m_GameObject: {fileID: 39883717}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 0, z: 63}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &39883719
-BoxCollider:
+--- !u!135 &39883719
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -237,7 +229,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &39883720
 MeshRenderer:
@@ -287,7 +279,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 39883717}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &66217296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -383,14 +375,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -518,13 +502,13 @@ Transform:
   m_GameObject: {fileID: 138446428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: 63}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &138446430
-BoxCollider:
+--- !u!135 &138446430
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -534,7 +518,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &138446431
 MeshRenderer:
@@ -584,7 +568,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138446428}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &165431112
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -640,14 +624,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (18)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1 &187998178
@@ -678,13 +654,13 @@ Transform:
   m_GameObject: {fileID: 187998178}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -128, y: 0, z: 63}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &187998180
-BoxCollider:
+--- !u!135 &187998180
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -694,7 +670,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &187998181
 MeshRenderer:
@@ -744,7 +720,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 187998178}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &238632090 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -810,14 +786,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (20)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!4 &278012378 stripped
@@ -837,17 +805,13 @@ GameObject:
   - component: {fileID: 283477503}
   - component: {fileID: 283477502}
   - component: {fileID: 283477501}
+  - component: {fileID: 283477505}
   - component: {fileID: 283477506}
-<<<<<<< Updated upstream
   - component: {fileID: 283477507}
   - component: {fileID: 283477508}
   - component: {fileID: 283477509}
   - component: {fileID: 283477510}
   - component: {fileID: 283477511}
-=======
-  - component: {fileID: 283477505}
-  - component: {fileID: 283477507}
->>>>>>> Stashed changes
   m_Layer: 0
   m_Name: Car
   m_TagString: Player
@@ -925,13 +889,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 283477500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.61, y: 1, z: -12.61}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 3}
   m_Children:
   - {fileID: 569765400}
   - {fileID: 1272902097}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &283477505
 MonoBehaviour:
@@ -972,7 +936,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 283477500}
   m_Enabled: 1
   m_EditorHideFlags: 0
-<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 5b3c0b86949a67e4b9365043a065abc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -1116,21 +1079,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensityModifier: 1.5
-=======
-  m_Script: {fileID: 11500000, guid: 9a42aeddf98c3f44cbcd8756fb89d4d1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numOfLaps: 0
-  raceCheckpointList: []
-  nextCheckpoint: {fileID: 0}
-  startCheckpoint: {fileID: 0}
-  racer: {fileID: 4176782143998226900, guid: 98a8a75157284d445bd408d278ad855d, type: 3}
-  racerList: []
-  checkpointsReached: 0
-  currentLap: 0
-  raceOverCheck: 0
-  lapOverCheck: 0
->>>>>>> Stashed changes
 --- !u!1 &294418187
 GameObject:
   m_ObjectHideFlags: 0
@@ -1237,7 +1185,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
   m_PrefabInstance: {fileID: 1795949846}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
 --- !u!1 &357534663
 GameObject:
   m_ObjectHideFlags: 0
@@ -1317,13 +1264,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 357534663}
   m_CullTransparentMesh: 1
-=======
---- !u!1 &389571126 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5810358611642357439, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-  m_PrefabInstance: {fileID: 941639731366650788}
-  m_PrefabAsset: {fileID: 0}
->>>>>>> Stashed changes
 --- !u!1 &416474103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1359,7 +1299,7 @@ MonoBehaviour:
   hubCar: {fileID: 4176782143998226900, guid: 2d7eb2f5de02bd647af2d928fdd58ea8, type: 3}
   hubCarSpawn: []
   hubCarList: []
-  hubCarNum: 10
+  hubCarNum: 20
   grassMask:
     serializedVersion: 2
     m_Bits: 128
@@ -1421,7 +1361,7 @@ MonoBehaviour:
   pedestrian: {fileID: 7220926856843305369, guid: dc7c444fd11ed9341b66cdc3fc957476, type: 3}
   pedestrianSpawn: []
   pedestrianList: []
-  pedestrianNum: 20
+  pedestrianNum: 30
   roadMask:
     serializedVersion: 2
     m_Bits: 64
@@ -1588,21 +1528,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (10)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-<<<<<<< Updated upstream
 --- !u!1 &508911298
-=======
---- !u!1 &497914677
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1610,27 +1538,17 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 508911302}
   - component: {fileID: 508911301}
   - component: {fileID: 508911300}
   - component: {fileID: 508911299}
   m_Layer: 0
   m_Name: Mini Map Camera
-=======
-  - component: {fileID: 497914678}
-  - component: {fileID: 497914681}
-  - component: {fileID: 497914680}
-  - component: {fileID: 497914679}
-  m_Layer: 7
-  m_Name: Wall (1)
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!114 &508911299
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1696,15 +1614,11 @@ Camera:
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
 --- !u!4 &508911302
-=======
---- !u!4 &497914678
->>>>>>> Stashed changes
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 508911298}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 58.55, z: 0}
@@ -1755,23 +1669,10 @@ RectTransform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &522605985
 MonoBehaviour:
-=======
-  m_GameObject: {fileID: 497914677}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 25, z: -5}
-  m_LocalScale: {x: 1, y: 0, z: 5}
-  m_Children: []
-  m_Father: {fileID: 1052293792}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!64 &497914679
-MeshCollider:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 522605983}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1786,23 +1687,10 @@ MeshCollider:
   arrow: {fileID: 1657002255}
 --- !u!114 &522605986
 MonoBehaviour:
-=======
-  m_GameObject: {fileID: 497914677}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &497914680
-MeshRenderer:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 522605983}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -1829,57 +1717,12 @@ MeshRenderer:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &522605987
 CanvasRenderer:
-=======
-  m_GameObject: {fileID: 497914677}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &497914681
-MeshFilter:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 522605983}
   m_CullTransparentMesh: 1
-=======
-  m_GameObject: {fileID: 497914677}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> Stashed changes
 --- !u!1 &528337053
 GameObject:
   m_ObjectHideFlags: 0
@@ -2030,14 +1873,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (27)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -2287,14 +2122,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (29)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1001 &630167252
@@ -2352,14 +2179,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (4)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1 &639023342
@@ -2390,13 +2209,13 @@ Transform:
   m_GameObject: {fileID: 639023342}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -128, y: 0, z: 125}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &639023344
-BoxCollider:
+--- !u!135 &639023344
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -2406,7 +2225,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &639023345
 MeshRenderer:
@@ -2456,7 +2275,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639023342}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &701334116 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -2609,14 +2428,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (22)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -2776,14 +2587,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (12)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1001 &878196479
@@ -2840,14 +2643,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (19)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -3045,103 +2840,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
   m_PrefabInstance: {fileID: 98568206}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &959944565
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 959944566}
-  - component: {fileID: 959944569}
-  - component: {fileID: 959944568}
-  - component: {fileID: 959944567}
-  m_Layer: 7
-  m_Name: Wall (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &959944566
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959944565}
-  m_LocalRotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
-  m_LocalPosition: {x: 5, y: 25, z: 0}
-  m_LocalScale: {x: 1, y: 0, z: 5}
-  m_Children: []
-  m_Father: {fileID: 1052293792}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 90}
---- !u!64 &959944567
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959944565}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &959944568
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959944565}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &959944569
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 959944565}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3289,13 +2987,13 @@ Transform:
   m_GameObject: {fileID: 999163332}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: -63}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &999163334
-BoxCollider:
+--- !u!135 &999163334
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3305,7 +3003,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &999163335
 MeshRenderer:
@@ -3355,7 +3053,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999163332}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1052293788
 GameObject:
   m_ObjectHideFlags: 0
@@ -3445,16 +3143,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1052293788}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.05, z: 0}
   m_LocalScale: {x: 30, y: 1, z: 30}
-  m_Children:
-  - {fileID: 1527307896}
-  - {fileID: 497914678}
-  - {fileID: 1759356445}
-  - {fileID: 959944566}
+  m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1057173118
 GameObject:
@@ -3484,13 +3178,13 @@ Transform:
   m_GameObject: {fileID: 1057173118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1057173120
-BoxCollider:
+--- !u!135 &1057173120
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -3500,7 +3194,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1057173121
 MeshRenderer:
@@ -3550,7 +3244,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1057173118}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1104898611
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3605,14 +3299,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (14)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -3951,77 +3637,8 @@ Transform:
 --- !u!212 &1272902098
 SpriteRenderer:
   m_ObjectHideFlags: 0
-<<<<<<< Updated upstream
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
-=======
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1343166157}
-    m_Modifications:
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_RootOrder
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 13.599998
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Name
-      value: Pedestrian Checkpoint (15)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
---- !u!4 &1266855216 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-  m_PrefabInstance: {fileID: 1823945734}
->>>>>>> Stashed changes
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1272902096}
   m_Enabled: 1
@@ -4101,13 +3718,13 @@ Transform:
   m_GameObject: {fileID: 1309005358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -128, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1309005360
-BoxCollider:
+--- !u!135 &1309005360
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4117,7 +3734,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1309005361
 MeshRenderer:
@@ -4167,7 +3784,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1309005358}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1343166156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4284,14 +3901,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (24)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -4419,13 +4028,13 @@ Transform:
   m_GameObject: {fileID: 1501333220}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: 125}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1501333222
-BoxCollider:
+--- !u!135 &1501333222
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4435,7 +4044,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1501333223
 MeshRenderer:
@@ -4485,7 +4094,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1501333220}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1514787398 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -4546,113 +4155,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (7)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
---- !u!1 &1527307895
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1527307896}
-  - component: {fileID: 1527307899}
-  - component: {fileID: 1527307898}
-  - component: {fileID: 1527307897}
-  m_Layer: 7
-  m_Name: Wall
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1527307896
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527307895}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: -0.7071068, w: 0}
-  m_LocalPosition: {x: 0, y: 25, z: 5}
-  m_LocalScale: {x: 1, y: 0, z: 5}
-  m_Children: []
-  m_Father: {fileID: 1052293792}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -180}
---- !u!64 &1527307897
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527307895}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1527307898
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527307895}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1527307899
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1527307895}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1534308820
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,14 +4318,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (28)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1001 &1623258106
@@ -4879,14 +4375,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (23)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1001 &1634633798
@@ -4943,14 +4431,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (16)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -5089,14 +4569,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1001 &1680560039
@@ -5153,14 +4625,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (31)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -5296,14 +4760,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (6)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!4 &1697848173 stripped
@@ -5435,13 +4891,13 @@ Transform:
   m_GameObject: {fileID: 1726264409}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: -124.8}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1726264411
-BoxCollider:
+--- !u!135 &1726264411
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5451,7 +4907,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1726264412
 MeshRenderer:
@@ -5501,13 +4957,8 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1726264409}
-<<<<<<< Updated upstream
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1731128061
-=======
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1759356444
->>>>>>> Stashed changes
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5515,37 +4966,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-<<<<<<< Updated upstream
   - component: {fileID: 1731128062}
   - component: {fileID: 1731128064}
   - component: {fileID: 1731128063}
   m_Layer: 5
   m_Name: Minimap outline (the GTA thing around it)
-=======
-  - component: {fileID: 1759356445}
-  - component: {fileID: 1759356448}
-  - component: {fileID: 1759356447}
-  - component: {fileID: 1759356446}
-  m_Layer: 7
-  m_Name: Wall (2)
->>>>>>> Stashed changes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
-<<<<<<< Updated upstream
 --- !u!224 &1731128062
 RectTransform:
-=======
---- !u!4 &1759356445
-Transform:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1731128061}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -5561,23 +4997,10 @@ Transform:
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1731128063
 MonoBehaviour:
-=======
-  m_GameObject: {fileID: 1759356444}
-  m_LocalRotation: {x: 0.5, y: 0.5, z: -0.5, w: 0.5}
-  m_LocalPosition: {x: -5, y: 25, z: 0}
-  m_LocalScale: {x: 1, y: 0, z: 5}
-  m_Children: []
-  m_Father: {fileID: 1052293792}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: -90}
---- !u!64 &1759356446
-MeshCollider:
->>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1731128061}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -5604,71 +5027,12 @@ MeshCollider:
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &1731128064
 CanvasRenderer:
-=======
-  m_GameObject: {fileID: 1759356444}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1759356447
-MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1759356444}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1759356448
-MeshFilter:
->>>>>>> Stashed changes
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-<<<<<<< Updated upstream
   m_GameObject: {fileID: 1731128061}
   m_CullTransparentMesh: 1
-=======
-  m_GameObject: {fileID: 1759356444}
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
->>>>>>> Stashed changes
 --- !u!1001 &1764293441
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5723,14 +5087,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (26)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -5794,14 +5150,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (13)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1001 &1795949846
@@ -5859,14 +5207,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (21)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!4 &1800354671 stripped
@@ -5902,13 +5242,13 @@ Transform:
   m_GameObject: {fileID: 1822076994}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 0, z: -63}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1822076996
-BoxCollider:
+--- !u!135 &1822076996
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -5918,7 +5258,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1822076997
 MeshRenderer:
@@ -5968,7 +5308,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1822076994}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &1823945734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6024,14 +5364,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (25)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!4 &1831301239 stripped
@@ -6072,13 +5404,13 @@ Transform:
   m_GameObject: {fileID: 1871536157}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 0, z: 125}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1871536159
-BoxCollider:
+--- !u!135 &1871536159
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6088,7 +5420,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1871536160
 MeshRenderer:
@@ -6138,7 +5470,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871536157}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1872961786
 GameObject:
   m_ObjectHideFlags: 0
@@ -6239,14 +5571,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (30)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1 &1904414082
@@ -6277,13 +5601,13 @@ Transform:
   m_GameObject: {fileID: 1904414082}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 125, y: 0, z: -126.4}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &1904414084
-BoxCollider:
+--- !u!135 &1904414084
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6293,7 +5617,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &1904414085
 MeshRenderer:
@@ -6343,7 +5667,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1904414082}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &1910402416 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -6403,14 +5727,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (5)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -6479,14 +5795,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (8)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!4 &2028756277 stripped
@@ -6549,14 +5857,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (9)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1 &2077298686
@@ -6587,13 +5887,13 @@ Transform:
   m_GameObject: {fileID: 2077298686}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -128, y: 0, z: -63}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2077298688
-BoxCollider:
+--- !u!135 &2077298688
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6603,7 +5903,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2077298689
 MeshRenderer:
@@ -6653,7 +5953,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2077298686}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!4 &2086055581 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -6713,14 +6013,6 @@ PrefabInstance:
     - target: {fileID: 3263183690224709507, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
       propertyPath: m_Name
       value: Pedestrian Checkpoint (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -6850,14 +6142,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint (17)
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
 --- !u!1 &2142724276
@@ -6888,13 +6172,13 @@ Transform:
   m_GameObject: {fileID: 2142724276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -128, y: 0, z: -126}
-  m_LocalScale: {x: 15, y: 2, z: 15}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 1872961787}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &2142724278
-BoxCollider:
+--- !u!135 &2142724278
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -6904,7 +6188,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &2142724279
 MeshRenderer:
@@ -6954,7 +6238,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2142724276}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &941639731366650788
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6965,14 +6249,6 @@ PrefabInstance:
     - target: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
       propertyPath: m_RootOrder
       value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7014,18 +6290,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1872415112556062235, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2046461997740590105, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2046461997740590105, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5810358611642357439, guid: f068eab30c9821644a292e28df34ee52, type: 3}
       propertyPath: m_Name
       value: Checkpoint (Mid Center)
@@ -7034,10 +6298,6 @@ PrefabInstance:
       propertyPath: m_TagString
       value: CarCheckpoint
       objectReference: {fileID: 0}
-    - target: {fileID: 8136815230890868763, guid: f068eab30c9821644a292e28df34ee52, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8722799360495608111, guid: f068eab30c9821644a292e28df34ee52, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -7046,8 +6306,7 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 8722799360495608111, guid: f068eab30c9821644a292e28df34ee52, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f068eab30c9821644a292e28df34ee52, type: 3}
 --- !u!1001 &3263183688803685613
 PrefabInstance:
@@ -7104,112 +6363,5 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pedestrian Checkpoint
       objectReference: {fileID: 0}
-    - target: {fileID: 3263183690224709532, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3830932823524579331, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
---- !u!1001 &5417420608845900940
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: raceName
-      value: Test
-      objectReference: {fileID: 0}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: racerNum
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: numOfLaps
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: raceCheckpoints.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: raceCheckpoints.Array.data[0]
-      value: 
-      objectReference: {fileID: 1309005358}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: raceCheckpoints.Array.data[1]
-      value: 
-      objectReference: {fileID: 187998178}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: raceCheckpoints.Array.data[2]
-      value: 
-      objectReference: {fileID: 138446428}
-    - target: {fileID: 188044001022809170, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: raceCheckpoints.Array.data[3]
-      value: 
-      objectReference: {fileID: 389571126}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_RootOrder
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -5.48
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 270
-      objectReference: {fileID: 0}
-    - target: {fileID: 5101096103238911534, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5654183452521624961, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_Name
-      value: Race Start Trigger
-      objectReference: {fileID: 0}
-    - target: {fileID: 5654183452521624961, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5654183452521624961, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
-      propertyPath: m_TagString
-      value: RaceTrigger
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 0}
-    - {fileID: 0}
-  m_SourcePrefab: {fileID: 100100000, guid: 5d754f88781b20843bc40dffd19e3a11, type: 3}
