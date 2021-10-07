@@ -494,3 +494,4 @@ Received Import Request.
 Start importing Packages/com.unity.ugui/Runtime/UI/Core/Graphic.cs using Guid(a6238e9452bfc704f82ff36791fe1a45) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd96128be482811c411ab75f38e171c06') in 0.003104 seconds 
   Import took 0.020786 seconds .
 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
