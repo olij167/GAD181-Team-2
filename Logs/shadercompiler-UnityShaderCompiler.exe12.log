@@ -2,6 +2,9 @@ Base path: 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data', plugins 
 Cmd: initializeCompiler
 
 <<<<<<< HEAD
+=======
+<<<<<<< Updated upstream
+<<<<<<< HEAD
 
 Cmd: initializeCompiler
 
@@ -17,4 +20,7 @@ Cmd: compileSnippet
 
 =======
 >>>>>>> 132681cc7cdaa6cbb2d8f53ebbc52e4536425184
+=======
+>>>>>>> Stashed changes
 Cmd: shutdown
+>>>>>>> 106304c45bcb4676ec4d28b9d908d3c63fed798e
