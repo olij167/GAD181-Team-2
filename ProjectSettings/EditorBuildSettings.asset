@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Driving scene.unity
     guid: d272616053343db40b8823990095a28c
+  - enabled: 1
+    path: Assets/Prototype Delivery Scene.unity
+    guid: df04e6537ad42244ca40229320c2e1dd
   m_configObjects: {}
