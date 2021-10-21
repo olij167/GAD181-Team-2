@@ -16,7 +16,11 @@ public class Points : MonoBehaviour
 
             GetComponent<AudioSource>().PlayOneShot(MySound);
 
+//<<<<<<< Updated upstream
             //other.gameObject.GetComponent<MeshRenderer>().enabled = false;
+//=======
+            other.gameObject.SetActive(false);
+//>>>>>>> Stashed changes
 
             ++points;
             text.text = points.ToString();
