@@ -102,6 +102,7 @@ C# parse time         : 262ms
 candidates check time : 32ms
 console write time    : 1ms
 
+<<<<<<< Updated upstream
 [api-updater (non-obsolete-error-filter)] 7/10/2021 2:21:40 AM : Starting C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
 [api-updater (non-obsolete-error-filter)] Exception caught while loading types from C:\Users\61426\Documents\Unity\GAD181 Team 2\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll (some types may not be loaded)
 	Exception of type 'System.Reflection.ReflectionTypeLoadException' was thrown.
@@ -129,13 +130,25 @@ C# parse time         : 101ms
 candidates check time : 18ms
 console write time    : 0ms
 
-[api-updater (non-obsolete-error-filter)] 18/10/2021 2:23:33 PM : Starting C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+=======
+>>>>>>> Stashed changes
+[api-updater (non-obsolete-error-filter)] 17/10/2021 11:09:13 PM : Starting C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
 [api-updater (non-obsolete-error-filter)] 
 ----------------------------------
-jit/startup time      : 414.2899ms
-moved types parse time: 35ms
-candidates parse time : 0ms
-C# parse time         : 188ms
-candidates check time : 30ms
+jit/startup time      : 640.2334ms
+moved types parse time: 50ms
+candidates parse time : 1ms
+C# parse time         : 214ms
+candidates check time : 29ms
+console write time    : 10ms
+
+[api-updater (non-obsolete-error-filter)] 17/10/2021 11:11:06 PM : Starting C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Tools/ScriptUpdater/APIUpdater.NonObsoleteApiUpdaterDetector.exe
+[api-updater (non-obsolete-error-filter)] 
+----------------------------------
+jit/startup time      : 77.3465ms
+moved types parse time: 46ms
+candidates parse time : 1ms
+C# parse time         : 150ms
+candidates check time : 25ms
 console write time    : 0ms
 
