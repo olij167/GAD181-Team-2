@@ -97,7 +97,6 @@ GameObject:
   - component: {fileID: 6682467769924823180}
   - component: {fileID: 6682467769924823222}
   - component: {fileID: 6682467769924823217}
-  - component: {fileID: 6682467769924823216}
   - component: {fileID: 6682467769924823219}
   - component: {fileID: 6682467769924823218}
   - component: {fileID: 6682467769924823183}
@@ -310,20 +309,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensityModifier: 1.5
---- !u!114 &6682467769924823216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6682467770158372247}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e07e5d9c6177a14f900524cd1046a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winorlose: {fileID: 0}
-  myText: {fileID: 0}
 --- !u!114 &6682467769924823219
 MonoBehaviour:
   m_ObjectHideFlags: 0
