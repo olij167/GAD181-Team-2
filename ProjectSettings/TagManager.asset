@@ -13,6 +13,9 @@ TagManager:
   - KHABSOIVHBAISDJBV
   - Fuel
   - BadCar
+  - Building
+  - RaceTrigger
+  - Pizza
   layers:
   - Default
   - TransparentFX
@@ -23,8 +26,8 @@ TagManager:
   - roadMask
   - grassMask
   - JBEFIVBJAF
-  - 
-  - 
+  - Destination
+  - BuildingLayer
   - 
   - 
   - 
