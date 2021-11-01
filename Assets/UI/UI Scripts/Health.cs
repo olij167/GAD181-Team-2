@@ -25,7 +25,7 @@ public class Health : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Fuel"))
         {
-            health +=5;
+            health = health + 5;
         }
 
         myText.text = health.ToString();
