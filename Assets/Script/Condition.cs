@@ -29,17 +29,17 @@ public class Condition : MonoBehaviour
     }
     private void Update()
     {
-        if (condition == 90||condition == 100);
-        {
-            Console.WriteLine("Hot");
-        }
-        else if (condition == 80|| condition == 70);
-        {
-            myText.text = .ToString("Just right");
-        }
-        else
-        {
-            myText.text = condition.ToString();
-        }
+        //if (condition == 90||condition == 100);
+        //{
+        //    Console.WriteLine("Hot");
+        //}
+        //else if (condition == 80|| condition == 70);
+        //{
+        //    myText.text = .ToString("Just right");
+        //}
+        //else
+        //{
+        //    myText.text = condition.ToString();
+        //}
     }
 }
