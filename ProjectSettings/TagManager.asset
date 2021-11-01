@@ -15,6 +15,7 @@ TagManager:
   - BadCar
   - Building
   - RaceTrigger
+  - Pizza
   layers:
   - Default
   - TransparentFX
