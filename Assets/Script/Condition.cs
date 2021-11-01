@@ -5,6 +5,7 @@ using UnityEngine;
 public class Condition : MonoBehaviour
 {
     private int condition = 100;
+    private TextAlignment mytext;
 
     private void Start()
     {
@@ -25,21 +26,6 @@ public class Condition : MonoBehaviour
         {
             condition = condition -20;
         }
-        //myText.text = condition.ToString();
-    }
-    private void Update()
-    {
-        //if (condition == 90||condition == 100);
-        //{
-        //    Console.WriteLine("Hot");
-        //}
-        //else if (condition == 80|| condition == 70);
-        //{
-        //    myText.text = .ToString("Just right");
-        //}
-        //else
-        //{
-        //    myText.text = condition.ToString();
-        //}
+        myText.text = condition.ToString();
     }
 }
