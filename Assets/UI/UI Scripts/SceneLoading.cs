@@ -25,7 +25,7 @@ public class SceneLoading : MonoBehaviour
         {
             //take the progess bar fill = async operation progress.
             _progressBar.fillAmount = gamelevel.progress;
-            yield return new WaitForEndOfFrame();
+            yield return new WaitForSeconds(5.0f);
 
 
         }
