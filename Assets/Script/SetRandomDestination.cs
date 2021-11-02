@@ -7,9 +7,11 @@ public class SetRandomDestination : MonoBehaviour
 {
     public GameObject[] destinationArray; // all potential destinations
     public GameObject destination; // selected destination
+    public Material highlightedDestination;
+    Material  originalDestinationMaterial;
 
     public float deliveryRange; // look radius
-    public bool destinationSet, destinationInRange; //check if destination is set, check if destination is in range
+    public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
     public LayerMask destinationLayer; 
 
     public int numOfDeliveries, deliveryCounter;
@@ -23,7 +25,7 @@ public class SetRandomDestination : MonoBehaviour
     int destinationNum;
 
     // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI;
+    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
 
 
     void Start()
@@ -45,8 +47,12 @@ public class SetRandomDestination : MonoBehaviour
 
         destinationInRange = Physics.CheckSphere(transform.position, deliveryRange, destinationLayer); // check if destination is within delivery range
 
-        //if (destinationInRange) 
+        if (destinationInRange)
+        {
             EngagePizzaLauncher(); // press space to shoot pizza
+            pizzaLauncherEngagedText.text = "Pizza Launcher Engaged!";
+        }
+        else pizzaLauncherEngagedText.text = "Pizza Launcher Inactive.";
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
 
@@ -55,17 +61,22 @@ public class SetRandomDestination : MonoBehaviour
 
     void SetDestination() // choose random destination
     {
+        deliveryComplete = false;
         int randDestination = Random.Range(0, destinationArray.Length);
 
         for (int i = 0; i < destinationArray.Length; i++)
             destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
 
         destination = destinationArray[randDestination];
+        originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
+        destination.GetComponent<MeshRenderer>().material = highlightedDestination;
         destination.layer = LayerMask.NameToLayer("Destination");
     }
 
     void EngagePizzaLauncher()
     {
+        
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(pizza, shootPos.position, shootPos.rotation);
@@ -96,6 +107,7 @@ public class SetRandomDestination : MonoBehaviour
 
     void DeliveryComplete()
     {
+        deliveryComplete = true;
         deliveryCounter++;
 
         foreach (GameObject pizza in pizzaList)
@@ -103,17 +115,19 @@ public class SetRandomDestination : MonoBehaviour
 
         pizzaList.Clear();
 
-        SetDestination();
-
         if (deliveryCounter >= numOfDeliveries)
         {
             //game over scene transition
         }
+
+        destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+
+        SetDestination();
     }
 
     void OnDrawGizmosSelected()
     {
-        // Draw a yellow sphere at the transform's position
+        // look radius visualiser
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, deliveryRange);
     }
