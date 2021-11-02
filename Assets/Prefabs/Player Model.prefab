@@ -228,7 +228,7 @@ GameObject:
   - component: {fileID: 6682467769924823183}
   m_Layer: 0
   m_Name: Player Model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -356,6 +356,7 @@ MonoBehaviour:
   pizzaList: []
   shotPower: 50
   stopDistance: 0
+  deliveriesCompleteUI: {fileID: 0}
 --- !u!82 &6682467769924823222
 AudioSource:
   m_ObjectHideFlags: 0

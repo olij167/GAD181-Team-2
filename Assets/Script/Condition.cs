@@ -1,31 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Condition : MonoBehaviour
 {
-    private int condition = 100;
-    private TextAlignment mytext;
+    private int maxCondition = 100;
+    public Text mytext;
 
     private void Start()
     {
-        
-        //mytext.text = Condition.Tostring();
+        mytext.text = maxCondition.ToString();
     }
-    private void OnCollisionEnter(Collision collision)
+private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("BadCar"))
-        {
-            condition = condition -20 ;
-        }
-        if (collision.gameObject.CompareTag("Pedestrian"))
-        {
-            condition = condition -10;
-        }
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
-            condition = condition -20;
+            maxCondition = maxCondition - 20;
         }
-        myText.text = condition.ToString();
+        else if (collision.gameObject.CompareTag("Pedestrian"))
+        {
+            maxCondition = maxCondition - 10;
+        }
+        else if (collision.gameObject.CompareTag("Building"))
+        {
+            maxCondition = maxCondition - 20;
+        }
+        mytext.text = maxCondition.ToString();
     }
 }
