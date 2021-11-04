@@ -3422,6 +3422,7 @@ GameObject:
   - component: {fileID: 445221535}
   - component: {fileID: 445221537}
   - component: {fileID: 445221536}
+  - component: {fileID: 445221538}
   m_Layer: 5
   m_Name: Temperature Number
   m_TagString: Untagged
@@ -3490,6 +3491,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445221534}
   m_CullTransparentMesh: 1
+--- !u!114 &445221538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 445221534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5bdb80ab9fbc7488fb5e65485b1841, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDisplay: {fileID: 445221534}
+  secondsLeft: 30
+  takingAway: 0
 --- !u!4 &446734033 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
