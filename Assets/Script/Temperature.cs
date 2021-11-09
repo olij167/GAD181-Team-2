@@ -5,42 +5,32 @@ using UnityEngine.UI;
 
 public class Temperature : MonoBehaviour
 {
-    public GameObject textDisplay;
-    public int secondsLeft = 30;
-    public bool takingAway = false;
+    public int countdownTime;
+    public Text countdownDisplay;
 
-    void Start()
+    private void Start()
     {
-        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+        StartCoroutine(CountdownToStart());
     }
 
-    void Update()
+    IEnumerator CountdownToStart()
     {
-        if (takingAway == false && secondsLeft >= 0)
+        while(countdownTime > 0)
         {
-            StartCoroutine(TimerTake());
-        }
-    }
-    IEnumerator TimerTake()
-    {
-        takingAway = true;
-        yield return new WaitForSeconds(1);
-        secondsLeft -= 1;
-        if (secondsLeft < 10)
-        {
-            textDisplay.GetComponent<Text>().text = "00:0" + secondsLeft;
-        }
-        else
-        {
-            textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
-        }
-        takingAway = false;
-        GameOver();
+            countdownDisplay.text = countdownTime.ToString();
 
-        void GameOver()
-        {
+            yield return new WaitForSeconds(1f);
 
+            countdownTime--;
         }
+
+        countdownDisplay.text = "GO!";
+        //below is not working figure out soon
+        //Temperature.instance.beginGame();
+
+        yield return new WaitForSeconds(1f);
+
+        countdownDisplay.gameObject.SetActive(false);
     }
      
 }
