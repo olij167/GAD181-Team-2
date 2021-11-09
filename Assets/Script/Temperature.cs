@@ -7,7 +7,10 @@ public class Temperature : MonoBehaviour
 {
     public GameObject textDisplay;
     public int secondsLeft = 30;
+    public int resetSecondsLeft = 30;
     public bool takingAway = false;
+    public GameObject player;
+    public bool deliveryComplete;
 
     void Start()
     {
@@ -16,6 +19,15 @@ public class Temperature : MonoBehaviour
 
     void Update()
     {
+        //player.GetComponent<SetRandomDestination>().del
+
+
+
+
+        if (secondsLeft <= 0)
+        {
+            secondsLeft = resetSecondsLeft;
+        }
         if (takingAway == false && secondsLeft >= 0)
         {
             StartCoroutine(TimerTake());
