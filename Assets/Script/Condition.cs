@@ -16,15 +16,15 @@ private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
-            maxCondition = maxCondition - 20;
+            maxCondition = maxCondition - 5;
         }
         else if (collision.gameObject.CompareTag("Pedestrian"))
         {
-            maxCondition = maxCondition - 10;
+            maxCondition = maxCondition - 1;
         }
         else if (collision.gameObject.CompareTag("Building"))
         {
-            maxCondition = maxCondition - 20;
+            maxCondition = maxCondition - 5;
         }
         mytext.text = maxCondition.ToString();
     }
