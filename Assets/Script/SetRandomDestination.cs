@@ -27,6 +27,10 @@ public class SetRandomDestination : MonoBehaviour
     // delivery complete placeholder UI
     public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
 
+    //temp variables
+    public float temp, resetTemp;
+    public TextMeshProUGUI tempUIValue;
+
 
     void Start()
     {
@@ -44,7 +48,6 @@ public class SetRandomDestination : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         destinationInRange = Physics.CheckSphere(transform.position, deliveryRange, destinationLayer); // check if destination is within delivery range
 
         if (destinationInRange)
@@ -56,7 +59,14 @@ public class SetRandomDestination : MonoBehaviour
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
 
+        temp -= Time.deltaTime;
 
+        if (temp <= 0)
+        {
+            // game over
+        }
+
+        tempUIValue.text = temp.ToString("F0");
     }
 
     void SetDestination() // choose random destination
@@ -75,7 +85,7 @@ public class SetRandomDestination : MonoBehaviour
 
     void EngagePizzaLauncher()
     {
-        
+        //pizzaList = new List<GameObject>();
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
@@ -109,9 +119,12 @@ public class SetRandomDestination : MonoBehaviour
     {
         deliveryComplete = true;
         deliveryCounter++;
+        temp = resetTemp;
 
         foreach (GameObject pizza in pizzaList)
+        {
             Destroy(pizza);
+        }
 
         pizzaList.Clear();
 

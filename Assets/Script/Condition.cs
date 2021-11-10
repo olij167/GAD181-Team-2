@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Condition : MonoBehaviour
 {
     private int maxCondition = 100;
-    public Text mytext;
+    public TextMeshProUGUI mytext;
 
     private void Start()
     {

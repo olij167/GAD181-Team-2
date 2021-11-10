@@ -43,8 +43,7 @@ public class HubWorldAI : MonoBehaviour
         if (!walkPointSet) SearchWalkPoint();
 
         // if there is a walkpoint, go there
-        if (walkPointSet)
-            agent.SetDestination(walkPoint);
+        else agent.SetDestination(walkPoint);
 
         lastPosition = transform.position;  // remember the last position so we can check if we are staying still
         
