@@ -1,11 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+using TMPro;
 
 public class Temperature : MonoBehaviour
 {
-    public GameObject textDisplay;
+    public TextMeshProUGUI textDisplay;
     public int secondsLeft = 30;
     public int resetSecondsLeft = 30;
     public bool takingAway = false;
@@ -14,23 +14,21 @@ public class Temperature : MonoBehaviour
 
     void Start()
     {
-        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+        textDisplay.GetComponent<TextMeshProUGUI>().text = "00:" + secondsLeft;
     }
 
     void Update()
     {
-        //player.GetComponent<SetRandomDestination>().del
+        
 
-
-
-
-        if (secondsLeft <= 0)
-        {
-            secondsLeft = resetSecondsLeft;
-        }
         if (takingAway == false && secondsLeft >= 0)
         {
             StartCoroutine(TimerTake());
+        }
+
+        if (secondsLeft <= 0)
+        {
+            //game over
         }
     }
     IEnumerator TimerTake()
@@ -40,12 +38,20 @@ public class Temperature : MonoBehaviour
         secondsLeft -= 1;
         if (secondsLeft < 10)
         {
-            textDisplay.GetComponent<Text>().text = "00:0" + secondsLeft;
+            textDisplay.GetComponent<TextMeshProUGUI>().text = "00:0" + secondsLeft;
         }
         else
         {
-            textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+            textDisplay.GetComponent<TextMeshProUGUI>().text = "00:" + secondsLeft;
         }
+
+        deliveryComplete = player.GetComponent<SetRandomDestination>().deliveryComplete;
+
+        if (deliveryComplete)
+        {
+            ResetTimer();
+        }
+
         takingAway = false;
         GameOver();
 
@@ -53,6 +59,13 @@ public class Temperature : MonoBehaviour
         {
 
         }
+        
+        void ResetTimer()
+        {
+            secondsLeft = resetSecondsLeft;
+        }
     }
+
+    
      
 }
