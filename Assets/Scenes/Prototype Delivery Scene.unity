@@ -12336,7 +12336,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604676304}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4d5bdb80ab9fbc7488fb5e65485b1841, type: 3}
   m_Name: 
@@ -12344,9 +12344,9 @@ MonoBehaviour:
   textDisplay: {fileID: 1604676307}
   secondsLeft: 30
   resetSecondsLeft: 30
-  takingAway: 0
-  player: {fileID: 2058047523}
+  player: {fileID: 6682467770158372247, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
   deliveryComplete: 0
+  deliveryCounter: 0
 --- !u!114 &1604676307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16872,9 +16872,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5021343222071967590, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
+      propertyPath: temp
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021343222071967590, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
       propertyPath: sphere
       value: 
       objectReference: {fileID: 100002, guid: 33fdceac61f90cb45a09fc4d806295a1, type: 3}
+    - target: {fileID: 5021343222071967590, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
+      propertyPath: resetTemp
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5021343222071967590, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
+      propertyPath: tempUIValue
+      value: 
+      objectReference: {fileID: 1604676307}
     - target: {fileID: 5021343222071967590, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
       propertyPath: stopDistance
       value: 0.1
