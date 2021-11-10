@@ -1,42 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class Temperature : MonoBehaviour
 {
-    public TextMeshProUGUI textDisplay;
-    public float secondsLeft = 30;
-    public float resetSecondsLeft = 30;
-    //public bool takingAway = false;
+    public GameObject textDisplay;
+    public int secondsLeft = 30;
+    public int resetSecondsLeft = 30;
+    public bool takingAway = false;
     public GameObject player;
     public bool deliveryComplete;
-    public int deliveryCounter = 0;
 
     void Start()
     {
-        textDisplay.GetComponent<TextMeshProUGUI>().text = "00:" + secondsLeft;
+        textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
     }
 
     void Update()
     {
-        deliveryComplete = player.GetComponent<SetRandomDestination>().deliveryComplete;
+        //player.GetComponent<SetRandomDestination>().del
 
 
-        if (!deliveryComplete) secondsLeft -= Time.deltaTime;
-        else secondsLeft = resetSecondsLeft;
-                if (secondsLeft <= 0) GameOver();
 
-        textDisplay.text = secondsLeft.ToString("F0");
+
+        if (secondsLeft <= 0)
+        {
+            secondsLeft = resetSecondsLeft;
+        }
+        if (takingAway == false && secondsLeft >= 0)
+        {
+            StartCoroutine(TimerTake());
+        }
     }
-
-    void GameOver()
+    IEnumerator TimerTake()
     {
-        secondsLeft = 0;
-        // game over stuff
-    }
-    
+        takingAway = true;
+        yield return new WaitForSeconds(1);
+        secondsLeft -= 1;
+        if (secondsLeft < 10)
+        {
+            textDisplay.GetComponent<Text>().text = "00:0" + secondsLeft;
+        }
+        else
+        {
+            textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+        }
+        takingAway = false;
+        GameOver();
 
-    
-     
+        void GameOver()
+        {
+
+        }
+    }
+
 }
