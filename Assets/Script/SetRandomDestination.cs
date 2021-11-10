@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class SetRandomDestination : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class SetRandomDestination : MonoBehaviour
     //temp variables
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
+    public Image tempBar;
 
 
     void Start()
@@ -67,6 +69,8 @@ public class SetRandomDestination : MonoBehaviour
         }
 
         tempUIValue.text = temp.ToString("F0");
+        tempBar.fillAmount = Mathf.Clamp(temp / resetTemp, 0, resetTemp);
+        tempBar.color = Color.Lerp(Color.blue, Color.red, temp / resetTemp);
     }
 
     void SetDestination() // choose random destination
