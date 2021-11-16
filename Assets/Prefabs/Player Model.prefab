@@ -95,6 +95,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+--- !u!1 &4786615184924611839
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2363390800439898423}
+  m_Layer: 0
+  m_Name: ShootPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2363390800439898423
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4786615184924611839}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.788, z: -0.317}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6682467770158729655}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6682467769988632370
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,13 +223,12 @@ GameObject:
   - component: {fileID: 5021343222071967590}
   - component: {fileID: 6682467769924823222}
   - component: {fileID: 6682467769924823217}
-  - component: {fileID: 6682467769924823216}
   - component: {fileID: 6682467769924823219}
   - component: {fileID: 6682467769924823218}
   - component: {fileID: 6682467769924823183}
   m_Layer: 0
   m_Name: Player Model
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -212,12 +241,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6682467770158372247}
   m_LocalRotation: {x: 0, y: 0.7071068, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: -0.5, y: 0.5, z: -0.5}
   m_Children:
   - {fileID: 6682467769988632333}
   - {fileID: 5161205160110870428}
   - {fileID: 936946672917851702}
+  - {fileID: 2363390800439898423}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 270, z: 0}
@@ -313,15 +343,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destinationArray: []
   destination: {fileID: 0}
+  highlightedDestination: {fileID: 0}
   deliveryRange: 20
   destinationSet: 0
-  currentDeliveryComplete: 0
   destinationInRange: 0
+  deliveryComplete: 0
   destinationLayer:
     serializedVersion: 2
     m_Bits: 512
   numOfDeliveries: 0
   deliveryCounter: 0
+  shootPos: {fileID: 2363390800439898423}
+  pizza: {fileID: 3367850983754321440, guid: f6eb9a3f0e87dc241955b6b1f0c33d00, type: 3}
+  pizzaList: []
+  shotPower: 50
+  stopDistance: 0
+  deliveriesCompleteUI: {fileID: 0}
+  pizzaLauncherEngagedText: {fileID: 0}
+  temp: 0
+  resetTemp: 0
+  tempUIValue: {fileID: 0}
 --- !u!82 &6682467769924823222
 AudioSource:
   m_ObjectHideFlags: 0
@@ -431,20 +472,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intensityModifier: 1.5
---- !u!114 &6682467769924823216
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6682467770158372247}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e07e5d9c6177a14f900524cd1046a81, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  winorlose: {fileID: 0}
-  myText: {fileID: 0}
 --- !u!114 &6682467769924823219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -512,7 +539,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7754547239134852627}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6682467770158729655}
