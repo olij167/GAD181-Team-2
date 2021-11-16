@@ -7130,7 +7130,7 @@ MonoBehaviour:
   hubCar: {fileID: 5827861789765311647, guid: 3c525ae2b2e03a04a9f4dcfb77eb1046, type: 3}
   hubCarSpawn: []
   hubCarList: []
-  hubCarNum: 1
+  hubCarNum: 10
   grassMask:
     serializedVersion: 2
     m_Bits: 128
