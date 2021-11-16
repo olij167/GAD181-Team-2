@@ -117,6 +117,8 @@ public class SetRandomDestination : MonoBehaviour
         }
 
         foreach (GameObject pizza in pizzaList)
+
+        
         {
             if (pizza == null) pizzaList.Remove(pizza);
 

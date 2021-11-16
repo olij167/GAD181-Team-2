@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4426775, g: 0.48494428, b: 0.5346488, a: 1}
+  m_IndirectSpecularColor: {r: 0.44267723, g: 0.484944, b: 0.53464806, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1806,8 +1806,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1371682657}
-  m_LocalRotation: {x: 0.028488772, y: 0.9671791, z: -0.12589002, w: 0.21887152}
-  m_LocalPosition: {x: 0.7090707, y: 0.22064275, z: 0.56685275}
+  m_LocalRotation: {x: 0.012237618, y: 0.9854051, z: -0.14936022, w: 0.080737755}
+  m_LocalPosition: {x: 0.18407065, y: -0.08935723, z: 0.43085277}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2025,7 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f96b1208b93ec46938e136327143b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyScene: Level Loading Scene
+  MyScene: Prototype Delivery Scene
 --- !u!1 &1531242365
 GameObject:
   m_ObjectHideFlags: 0
