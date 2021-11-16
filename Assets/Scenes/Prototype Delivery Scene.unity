@@ -6802,7 +6802,7 @@ MonoBehaviour:
   hubCar: {fileID: 5827861789765311647, guid: 3c525ae2b2e03a04a9f4dcfb77eb1046, type: 3}
   hubCarSpawn: []
   hubCarList: []
-  hubCarNum: 50
+  hubCarNum: 1
   grassMask:
     serializedVersion: 2
     m_Bits: 128
@@ -15938,6 +15938,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6682467770158372247, guid: ff5ae9995ee1aa4439411235ebce6753, type: 3}
   m_PrefabInstance: {fileID: 6682467771433147565}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2058047524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2058047523}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e96928bf86ab0854fa005c5eb1af161b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  points: 0
+  mytext: {fileID: 0}
 --- !u!114 &2058047534
 MonoBehaviour:
   m_ObjectHideFlags: 0
