@@ -107,15 +107,17 @@ public class SetRandomDestination : MonoBehaviour
         }
 
         foreach (GameObject pizza in pizzaList)
+
+        
         {
-            pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // send pizza to the destination
+                pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // send pizza to the destination
 
-            Vector3 distanceToWalkPoint = pizza.transform.position - destination.transform.position;
+                Vector3 distanceToWalkPoint = pizza.transform.position - destination.transform.position;
 
-            if (distanceToWalkPoint.magnitude < stopDistance) // check if pizza is at destination
-            {
-                DeliveryComplete();
-            }
+                if (distanceToWalkPoint.magnitude < stopDistance) // check if pizza is at destination
+                {
+                    DeliveryComplete();
+                }
         }
     }
 
