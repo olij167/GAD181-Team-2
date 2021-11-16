@@ -17,6 +17,7 @@ TagManager:
   - RaceTrigger
   - Pizza
   - Grass
+  - MAST_Holder
   layers:
   - Default
   - TransparentFX
