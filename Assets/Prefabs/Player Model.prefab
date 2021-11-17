@@ -311,8 +311,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.21, y: 2.5180607, z: 4.89}
-  m_Center: {x: 0, y: 1.2608719, z: -0.0000014305115}
+  m_Size: {x: 2.21, y: 2, z: 4.89}
+  m_Center: {x: 0, y: 1, z: -0.0000014305115}
 --- !u!54 &6682467769924823180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -327,7 +327,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &5021343222071967590
 MonoBehaviour:
@@ -363,6 +363,7 @@ MonoBehaviour:
       m_Calls: []
   deliveriesCompleteUI: {fileID: 0}
   pizzaLauncherEngagedText: {fileID: 0}
+  pizzaEngagedBackground: {fileID: 0}
   temp: 0
   resetTemp: 0
   tempUIValue: {fileID: 0}
