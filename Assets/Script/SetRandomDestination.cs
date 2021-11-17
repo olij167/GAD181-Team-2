@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SetRandomDestination : MonoBehaviour
 {
@@ -15,7 +16,7 @@ public class SetRandomDestination : MonoBehaviour
     public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
     public LayerMask destinationLayer; 
 
-    public int numOfDeliveries, deliveryCounter;
+    public int numOfDeliveries = 3, deliveryCounter;
 
     // projectile variables
     public Transform shootPos;
@@ -62,10 +63,10 @@ public class SetRandomDestination : MonoBehaviour
         deliveriesCompleteUI.text = deliveryCounter.ToString();
 
         temp -= Time.deltaTime;
-
+        //Below is if the timer runs out the Game is over
         if (temp <= 0)
         {
-            // game over
+            SceneManager.LoadScene("LoseScreen");
         }
 
         tempUIValue.text = temp.ToString("F0");
@@ -132,12 +133,13 @@ public class SetRandomDestination : MonoBehaviour
 
         pizzaList.Clear();
 
-        if (deliveryCounter >= numOfDeliveries)
-        {
-            //game over scene transition
-        }
-
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+
+        //Below is the code for finishing the game after a certain amount of deliverys
+        if (deliveryCounter >= 2)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
 
         SetDestination();
     }

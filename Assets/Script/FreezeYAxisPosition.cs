@@ -16,5 +16,6 @@ public class FreezeYAxisPosition : MonoBehaviour
         {
             gameObject.transform.position = grounded;
         }
+
     }
 }
