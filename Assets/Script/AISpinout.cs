@@ -33,7 +33,8 @@ public class AISpinout : MonoBehaviour
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
 
-            Vector3 smashForce = new Vector3(collision.relativeVelocity.x, gameObject.transform.position.y, collision.relativeVelocity.z);
+
+            Vector3 smashForce = new Vector3(collision.relativeVelocity.x * spinSpeed, 0, collision.relativeVelocity.z * spinSpeed);
             rb.AddForce(smashForce * Time.deltaTime);
         }
     }
