@@ -29,15 +29,20 @@ public class SetRandomDestination : MonoBehaviour
 
     // delivery complete placeholder UI
     public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
+    public Image pizzaEngagedBackground;
 
     //temp variables
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
     public Image tempBar;
+    Color hot, cold;
 
 
     void Start()
     {
+        cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
+        hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
+        
         destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
         deliveryCompleteEvent.AddListener(DeliveryComplete);
@@ -59,9 +64,15 @@ public class SetRandomDestination : MonoBehaviour
         if (destinationInRange)
         {
             EngagePizzaLauncher(); // press space to shoot pizza
-            pizzaLauncherEngagedText.text = "Pizza Launcher Engaged!";
+            pizzaLauncherEngagedText.text = "Engaged!";
+            pizzaEngagedBackground.color = hot;
+
         }
-        else pizzaLauncherEngagedText.text = "Pizza Launcher Inactive.";
+        else
+        {
+            pizzaLauncherEngagedText.text = "Inactive.";
+            pizzaEngagedBackground.color = cold;
+        }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
 
@@ -80,7 +91,7 @@ public class SetRandomDestination : MonoBehaviour
         tempUIValue.text = temp.ToString("F0");
         float fillAmount = temp / resetTemp;
         tempBar.rectTransform.localScale = new Vector3(fillAmount, 1f, 1f);
-        tempBar.color = Color.Lerp(Color.blue, Color.red, temp / resetTemp);
+        tempBar.color = Color.Lerp(cold, hot, temp / resetTemp);
     }
 
     public void SetDestination() // choose random destination
