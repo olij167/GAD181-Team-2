@@ -7,7 +7,7 @@ public class CarCollisionSound : MonoBehaviour
     public AudioClip impact;
     AudioSource audioSource;
 
-    void Awake()
+    void Start()
     {
         audioSource = GetComponent<AudioSource>();
     }
@@ -15,5 +15,7 @@ public class CarCollisionSound : MonoBehaviour
     void OnCollisionEnter()
     {
         audioSource.PlayOneShot(impact, 0.7F);
+   
     }
+
 }
