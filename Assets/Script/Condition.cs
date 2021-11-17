@@ -37,9 +37,13 @@ private void OnCollisionEnter(Collision collision)
         }
         mytext.text = maxCondition.ToString();
         //below is the code to load the game over screen
-        if (maxCondition < 0)
+        if (maxCondition <= 0)
         {
             SceneManager.LoadScene("LoseScreen");
         }
+    }
+    private void Update()
+    {
+       
     }
 }
