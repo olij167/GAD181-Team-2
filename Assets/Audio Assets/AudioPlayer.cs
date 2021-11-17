@@ -8,8 +8,8 @@ public class AudioPlayer : MonoBehaviour
     public Mis1eader.MediaPlayer.AudioSourcePlayer mediaPlayer = null;
     //public Mis1eader.MediaPlayer.VideoClipPlayer mediaPlayer = null;
     //public Mis1eader.MediaPlayer.VideoSourcePlayer mediaPlayer = null;
-    public UnityEngine.KeyCode backward = UnityEngine.KeyCode.P;
-    public UnityEngine.KeyCode forward = UnityEngine.KeyCode.O;
+    public UnityEngine.KeyCode backward = UnityEngine.KeyCode.E;
+    public UnityEngine.KeyCode forward = UnityEngine.KeyCode.Q;
     private void Update()
     {
         if (mediaPlayer)

@@ -41,6 +41,10 @@ public class SetRandomDestination : MonoBehaviour
     public Image tempBar;
     Color hot, cold;
 
+    // audio variables
+    public AudioSource pizzaLaunched;
+    public AudioSource pizzaDelivered;
+  
 
     void Start()
     {
@@ -67,6 +71,7 @@ public class SetRandomDestination : MonoBehaviour
 
         if (destinationInRange)
         {
+          
             EngagePizzaLauncher(); // press space to shoot pizza
             pizzaLauncherEngagedText.text = "Engaged!";
             pizzaEngagedBackground.color = hot;
@@ -118,6 +123,7 @@ public class SetRandomDestination : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            pizzaLaunched.Play();
             Instantiate(pizza, shootPos.position, shootPos.rotation);
 
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("Pizza").Length; i++)
@@ -154,6 +160,7 @@ public class SetRandomDestination : MonoBehaviour
         deliveryComplete = true;
         deliveryCounter++;
         temp = resetTemp;
+        pizzaDelivered.Play();
 
         foreach (GameObject pizza in pizzaList)
         {
