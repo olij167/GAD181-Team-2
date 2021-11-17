@@ -3,7 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+<<<<<<< HEAD
+using UnityEngine.SceneManagement;
+=======
 using UnityEngine.Events;
+>>>>>>> bb201e790ee1e25e86ad98756f973a6addb47912
 
 public class SetRandomDestination : MonoBehaviour
 {
@@ -16,7 +20,7 @@ public class SetRandomDestination : MonoBehaviour
     public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
     public LayerMask destinationLayer; 
 
-    public int numOfDeliveries, deliveryCounter;
+    public int numOfDeliveries = 3, deliveryCounter;
 
     // projectile variables
     public Transform shootPos;
@@ -29,15 +33,24 @@ public class SetRandomDestination : MonoBehaviour
 
     // delivery complete placeholder UI
     public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
+    public Image pizzaEngagedBackground;
 
     //temp variables
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
     public Image tempBar;
+    Color hot, cold;
 
+    // audio variables
+    public AudioSource pizzaLaunched;
+    public AudioSource pizzaDelivered;
+  
 
     void Start()
     {
+        cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
+        hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
+        
         destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
         deliveryCompleteEvent.AddListener(DeliveryComplete);
@@ -58,18 +71,25 @@ public class SetRandomDestination : MonoBehaviour
 
         if (destinationInRange)
         {
+          
             EngagePizzaLauncher(); // press space to shoot pizza
-            pizzaLauncherEngagedText.text = "Pizza Launcher Engaged!";
+            pizzaLauncherEngagedText.text = "Engaged!";
+            pizzaEngagedBackground.color = hot;
+
         }
-        else pizzaLauncherEngagedText.text = "Pizza Launcher Inactive.";
+        else
+        {
+            pizzaLauncherEngagedText.text = "Inactive.";
+            pizzaEngagedBackground.color = cold;
+        }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
 
         temp -= Time.deltaTime;
-
+        //Below is if the timer runs out the Game is over
         if (temp <= 0)
         {
-            // game over
+            SceneManager.LoadScene("LoseScreen");
         }
 
         
@@ -80,7 +100,7 @@ public class SetRandomDestination : MonoBehaviour
         tempUIValue.text = temp.ToString("F0");
         float fillAmount = temp / resetTemp;
         tempBar.rectTransform.localScale = new Vector3(fillAmount, 1f, 1f);
-        tempBar.color = Color.Lerp(Color.blue, Color.red, temp / resetTemp);
+        tempBar.color = Color.Lerp(cold, hot, temp / resetTemp);
     }
 
     public void SetDestination() // choose random destination
@@ -103,6 +123,7 @@ public class SetRandomDestination : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            pizzaLaunched.Play();
             Instantiate(pizza, shootPos.position, shootPos.rotation);
 
             for (int i = 0; i < GameObject.FindGameObjectsWithTag("Pizza").Length; i++)
@@ -139,6 +160,7 @@ public class SetRandomDestination : MonoBehaviour
         deliveryComplete = true;
         deliveryCounter++;
         temp = resetTemp;
+        pizzaDelivered.Play();
 
         foreach (GameObject pizza in pizzaList)
         {
@@ -147,12 +169,13 @@ public class SetRandomDestination : MonoBehaviour
 
         pizzaList.Clear();
 
-        if (deliveryCounter >= numOfDeliveries)
-        {
-            //game over scene transition
-        }
-
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+
+        //Below is the code for finishing the game after a certain amount of deliverys
+        if (deliveryCounter >= 2)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
 
         SetDestination();
 
