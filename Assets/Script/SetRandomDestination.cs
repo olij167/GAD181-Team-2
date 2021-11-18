@@ -8,7 +8,7 @@ using UnityEngine.Events;
 public class SetRandomDestination : MonoBehaviour
 {
     public GameObject[] destinationArray; // all potential destinations
-    public GameObject destination; // selected destination
+    public GameObject destination, arrow; // selected destination
     public Material highlightedDestination;
     Material  originalDestinationMaterial;
 
@@ -28,8 +28,8 @@ public class SetRandomDestination : MonoBehaviour
     int destinationNum;
 
     // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
-    public Image pizzaEngagedBackground;
+    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText;
+    public Image pizzaEngagedBackground, pizzaEngagedBorder;
 
     //temp variables
     public float temp, resetTemp;
@@ -46,7 +46,9 @@ public class SetRandomDestination : MonoBehaviour
     {
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
-        
+
+        pizzaEngagedBackground.color = hot;
+
         destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
         deliveryCompleteEvent.AddListener(DeliveryComplete);
@@ -67,16 +69,21 @@ public class SetRandomDestination : MonoBehaviour
 
         if (destinationInRange)
         {
-          
+            pizzaLauncherText.enabled = true;
+            pizzaEngagedBorder.enabled = true;
+            pizzaEngagedBackground.enabled = true;
             EngagePizzaLauncher(); // press space to shoot pizza
-            pizzaLauncherEngagedText.text = "Engaged!";
-            pizzaEngagedBackground.color = hot;
+            engagedText.text = "Engaged!";
+            arrow.GetComponent<MeshRenderer>().material.color = hot;
 
         }
         else
         {
-            pizzaLauncherEngagedText.text = "Inactive.";
-            pizzaEngagedBackground.color = cold;
+            engagedText.text = null;
+            pizzaEngagedBorder.enabled = false;
+            pizzaEngagedBackground.enabled = false;
+            pizzaLauncherText.enabled = false;
+            arrow.GetComponent<MeshRenderer>().material.color = cold;
         }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
