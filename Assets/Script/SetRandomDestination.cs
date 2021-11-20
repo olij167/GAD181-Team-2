@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Events;
 
 public class SetRandomDestination : MonoBehaviour
 {
@@ -23,7 +22,7 @@ public class SetRandomDestination : MonoBehaviour
     public GameObject pizza;
     public List<GameObject> pizzaList; // control pizzas
     public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
-    public UnityEvent deliveryCompleteEvent;
+    public bool launcherActive;
 
     int destinationNum;
 
@@ -51,8 +50,6 @@ public class SetRandomDestination : MonoBehaviour
 
         destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
-        deliveryCompleteEvent.AddListener(DeliveryComplete);
-
         destinationArray = new GameObject[destinationNum];
         for (int i = 0; i < destinationNum; i++)
         {
@@ -79,7 +76,8 @@ public class SetRandomDestination : MonoBehaviour
             arrow.GetComponent<MeshRenderer>().material.color = hot;
 
         }
-        else
+        
+        if (!destinationInRange)
         {
             engagedText.text = null;
             pizzaEngagedBorder.enabled = false;
@@ -142,6 +140,7 @@ public class SetRandomDestination : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space)) // press space to shoot pizzas
         {
+            
             pizzaLaunched.Play();
             Instantiate(pizza, shootPos.position, shootPos.rotation);
 
@@ -175,8 +174,10 @@ public class SetRandomDestination : MonoBehaviour
         {
             //put game over scene transition script here
         }
-
+        
+        destination.layer = LayerMask.NameToLayer("BuildingLayer");
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+        
 
         SetDestination();
 
