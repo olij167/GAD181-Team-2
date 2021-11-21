@@ -71,4 +71,12 @@ public class HubWorldAI : MonoBehaviour
 
         walkPointSet = true;
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Pizza"))
+        {
+            Destroy(collision.gameObject);
+        }
+    }
 }
