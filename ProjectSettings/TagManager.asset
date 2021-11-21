@@ -19,6 +19,7 @@ TagManager:
   - Grass
   - MAST_Holder
   - Footpath
+  - Restaurant
   layers:
   - Default
   - TransparentFX
