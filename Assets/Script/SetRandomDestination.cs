@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class SetRandomDestination : MonoBehaviour
 {
@@ -13,7 +14,9 @@ public class SetRandomDestination : MonoBehaviour
 
     public float deliveryRange; // look radius
     public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
-    public LayerMask destinationLayer; 
+    public LayerMask destinationLayer;
+
+    public UnityAction deliveredEvent;
 
     public int numOfDeliveries, deliveryCounter;
 
@@ -43,6 +46,8 @@ public class SetRandomDestination : MonoBehaviour
 
     void Start()
     {
+        
+
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
 
@@ -155,9 +160,9 @@ public class SetRandomDestination : MonoBehaviour
             }
         }
     }
-
     public void DeliveryComplete()
     {
+        
         deliveryComplete = true;
         deliveryCounter++;
         temp = resetTemp;

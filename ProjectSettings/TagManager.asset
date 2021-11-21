@@ -18,6 +18,7 @@ TagManager:
   - Pizza
   - Grass
   - MAST_Holder
+  - Footpath
   layers:
   - Default
   - TransparentFX
@@ -30,7 +31,7 @@ TagManager:
   - JBEFIVBJAF
   - Destination
   - BuildingLayer
-  - 
+  - FootpathLayer
   - 
   - 
   - 

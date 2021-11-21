@@ -1,33 +1,37 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Events;
 
 
 public class PizzaCollisions : MonoBehaviour
 {
-    public GameObject player;
+
     public Material destinationMat;
-    
 
 
-    private void Awake()
+    private void Update()
     {
         Debug.Log("Pizza shot!");
-        destinationMat = player.GetComponent<SetRandomDestination>().highlightedDestination;
+        destinationMat = GameObject.FindGameObjectWithTag("Player").GetComponent<SetRandomDestination>().highlightedDestination;
+
+        Physics.IgnoreCollision(GameObject.FindGameObjectWithTag("Player").GetComponent<BoxCollider>(), GetComponent<SphereCollider>());
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
-       Physics.IgnoreCollision(player.GetComponent<BoxCollider>(), GetComponent<SphereCollider>(), true);
-
+       
         Debug.Log(other.gameObject.GetComponent<MeshRenderer>().material);
 
-        if (other.gameObject.GetComponent<MeshRenderer>().material == destinationMat)
+        if (other.gameObject.GetComponent<MeshRenderer>().material != destinationMat)
         {
-            Debug.Log("Delivery Complete");
+            Destroy(gameObject);
+            
+            Debug.Log("Target Missed");
         }
-        
+        else
+        {
+            gameObject.transform.position = Vector3.MoveTowards(gameObject.transform.position, other.transform.position, GameObject.FindGameObjectWithTag("Player").GetComponent<SetRandomDestination>().shotPower * Time.deltaTime);
+        }
     }
 }
 
