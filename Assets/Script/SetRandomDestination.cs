@@ -13,7 +13,7 @@ public class SetRandomDestination : MonoBehaviour
     Material  originalDestinationMaterial;
 
     public float deliveryRange; // look radius
-    public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
+    public bool destinationSet, destinationInRange; //check if destination is set, check if destination is in range, check if delivery complete
     public LayerMask destinationLayer;
 
     public UnityAction deliveredEvent;
@@ -30,14 +30,14 @@ public class SetRandomDestination : MonoBehaviour
     int destinationNum;
 
     // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText;
+    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
     public Image pizzaEngagedBackground, pizzaEngagedBorder;
 
     //temp variables
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
     public Image tempBar;
-    Color hot, cold;
+    Color hot, warm, cold;
 
     // audio variables
     public AudioSource pizzaLaunched;
@@ -46,9 +46,9 @@ public class SetRandomDestination : MonoBehaviour
 
     void Start()
     {
-        
 
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
+        warm = highlightedDestination.color;
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
 
         pizzaEngagedBackground.color = hot;
@@ -68,6 +68,8 @@ public class SetRandomDestination : MonoBehaviour
     void Update()
     {
         destinationInRange = Physics.CheckSphere(transform.position, deliveryRange, destinationLayer); // check if destination is within delivery range
+        Vector3 distanceToDestination = transform.position - destination.transform.position;
+        distanceToDestinationText.text = distanceToDestination.magnitude.ToString("f0");
 
         if (destinationInRange)
         {
@@ -77,8 +79,8 @@ public class SetRandomDestination : MonoBehaviour
             
             EngagePizzaLauncher(); // press space to shoot pizza
             engagedText.text = "Engaged!";
-            
-            arrow.GetComponent<MeshRenderer>().material.color = hot;
+
+            arrow.GetComponent<MeshRenderer>().material.color = highlightedDestination.color;
 
         }
         
@@ -88,8 +90,8 @@ public class SetRandomDestination : MonoBehaviour
             pizzaEngagedBorder.enabled = false;
             pizzaEngagedBackground.enabled = false;
             pizzaLauncherText.enabled = false;
-            
-            arrow.GetComponent<MeshRenderer>().material.color = cold;
+
+            arrow.GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.red, cold, distanceToDestination.magnitude / transform.position.magnitude);
         }
 
         // send pizza to destination
@@ -116,18 +118,17 @@ public class SetRandomDestination : MonoBehaviour
         {
             // game over
         }
-        
-        if (deliveryComplete) DeliveryComplete();
 
         tempUIValue.text = temp.ToString("F0");
         float fillAmount = temp / resetTemp;
-        tempBar.rectTransform.localScale = new Vector3(fillAmount, 1f, 1f);
-        tempBar.color = Color.Lerp(cold, hot, temp / resetTemp);
+        tempBar.fillAmount = fillAmount;
+        if (temp > resetTemp/2)
+            tempBar.color = Color.Lerp(warm, hot, temp / resetTemp);
+        else tempBar.color = Color.Lerp(cold, warm, temp / resetTemp);
     }
 
     public void SetDestination() // choose random destination
     {
-        deliveryComplete = false;
         int randDestination = Random.Range(0, destinationArray.Length); //generate a random number within the amount of buildings
 
         //for (int i = 0; i < destinationArray.Length; i++)
@@ -162,11 +163,10 @@ public class SetRandomDestination : MonoBehaviour
     }
     public void DeliveryComplete()
     {
-        
-        deliveryComplete = true;
         deliveryCounter++;
         temp = resetTemp;
         pizzaDelivered.Play();
+        
 
         foreach (GameObject pizza in pizzaList)
         {
@@ -182,12 +182,10 @@ public class SetRandomDestination : MonoBehaviour
         
         destination.layer = LayerMask.NameToLayer("BuildingLayer");
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+
+            SetDestination();
         
-
-        SetDestination();
-
     }
-
     void OnDrawGizmosSelected()
     {
         // look radius visualiser

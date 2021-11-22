@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Restaurant : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
