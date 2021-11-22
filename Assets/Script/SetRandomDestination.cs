@@ -3,20 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Events;
+
 
 public class SetRandomDestination : MonoBehaviour
 {
+    // destination indicator variables
     public GameObject[] destinationArray; // all potential destinations
     public GameObject destination, arrow; // selected destination
     public Material highlightedDestination;
     Material  originalDestinationMaterial;
 
+    //destination finding variables
     public float deliveryRange; // look radius
     public bool destinationSet, destinationInRange; //check if destination is set, check if destination is in range, check if delivery complete
     public LayerMask destinationLayer;
+    public Vector3 distanceToDestination;
 
-    public UnityAction deliveredEvent;
 
     public int numOfDeliveries, deliveryCounter;
 
@@ -68,8 +70,8 @@ public class SetRandomDestination : MonoBehaviour
     void Update()
     {
         destinationInRange = Physics.CheckSphere(transform.position, deliveryRange, destinationLayer); // check if destination is within delivery range
-        Vector3 distanceToDestination = transform.position - destination.transform.position;
-        distanceToDestinationText.text = distanceToDestination.magnitude.ToString("f0");
+        distanceToDestination = transform.position - destination.transform.position;
+        distanceToDestinationText.text = distanceToDestination.magnitude.ToString("f0") + "m";
 
         if (destinationInRange)
         {
