@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 400000}
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
+  - component: {fileID: -9063949004652161655}
   m_Layer: 10
   m_Name: Building_Store_Pawn
   m_TagString: Building
@@ -81,3 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-9063949004652161655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69d5ab8137f66445aadf64ba884748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
+  feedbackTimer: 2
+  feedbackTimerReset: 2
+  playerFeedback: 0
