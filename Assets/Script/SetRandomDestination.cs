@@ -8,13 +8,13 @@ using UnityEngine.Events;
 public class SetRandomDestination : MonoBehaviour
 {
     public GameObject[] destinationArray; // all potential destinations
-    public GameObject destination; // selected destination
+    public GameObject destination, arrow; // selected destination
     public Material highlightedDestination;
     Material  originalDestinationMaterial;
 
     public float deliveryRange; // look radius
     public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
-    public LayerMask destinationLayer; 
+    public LayerMask destinationLayer;
 
     public int numOfDeliveries = 3, deliveryCounter;
 
@@ -23,13 +23,13 @@ public class SetRandomDestination : MonoBehaviour
     public GameObject pizza;
     public List<GameObject> pizzaList; // control pizzas
     public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
-    public UnityEvent deliveryCompleteEvent;
+    public bool launcherActive;
 
     int destinationNum;
 
     // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
-    public Image pizzaEngagedBackground;
+    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText;
+    public Image pizzaEngagedBackground, pizzaEngagedBorder;
 
     //temp variables
     public float temp, resetTemp;
@@ -44,12 +44,14 @@ public class SetRandomDestination : MonoBehaviour
 
     void Start()
     {
+        
+
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
-        
-        destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
-        deliveryCompleteEvent.AddListener(DeliveryComplete);
+        pizzaEngagedBackground.color = hot;
+
+        destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
         destinationArray = new GameObject[destinationNum];
         for (int i = 0; i < destinationNum; i++)
@@ -67,16 +69,41 @@ public class SetRandomDestination : MonoBehaviour
 
         if (destinationInRange)
         {
-          
+            pizzaLauncherText.enabled = true;
+            pizzaEngagedBorder.enabled = true;
+            pizzaEngagedBackground.enabled = true;
+            
             EngagePizzaLauncher(); // press space to shoot pizza
-            pizzaLauncherEngagedText.text = "Engaged!";
-            pizzaEngagedBackground.color = hot;
+            engagedText.text = "Engaged!";
+            
+            arrow.GetComponent<MeshRenderer>().material.color = hot;
 
         }
-        else
+        
+        if (!destinationInRange)
         {
-            pizzaLauncherEngagedText.text = "Inactive.";
-            pizzaEngagedBackground.color = cold;
+            engagedText.text = null;
+            pizzaEngagedBorder.enabled = false;
+            pizzaEngagedBackground.enabled = false;
+            pizzaLauncherText.enabled = false;
+            
+            arrow.GetComponent<MeshRenderer>().material.color = cold;
+        }
+
+        // send pizza to destination
+        foreach (GameObject pizza in pizzaList)
+        {
+            if (pizza == null) pizzaList.Remove(pizza);
+
+            if (pizza != null)
+            {
+                pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // move the pizza towards the position of the delivery destination
+
+                Vector3 distanceToWalkPoint = pizza.transform.position - destination.transform.position; // the distance between the pizza and the destination
+
+                if (distanceToWalkPoint.magnitude < stopDistance) // check if pizza has reached destination
+                    DeliveryComplete();
+            }
         }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
@@ -87,9 +114,6 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
-
-        
-        
         
         if (deliveryComplete) DeliveryComplete();
 
@@ -102,10 +126,10 @@ public class SetRandomDestination : MonoBehaviour
     public void SetDestination() // choose random destination
     {
         deliveryComplete = false;
-        int randDestination = Random.Range(0, destinationArray.Length);
+        int randDestination = Random.Range(0, destinationArray.Length); //generate a random number within the amount of buildings
 
-        for (int i = 0; i < destinationArray.Length; i++)
-            destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
+        //for (int i = 0; i < destinationArray.Length; i++)
+        //    destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
 
         destination = destinationArray[randDestination];
         originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
@@ -117,8 +141,9 @@ public class SetRandomDestination : MonoBehaviour
     {
         //pizzaList = new List<GameObject>();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) // press space to shoot pizzas
         {
+            
             pizzaLaunched.Play();
             Instantiate(pizza, shootPos.position, shootPos.rotation);
 
@@ -128,31 +153,14 @@ public class SetRandomDestination : MonoBehaviour
 
                 if (!pizzaList.Contains(newPizza))
                 {
-                    pizzaList.Add(newPizza); // add new pizza to list
+                    pizzaList.Add(newPizza);
                 }
             }
         }
-
-        foreach (GameObject pizza in pizzaList)
-
-        
-        {
-            if (pizza == null) pizzaList.Remove(pizza);
-
-            if (pizza != null)
-            {
-                pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // send pizza to the destination
-
-                Vector3 distanceToWalkPoint = pizza.transform.position - destination.transform.position;
-
-                if (distanceToWalkPoint.magnitude < stopDistance)
-                    DeliveryComplete();
-            }
-        }
     }
-
     public void DeliveryComplete()
     {
+        
         deliveryComplete = true;
         deliveryCounter++;
         temp = resetTemp;
@@ -172,6 +180,10 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
+        
+        destination.layer = LayerMask.NameToLayer("BuildingLayer");
+        destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+        
 
         SetDestination();
 
