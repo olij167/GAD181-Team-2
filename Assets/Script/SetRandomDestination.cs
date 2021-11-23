@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-<<<<<<< HEAD
-using UnityEngine.SceneManagement;
-=======
 using UnityEngine.Events;
->>>>>>> bb201e790ee1e25e86ad98756f973a6addb47912
 
 public class SetRandomDestination : MonoBehaviour
 {
