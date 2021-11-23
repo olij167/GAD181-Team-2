@@ -5,27 +5,27 @@ using TMPro;
 
 public class Condition : MonoBehaviour
 {
-    private int maxCondition = 100;
+    [HideInInspector] public int condition, maxCondition = 100;
     public TextMeshProUGUI mytext;
 
     private void Start()
     {
-        mytext.text = maxCondition.ToString();
+        mytext.text = condition.ToString();
     }
 private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
-            maxCondition = maxCondition - 5;
+            condition = condition - 5;
         }
         else if (collision.gameObject.CompareTag("Pedestrian"))
         {
-            maxCondition = maxCondition - 1;
+            condition = condition - 1;
         }
         else if (collision.gameObject.CompareTag("Building"))
         {
-            maxCondition = maxCondition - 5;
+            condition = condition - 5;
         }
-        mytext.text = maxCondition.ToString();
+        mytext.text = condition.ToString();
     }
 }

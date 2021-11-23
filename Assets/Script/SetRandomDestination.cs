@@ -11,11 +11,11 @@ public class SetRandomDestination : MonoBehaviour
     public GameObject[] destinationArray; // all potential destinations
     public GameObject destination, arrow; // selected destination
     public Material highlightedDestination;
-    Material  originalDestinationMaterial;
+    Material  originalDestinationMaterial, originalArrowMaterial;
 
-    //destination finding variables
-    public float deliveryRange; // look radius
-    public bool destinationSet, destinationInRange; //check if destination is set, check if destination is in range, check if delivery complete
+    //destination finding and delivery complete variables
+    public float deliveryRange, feedbackTimer, feedbackTimerReset; // look radius
+    public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
     public LayerMask destinationLayer;
     public Vector3 distanceToDestination;
 
@@ -34,6 +34,7 @@ public class SetRandomDestination : MonoBehaviour
     // delivery complete placeholder UI
     public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
     public Image pizzaEngagedBackground, pizzaEngagedBorder;
+    public Material goodFeedback;
 
     //temp variables
     public float temp, resetTemp;
@@ -127,6 +128,25 @@ public class SetRandomDestination : MonoBehaviour
         if (temp > resetTemp/2)
             tempBar.color = Color.Lerp(warm, hot, temp / resetTemp);
         else tempBar.color = Color.Lerp(cold, warm, temp / resetTemp);
+
+        if (playerFeedback)
+        {
+            originalArrowMaterial = arrow.GetComponent<MeshRenderer>().material;
+            feedbackTimer -= Time.deltaTime;
+            destination.GetComponent<MeshRenderer>().material = goodFeedback;
+            arrow.GetComponent<MeshRenderer>().material = goodFeedback;
+
+            if (feedbackTimer <= 0)
+            {
+                destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+                arrow.GetComponent<MeshRenderer>().material = originalArrowMaterial;
+
+                destination.layer = LayerMask.NameToLayer("BuildingLayer");
+                feedbackTimer = feedbackTimerReset;
+                SetDestination();
+                playerFeedback = false;
+            }
+        }            
     }
 
     public void SetDestination() // choose random destination
@@ -135,6 +155,8 @@ public class SetRandomDestination : MonoBehaviour
 
         //for (int i = 0; i < destinationArray.Length; i++)
         //    destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
+        temp = resetTemp;
+        gameObject.GetComponent<Condition>().condition = gameObject.GetComponent<Condition>().maxCondition;
 
         destination = destinationArray[randDestination];
         originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
@@ -166,9 +188,8 @@ public class SetRandomDestination : MonoBehaviour
     public void DeliveryComplete()
     {
         deliveryCounter++;
-        temp = resetTemp;
+        playerFeedback = true;
         pizzaDelivered.Play();
-        
 
         foreach (GameObject pizza in pizzaList)
         {
@@ -181,11 +202,6 @@ public class SetRandomDestination : MonoBehaviour
         {
             //put game over scene transition script here
         }
-        
-        destination.layer = LayerMask.NameToLayer("BuildingLayer");
-        destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
-
-            SetDestination();
         
     }
     void OnDrawGizmosSelected()

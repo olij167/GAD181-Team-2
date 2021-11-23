@@ -13,14 +13,14 @@ public class HubWorldAI : MonoBehaviour
     public List<GameObject> checkpoints;
 
     public Vector3 walkPoint, lastPosition;
-    public bool walkPointSet;
+    public bool walkPointSet, playerFeedback;
 
     public float speed = 1000f, stopDistance, walkPointTimer, walkPointTimerReset;
-                //stop distance is the distance from checkpoint before a new point is chosen
+                    //stop distance is the distance from checkpoint before a new point is chosen
 
-                //walkpoint timer is the time ai has to reach walkpoint before finding a new one
+                    //walkpoint timer is the time ai has to reach walkpoint before finding a new one
 
-                //walkpoint timer reset is the time for timer to reset to
+                    //walkpoint timer reset is the time for timer to reset to
 
     void Start()
     {
@@ -30,11 +30,13 @@ public class HubWorldAI : MonoBehaviour
 
     void Update()
     {
-
         if (walkPointTimer > 0)
             walkPointTimer -= Time.deltaTime;
+        else SearchWalkPoint();
 
         Patroling();
+
+        
     }
 
     private void Patroling()
@@ -70,13 +72,5 @@ public class HubWorldAI : MonoBehaviour
         }
 
         walkPointSet = true;
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag("Pizza"))
-        {
-            Destroy(collision.gameObject);
-        }
     }
 }

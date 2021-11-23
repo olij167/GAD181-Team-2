@@ -156,6 +156,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  playerFeedback: 0
   speed: 1200
   stopDistance: 1
   walkPointTimer: 10
@@ -176,6 +177,10 @@ MonoBehaviour:
   sleeptime: 5
   sleeptimeReset: 5
   trafficPrefab: {fileID: 5827861789765311647}
+  playerFeedback: 0
+  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
+  feedbackTimer: 2
+  feedbackTimerReset: 2
 --- !u!114 &149799190584596288
 MonoBehaviour:
   m_ObjectHideFlags: 0
