@@ -6,41 +6,31 @@ using UnityEngine.SceneManagement;
 
 public class Condition : MonoBehaviour
 {
-    private int maxCondition = 100;
+    [HideInInspector] public int condition, maxCondition = 100;
     public TextMeshProUGUI mytext;
 
     private void Start()
     {
-        mytext.text = maxCondition.ToString();
+        mytext.text = condition.ToString();
     }
 private void OnCollisionEnter(Collision collision)
     {
         //Cars driving around
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
-            maxCondition = maxCondition - 5;
+            condition = condition - 5;
         }
         //little guys walking around
         else if (collision.gameObject.CompareTag("Pedestrian"))
         {
-            maxCondition = maxCondition - 1;
+            condition = condition - 1;
         }
         //Buildins what can be delivered to
         else if (collision.gameObject.CompareTag("Building"))
         {
-            maxCondition = maxCondition - 5;
+            condition = condition - 5;
         }
-        //randoms buildings/environment around town
-        else if (collision.gameObject.CompareTag("Decoration"))
-        {
-            maxCondition = maxCondition - 5;
-        }
-        mytext.text = maxCondition.ToString();
-        //below is the code to load the game over screen
-        if (maxCondition <= 0)
-        {
-            SceneManager.LoadScene("LoseScreen");
-        }
+        mytext.text = condition.ToString();
     }
     private void Update()
     {

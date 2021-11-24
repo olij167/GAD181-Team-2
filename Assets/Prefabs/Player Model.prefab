@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4228721298090467731}
   - component: {fileID: 2110948887742076249}
   - component: {fileID: 7135363180183269575}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -119,7 +119,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4786615184924611839}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.96, z: -1.93}
+  m_LocalPosition: {x: 0, y: 3.94, z: -1.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6682467770158729655}
@@ -309,8 +309,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.21, y: 2.5180607, z: 4.89}
-  m_Center: {x: 0, y: 1.2608719, z: -0.0000014305115}
+  m_Size: {x: 2.21, y: 2, z: 4.89}
+  m_Center: {x: 0, y: 1, z: -0.0000014305115}
 --- !u!54 &6682467769924823180
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -325,7 +325,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 0
 --- !u!114 &5021343222071967590
 MonoBehaviour:
@@ -341,30 +341,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   destinationArray: []
   destination: {fileID: 0}
+  arrow: {fileID: 0}
   highlightedDestination: {fileID: 2100000, guid: 78bfb3f9eadfe3343b6dde7c4b230846, type: 2}
   deliveryRange: 20
   destinationSet: 0
   destinationInRange: 0
-  deliveryComplete: 0
   destinationLayer:
     serializedVersion: 2
     m_Bits: 512
+  distanceToDestination: {x: 0, y: 0, z: 0}
   numOfDeliveries: 0
   deliveryCounter: 0
   shootPos: {fileID: 2363390800439898423}
-  pizza: {fileID: 3367850983754321440, guid: f6eb9a3f0e87dc241955b6b1f0c33d00, type: 3}
+  pizza: {fileID: 3828029944556317599, guid: 9af1df06d5af5bd4ca35b84e9998910e, type: 3}
   pizzaList: []
   shotPower: 0
   stopDistance: 0
-  deliveryCompleteEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  launcherActive: 0
   deliveriesCompleteUI: {fileID: 0}
-  pizzaLauncherEngagedText: {fileID: 0}
+  pizzaLauncherText: {fileID: 0}
+  engagedText: {fileID: 0}
+  distanceToDestinationText: {fileID: 0}
+  pizzaEngagedBackground: {fileID: 0}
+  pizzaEngagedBorder: {fileID: 0}
   temp: 0
   resetTemp: 0
   tempUIValue: {fileID: 0}
   tempBar: {fileID: 0}
+  pizzaLaunched: {fileID: 0}
+  pizzaDelivered: {fileID: 0}
 --- !u!82 &6682467769924823222
 AudioSource:
   m_ObjectHideFlags: 0

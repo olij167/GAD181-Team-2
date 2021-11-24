@@ -3,39 +3,43 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.Events;
+using UnityEngine.SceneManagement;
+
 
 public class SetRandomDestination : MonoBehaviour
 {
+    // destination indicator variables
     public GameObject[] destinationArray; // all potential destinations
-    public GameObject destination; // selected destination
+    public GameObject destination, arrow; // selected destination
     public Material highlightedDestination;
-    Material  originalDestinationMaterial;
+    Material  originalDestinationMaterial, originalArrowMaterial;
 
-    public float deliveryRange; // look radius
-    public bool destinationSet, destinationInRange, deliveryComplete; //check if destination is set, check if destination is in range, check if delivery complete
-    public LayerMask destinationLayer; 
+    //destination finding and delivery complete variables
+    public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter; // look radius
+    public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
+    public LayerMask destinationLayer;
+    public Vector3 distanceToDestination;
 
-    public int numOfDeliveries = 3, deliveryCounter;
 
     // projectile variables
     public Transform shootPos;
     public GameObject pizza;
     public List<GameObject> pizzaList; // control pizzas
     public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
-    public UnityEvent deliveryCompleteEvent;
+    public bool launcherActive;
 
     int destinationNum;
 
     // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherEngagedText;
-    public Image pizzaEngagedBackground;
+    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
+    public Image pizzaEngagedBackground, pizzaEngagedBorder;
+    public Material goodFeedback;
 
     //temp variables
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
     public Image tempBar;
-    Color hot, cold;
+    Color hot, warm, cold;
 
     // audio variables
     public AudioSource pizzaLaunched;
@@ -44,12 +48,14 @@ public class SetRandomDestination : MonoBehaviour
 
     void Start()
     {
-        cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
-        hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
-        
-        destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
-        deliveryCompleteEvent.AddListener(DeliveryComplete);
+        cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
+        warm = highlightedDestination.color;
+        hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
+
+        pizzaEngagedBackground.color = hot;
+
+        destinationNum = GameObject.FindGameObjectsWithTag("Building").Length;
 
         destinationArray = new GameObject[destinationNum];
         for (int i = 0; i < destinationNum; i++)
@@ -64,19 +70,46 @@ public class SetRandomDestination : MonoBehaviour
     void Update()
     {
         destinationInRange = Physics.CheckSphere(transform.position, deliveryRange, destinationLayer); // check if destination is within delivery range
+        distanceToDestination = transform.position - destination.transform.position;
+        distanceToDestinationText.text = distanceToDestination.magnitude.ToString("f0") + "m";
 
         if (destinationInRange)
         {
-          
+            pizzaLauncherText.enabled = true;
+            pizzaEngagedBorder.enabled = true;
+            pizzaEngagedBackground.enabled = true;
+            
             EngagePizzaLauncher(); // press space to shoot pizza
-            pizzaLauncherEngagedText.text = "Engaged!";
-            pizzaEngagedBackground.color = hot;
+            engagedText.text = "Engaged!";
+
+            arrow.GetComponent<MeshRenderer>().material.color = highlightedDestination.color;
 
         }
-        else
+        
+        if (!destinationInRange)
         {
-            pizzaLauncherEngagedText.text = "Inactive.";
-            pizzaEngagedBackground.color = cold;
+            engagedText.text = null;
+            pizzaEngagedBorder.enabled = false;
+            pizzaEngagedBackground.enabled = false;
+            pizzaLauncherText.enabled = false;
+
+            arrow.GetComponent<MeshRenderer>().material.color = Color.Lerp(Color.red, cold, distanceToDestination.magnitude / transform.position.magnitude);
+        }
+
+        // send pizza to destination
+        foreach (GameObject pizza in pizzaList)
+        {
+            if (pizza == null) pizzaList.Remove(pizza);
+
+            if (pizza != null)
+            {
+                pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // move the pizza towards the position of the delivery destination
+
+                Vector3 distanceToWalkPoint = pizza.transform.position - destination.transform.position; // the distance between the pizza and the destination
+
+                if (distanceToWalkPoint.magnitude < stopDistance) // check if pizza has reached destination
+                    DeliveryComplete();
+            }
         }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
@@ -88,24 +121,41 @@ public class SetRandomDestination : MonoBehaviour
             SceneManager.LoadScene("LoseScreen");
         }
 
-        
-        
-        
-        if (deliveryComplete) DeliveryComplete();
-
         tempUIValue.text = temp.ToString("F0");
         float fillAmount = temp / resetTemp;
-        tempBar.rectTransform.localScale = new Vector3(fillAmount, 1f, 1f);
-        tempBar.color = Color.Lerp(cold, hot, temp / resetTemp);
+        tempBar.fillAmount = fillAmount;
+        if (temp > resetTemp/2)
+            tempBar.color = Color.Lerp(warm, hot, temp / resetTemp);
+        else tempBar.color = Color.Lerp(cold, warm, temp / resetTemp);
+
+        if (playerFeedback)
+        {
+            originalArrowMaterial = arrow.GetComponent<MeshRenderer>().material;
+            feedbackTimer -= Time.deltaTime;
+            destination.GetComponent<MeshRenderer>().material = goodFeedback;
+            arrow.GetComponent<MeshRenderer>().material = goodFeedback;
+
+            if (feedbackTimer <= 0)
+            {
+                destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+                arrow.GetComponent<MeshRenderer>().material = originalArrowMaterial;
+
+                destination.layer = LayerMask.NameToLayer("BuildingLayer");
+                feedbackTimer = feedbackTimerReset;
+                SetDestination();
+                playerFeedback = false;
+            }
+        }            
     }
 
     public void SetDestination() // choose random destination
     {
-        deliveryComplete = false;
-        int randDestination = Random.Range(0, destinationArray.Length);
+        int randDestination = Random.Range(0, destinationArray.Length); //generate a random number within the amount of buildings
 
-        for (int i = 0; i < destinationArray.Length; i++)
-            destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
+        //for (int i = 0; i < destinationArray.Length; i++)
+        //    destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
+        temp = resetTemp;
+        gameObject.GetComponent<Condition>().condition = gameObject.GetComponent<Condition>().maxCondition;
 
         destination = destinationArray[randDestination];
         originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
@@ -117,8 +167,9 @@ public class SetRandomDestination : MonoBehaviour
     {
         //pizzaList = new List<GameObject>();
 
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space)) // press space to shoot pizzas
         {
+            
             pizzaLaunched.Play();
             Instantiate(pizza, shootPos.position, shootPos.rotation);
 
@@ -128,34 +179,15 @@ public class SetRandomDestination : MonoBehaviour
 
                 if (!pizzaList.Contains(newPizza))
                 {
-                    pizzaList.Add(newPizza); // add new pizza to list
+                    pizzaList.Add(newPizza);
                 }
             }
         }
-
-        foreach (GameObject pizza in pizzaList)
-
-        
-        {
-            if (pizza == null) pizzaList.Remove(pizza);
-
-            if (pizza != null)
-            {
-                pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // send pizza to the destination
-
-                Vector3 distanceToWalkPoint = pizza.transform.position - destination.transform.position;
-
-                if (distanceToWalkPoint.magnitude < stopDistance)
-                    DeliveryComplete();
-            }
-        }
     }
-
     public void DeliveryComplete()
     {
-        deliveryComplete = true;
         deliveryCounter++;
-        temp = resetTemp;
+        playerFeedback = true;
         pizzaDelivered.Play();
 
         foreach (GameObject pizza in pizzaList)
@@ -172,11 +204,8 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
-
-        SetDestination();
-
+        
     }
-
     void OnDrawGizmosSelected()
     {
         // look radius visualiser

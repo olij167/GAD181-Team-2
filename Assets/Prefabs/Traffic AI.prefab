@@ -94,12 +94,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5827861789765311647}
-  m_Material: {fileID: 13400000, guid: 5b98ac58c566fe449bb24c46b6d0c235, type: 2}
+  m_Material: {fileID: 13400000, guid: 5a2f21e0209e05a4dada2d47bd439920, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.02, y: 2, z: 4.81}
-  m_Center: {x: 0, y: 1.73, z: -0.0000014305115}
+  m_Center: {x: 0, y: 2, z: -0.0000014305115}
 --- !u!54 &5292523655103725933
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -108,13 +108,13 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5827861789765311647}
   serializedVersion: 2
-  m_Mass: 0.25
+  m_Mass: 0.5
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 1
-  m_Constraints: 80
+  m_Constraints: 84
   m_CollisionDetection: 1
 --- !u!195 &1595395662669862851
 NavMeshAgent:
@@ -156,6 +156,7 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  playerFeedback: 0
   speed: 1200
   stopDistance: 1
   walkPointTimer: 10
@@ -173,9 +174,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spinSpeed: 100
-  sleeptime: 6
-  sleeptimeReset: 6
+  sleeptime: 5
+  sleeptimeReset: 5
   trafficPrefab: {fileID: 5827861789765311647}
+  playerFeedback: 0
+  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
+  feedbackTimer: 2
+  feedbackTimerReset: 2
 --- !u!114 &149799190584596288
 MonoBehaviour:
   m_ObjectHideFlags: 0

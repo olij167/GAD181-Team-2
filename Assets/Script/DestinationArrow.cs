@@ -8,7 +8,7 @@ public class DestinationArrow : MonoBehaviour
 
     private void Update()
     {
-        target = GetComponentInParent<SetRandomDestination>().destination.transform;
+        target = GameObject.FindGameObjectWithTag("Player").GetComponent<SetRandomDestination>().destination.transform;
 
         transform.LookAt(target);
     }

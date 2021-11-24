@@ -45,6 +45,14 @@ public class PlayerCar : MonoBehaviour
         lastPosition = transform.position;
 
         _sideSlipAmount = movement.x;
+
+        if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
+        {
+            if (_sideSlipAmount > 0)
+            {
+                _sideSlipAmount -= 2 * Time.deltaTime;
+            }
+        }
     }
 
 
