@@ -18,9 +18,9 @@ public class BuildingCollisions : MonoBehaviour
     }
     private void Update()
     {
-        if (playerFeedback)
+       if (playerFeedback)
         {
-            //gameObject.GetComponent<MeshRenderer>().material = badFeedback;
+            gameObject.GetComponent<MeshRenderer>().material = badFeedback;
 
             feedbackTimer -= Time.deltaTime;
 
@@ -30,7 +30,6 @@ public class BuildingCollisions : MonoBehaviour
                 feedbackTimer = feedbackTimerReset;
                 playerFeedback = false;
             }
-            
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -40,9 +39,9 @@ public class BuildingCollisions : MonoBehaviour
             Debug.Log(gameObject.layer);
             if (!gameObject.layer.Equals(9))
             {
-                Destroy(collision.gameObject);
-            wrongDelivery.Play();
                 playerFeedback = true;
+                Destroy(collision.gameObject);
+                wrongDelivery.Play();
             }
         }
 
