@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Temperature : MonoBehaviour
 {
@@ -15,15 +16,11 @@ public class Temperature : MonoBehaviour
     void Start()
     {
         textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
+
     }
 
     void Update()
     {
-        //player.GetComponent<SetRandomDestination>().del
-
-
-
-
         if (secondsLeft <= 0)
         {
             secondsLeft = resetSecondsLeft;
@@ -32,7 +29,12 @@ public class Temperature : MonoBehaviour
         {
             StartCoroutine(TimerTake());
         }
+        if (secondsLeft < 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
     }
+    //i dont know if below code is still valid at this point?
     IEnumerator TimerTake()
     {
         takingAway = true;
@@ -47,12 +49,6 @@ public class Temperature : MonoBehaviour
             textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
         }
         takingAway = false;
-        GameOver();
-
-        void GameOver()
-        {
-
-        }
     }
 
 }

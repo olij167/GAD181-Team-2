@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 210112068}
   - component: {fileID: 987259804533976341}
   - component: {fileID: 6713023163160224965}
+  - component: {fileID: -191188371203900799}
   m_Layer: 10
   m_Name: Building_House_06
   m_TagString: Building
@@ -123,3 +124,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 5.13, y: 15.976265, z: 10.58}
   m_Center: {x: 2.06, y: 7.9881325, z: 7.59}
+--- !u!114 &-191188371203900799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e69d5ab8137f66445aadf64ba884748b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
+  feedbackTimer: 2
+  feedbackTimerReset: 2
+  playerFeedback: 0

@@ -255,3 +255,6 @@ MonoBehaviour:
   stopDistance: 0.5
   walkPointTimer: 20
   walkPointTimerReset: 20
+  feedbackTimer: 3
+  feedbackTimerReset: 3
+  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}

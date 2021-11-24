@@ -17,8 +17,10 @@ TagManager:
   - RaceTrigger
   - Pizza
   - Grass
+  - Decoration
   - MAST_Holder
   - Footpath
+  - Restaurant
   layers:
   - Default
   - TransparentFX
@@ -32,7 +34,7 @@ TagManager:
   - Destination
   - BuildingLayer
   - FootpathLayer
-  - 
+  - Arrow
   - 
   - 
   - 

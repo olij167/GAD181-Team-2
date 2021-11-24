@@ -8,10 +8,15 @@ public class AISpinout : MonoBehaviour
     Rigidbody rb;
     public float spinSpeed = 500f, sleeptime, sleeptimeReset;
     public GameObject trafficPrefab;
+    public bool playerFeedback;
+    public Material badFeedback;
+    Material originalMaterial;
+    public float feedbackTimer = 3, feedbackTimerReset = 3;
 
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
+        originalMaterial = gameObject.GetComponent<MeshRenderer>().material;
     }
 
     private void LateUpdate()
@@ -25,6 +30,20 @@ public class AISpinout : MonoBehaviour
             gameObject.GetComponent<NavMeshAgent>().enabled = true;
             sleeptime = sleeptimeReset;
         }
+
+        if (playerFeedback)
+        {
+            gameObject.GetComponent<MeshRenderer>().material = badFeedback;
+
+            feedbackTimer -= Time.deltaTime;
+
+            if (feedbackTimer <= 0)
+            {
+                gameObject.GetComponent<MeshRenderer>().material = originalMaterial;
+                feedbackTimer = feedbackTimerReset;
+                playerFeedback = false;
+            }
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -36,6 +55,16 @@ public class AISpinout : MonoBehaviour
 
             Vector3 smashForce = new Vector3(collision.relativeVelocity.x * spinSpeed, 0, collision.relativeVelocity.z * spinSpeed);
             rb.AddForce(smashForce * Time.deltaTime);
+
+            
+            if (collision.gameObject)
+                playerFeedback = true;
+
+            if (collision.gameObject.CompareTag("Pizza"))
+            {
+                Destroy(collision.gameObject);
+            }
+            
         }
     }
 }
