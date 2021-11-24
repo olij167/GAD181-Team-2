@@ -15008,7 +15008,7 @@ MonoBehaviour:
   hubCar: {fileID: 5827861789765311647, guid: 3c525ae2b2e03a04a9f4dcfb77eb1046, type: 3}
   hubCarSpawn: []
   hubCarList: []
-  hubCarNum: 2
+  hubCarNum: 15
   grassMask:
     serializedVersion: 2
     m_Bits: 128
@@ -35000,10 +35000,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1222465872}
   m_Mesh: {fileID: 4300000, guid: af4878fa6956aaf4f8de9982324f692a, type: 3}
-  badFeedback: {fileID: 0}
-  feedbackTimer: 0
-  feedbackTimerReset: 0
-  playerFeedback: 0
 --- !u!4 &1950360846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
