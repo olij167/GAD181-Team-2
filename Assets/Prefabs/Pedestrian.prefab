@@ -110,6 +110,7 @@ GameObject:
   - component: {fileID: 7220926856843305379}
   - component: {fileID: 7220926856843305372}
   - component: {fileID: 160626820100379961}
+  - component: {fileID: 4591548888208414316}
   m_Layer: 0
   m_Name: Pedestrian
   m_TagString: Pedestrian
@@ -251,10 +252,24 @@ MonoBehaviour:
   walkPoint: {x: 0, y: 0, z: 0}
   lastPosition: {x: 0, y: 0, z: 0}
   walkPointSet: 0
+  playerFeedback: 0
   speed: 100
   stopDistance: 0.5
   walkPointTimer: 20
   walkPointTimerReset: 20
+--- !u!114 &4591548888208414316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220926856843305369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 575a2c0c86eb567488c27091b2dbb527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
+  playerFeedback: 0
   feedbackTimer: 3
   feedbackTimerReset: 3
-  badFeedback: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
