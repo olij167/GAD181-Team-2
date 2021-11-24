@@ -28,6 +28,7 @@ private void OnCollisionEnter(Collision collision)
         //Buildins what can be delivered to
         else if (collision.gameObject.CompareTag("Building"))
         {
+<<<<<<< HEAD
             condition = condition - 5;
         }
         mytext.text = condition.ToString();
@@ -35,5 +36,18 @@ private void OnCollisionEnter(Collision collision)
     private void Update()
     {
        
+=======
+            maxCondition = maxCondition - 30;
+        }
+        mytext.text = maxCondition.ToString();
+
+    }
+    public void Update()
+    {
+        if (maxCondition <= 0)
+        {
+            SceneManager.LoadScene("GameOver");
+        }
+>>>>>>> DK-Points
     }
 }
