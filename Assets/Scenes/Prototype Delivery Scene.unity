@@ -289,6 +289,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &22006903
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -690,6 +694,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &38898790 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 74978b6b36516b04b92f6ec6b3b0898d, type: 3}
@@ -726,6 +734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &44801373
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -964,6 +976,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &53363809 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 30fba1c3c845fdf47b5228bcbf5a62ca, type: 3}
@@ -1283,6 +1299,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &80448449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1375,6 +1395,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &106030301
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1727,10 +1751,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -1738,6 +1758,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: feedbackTimerReset
       value: 3
@@ -1995,6 +2019,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &124777515
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2259,6 +2287,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &134875352
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2381,6 +2413,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &142709500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 74978b6b36516b04b92f6ec6b3b0898d, type: 3}
@@ -2414,6 +2450,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &151272067
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2862,6 +2902,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &194923282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3917,20 +3961,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118373263}
     m_RemovedComponents: []
-    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
-      propertyPath: badFeedback
-      value: 
-      objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
-    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
-      propertyPath: feedbackTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
-      propertyPath: feedbackTimerReset
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: -1571772575164118788, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
 --- !u!4 &238690547 stripped
 Transform:
@@ -4115,6 +4145,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &245169471 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -4138,6 +4172,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &252989201 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 303d9b02a3b7b874eb028800a52153a8, type: 3}
@@ -4265,6 +4303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &273215851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4803,6 +4845,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &296425482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6220,6 +6266,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &394329149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6346,6 +6396,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &396765768 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -6448,6 +6502,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &413287977
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7073,6 +7131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &462863024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7159,6 +7221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69d5ab8137f66445aadf64ba884748b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrongDelivery: {fileID: 0}
   badFeedback: {fileID: 0}
   feedbackTimer: 0
   feedbackTimerReset: 0
@@ -7849,6 +7912,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &503885099
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8204,6 +8271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &531239647 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -8375,6 +8446,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &546108252
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8406,6 +8481,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &547020261 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
@@ -8584,6 +8663,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &554330171
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8848,6 +8931,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &561362860
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9264,6 +9351,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &576818646
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9324,20 +9415,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118373263}
     m_RemovedComponents: []
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: badFeedback
-      value: 
-      objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimerReset
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1285636020008183687, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
 --- !u!1001 &576874420
 PrefabInstance:
@@ -9436,6 +9513,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &588895978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 2d411e3705baf384f95cd9fdb8f7c680, type: 3}
@@ -9454,6 +9535,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &588895981
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9799,6 +9884,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &601208312
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10072,6 +10161,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &624813001
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11269,6 +11362,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &685618699 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 30fba1c3c845fdf47b5228bcbf5a62ca, type: 3}
@@ -11287,6 +11384,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &685618702
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11686,6 +11787,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &718943250
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11808,6 +11913,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &724606734
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12255,10 +12364,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -12266,6 +12371,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
       propertyPath: feedbackTimerReset
       value: 3
@@ -12345,20 +12454,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118373263}
     m_RemovedComponents: []
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: badFeedback
-      value: 
-      objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimerReset
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1285636020008183687, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
 --- !u!4 &748661647 stripped
 Transform:
@@ -12383,6 +12478,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &751356638 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 305e1eb2d9581674f9f4bf509f939360, type: 3}
@@ -12647,6 +12746,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &767524377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12833,6 +12936,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &783469679
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12933,6 +13040,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &785717143
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13010,20 +13121,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118373263}
     m_RemovedComponents: []
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: badFeedback
-      value: 
-      objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimerReset
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1285636020008183687, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
 --- !u!4 &786381584 stripped
 Transform:
@@ -13052,6 +13149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69d5ab8137f66445aadf64ba884748b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrongDelivery: {fileID: 0}
   badFeedback: {fileID: 0}
   feedbackTimer: 0
   feedbackTimerReset: 0
@@ -13256,6 +13354,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &813847807 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -13613,6 +13715,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &825291285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13896,6 +14002,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &833915896 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -14242,6 +14352,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &844756090
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14428,6 +14542,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &849679838
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14528,6 +14646,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &851919884
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14660,7 +14782,7 @@ MonoBehaviour:
   hubCar: {fileID: 5827861789765311647, guid: 3c525ae2b2e03a04a9f4dcfb77eb1046, type: 3}
   hubCarSpawn: []
   hubCarList: []
-  hubCarNum: 20
+  hubCarNum: 2
   grassMask:
     serializedVersion: 2
     m_Bits: 128
@@ -14783,6 +14905,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &854627822
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15242,6 +15368,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &868797545
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15278,6 +15408,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &878366138
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15387,6 +15521,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &881244578
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15688,6 +15826,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &895714791
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16016,6 +16158,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &913436525
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -16047,6 +16193,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &921991905 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -16551,6 +16701,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &960128286
 GameObject:
   m_ObjectHideFlags: 0
@@ -16815,6 +16969,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &974768551
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16923,6 +17081,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &980513451
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17133,6 +17295,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &990520286
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17397,6 +17563,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1014659879
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17590,6 +17760,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1024279516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17754,6 +17928,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1029659092
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17785,6 +17963,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1032264432
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18059,6 +18241,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1045626896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18353,6 +18539,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &1057738465
 GameObject:
   m_ObjectHideFlags: 0
@@ -18576,6 +18766,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1058002015 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 8ccd238123648c94f98a6b61b908ac34, type: 3}
@@ -18599,6 +18793,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1061855643 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -18945,6 +19143,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1071154108
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19058,6 +19260,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1085780542
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19413,6 +19619,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1100547945
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19662,6 +19872,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1112213320 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -20106,6 +20320,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1149834983
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20142,6 +20360,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1159773599
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20647,6 +20869,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1184845083 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 04339706bd57d0e4ca629c1c3ef52dfb, type: 3}
@@ -20749,6 +20975,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1210067501
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21252,6 +21482,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1223362475
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21619,6 +21853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e69d5ab8137f66445aadf64ba884748b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrongDelivery: {fileID: 0}
   badFeedback: {fileID: 0}
   feedbackTimer: 0
   feedbackTimerReset: 0
@@ -21786,6 +22021,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1273090772
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22757,6 +22996,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1351937103
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23119,6 +23362,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1391514359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23241,6 +23488,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1400097059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
@@ -23264,6 +23515,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1408484078 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
@@ -23287,6 +23542,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &1409866545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 34dea18c1f78fe14e90765bd1a4d911f, type: 3}
@@ -23305,6 +23564,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1409866548
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23336,6 +23599,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1412189353
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23463,6 +23730,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1428116065
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23642,6 +23913,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1451148996
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23673,6 +23948,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1453403851
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24251,6 +24530,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1476247928 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 491360, guid: baf7bb04094c1fe4d994d728999eae1b, type: 3}
@@ -25349,6 +25632,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1541414931
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26515,6 +26802,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1588541085
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26624,6 +26915,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1589410077
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27142,6 +27437,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &1604676304
 GameObject:
   m_ObjectHideFlags: 0
@@ -27382,6 +27681,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1615658031
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -27571,6 +27874,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &1626200719 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 47f2a8c4066d55e469290eded6598a39, type: 3}
@@ -27589,6 +27896,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1626200722
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28124,6 +28435,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1664686555
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28430,6 +28745,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1677179916
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -28461,6 +28780,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1679061100
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29380,6 +29703,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1747194167 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 19da28f31e452744c9297f3b66231f26, type: 3}
@@ -29527,10 +29854,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -29538,6 +29861,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: feedbackTimerReset
       value: 3
@@ -29572,6 +29899,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1762590154
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -29694,6 +30025,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1767441691
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30130,6 +30465,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1783417874 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -30450,6 +30789,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1794199970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30702,6 +31045,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1803053161
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -30912,6 +31259,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1812277333
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31383,6 +31734,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1835569655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: d38740e8c663c3d4a816bda0dc5ea549, type: 3}
@@ -31506,6 +31861,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1847614734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -31529,6 +31888,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1856467281
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31703,6 +32066,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1863400259 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 1a61897f2f3c71f4090224a3a6b152e6, type: 3}
@@ -31739,6 +32106,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1864737971
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -31898,10 +32269,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -31909,6 +32276,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: feedbackTimerReset
       value: 3
@@ -32345,6 +32716,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1887917360 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 406326088447251169, guid: f068eab30c9821644a292e28df34ee52, type: 3}
@@ -32386,6 +32761,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1891314146
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32542,6 +32921,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1894714386
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -33818,14 +34201,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
---- !u!33 &1950242106
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1947044154}
-  m_Mesh: {fileID: 4300000, guid: af4878fa6956aaf4f8de9982324f692a, type: 3}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!4 &1950360846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -33936,6 +34315,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1 &1954530837 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d38740e8c663c3d4a816bda0dc5ea549, type: 3}
@@ -33967,6 +34350,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &1958348724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34071,6 +34458,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &1974086007
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34670,6 +35061,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &2006537029
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -34915,20 +35310,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118373263}
     m_RemovedComponents: []
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: badFeedback
-      value: 
-      objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 893936921, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
-      propertyPath: feedbackTimerReset
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1285636020008183687, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 29789fbe7685f4c4992b2a378483d4e0, type: 3}
 --- !u!4 &2019788292 stripped
 Transform:
@@ -35112,6 +35493,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &2038399993
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35441,6 +35826,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &2060525119
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -35705,6 +36094,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!65 &2075695731
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36058,20 +36451,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 118373263}
     m_RemovedComponents: []
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: badFeedback
-      value: 
-      objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: feedbackTimer
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: feedbackTimerReset
-      value: 3
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 577214811211284168, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
 --- !u!1001 &2121810669
 PrefabInstance:
@@ -36195,6 +36574,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   wrongDelivery: {fileID: 118373263}
+  badFeedback: {fileID: 0}
+  feedbackTimer: 0
+  feedbackTimerReset: 0
+  playerFeedback: 0
 --- !u!1001 &2141417715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -36665,5 +37048,6 @@ PrefabInstance:
       propertyPath: distanceToDestinationText
       value: 
       objectReference: {fileID: 28835507}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7335864753882354881, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
