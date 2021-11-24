@@ -13,7 +13,7 @@ public class Condition : MonoBehaviour
     {
         mytext.text = condition.ToString();
     }
-private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         //Cars driving around
         if (collision.gameObject.CompareTag("HubWorldCar"))
@@ -31,13 +31,9 @@ private void OnCollisionEnter(Collision collision)
             condition = condition - 5;
         }
         mytext.text = condition.ToString();
-    }
-    private void Update()
-    {
-       
-
-            maxCondition = maxCondition - 30;
+        if (maxCondition < 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
         }
-        //mytext.text = maxCondition.ToString();
-
     }
+}
