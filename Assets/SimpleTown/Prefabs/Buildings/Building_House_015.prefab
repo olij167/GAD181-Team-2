@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 3300000}
   - component: {fileID: 2300000}
   - component: {fileID: 5002923383187851921}
-  - component: {fileID: 5468380618779398282}
   m_Layer: 10
   m_Name: Building_House_015
   m_TagString: Building
@@ -101,19 +100,6 @@ MonoBehaviour:
   feedbackTimer: 2
   feedbackTimerReset: 2
   playerFeedback: 0
---- !u!114 &5468380618779398282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e614c6bb59cf74e8c783f69e41efed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goodFeedback: {fileID: 2100000, guid: 90d906914e8c678489a284769c1f5b7a, type: 2}
 --- !u!1001 &7189612500195034445
 PrefabInstance:
   m_ObjectHideFlags: 0

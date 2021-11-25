@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2094649499}
   - component: {fileID: 1131662637}
   - component: {fileID: -1571772575164118788}
-  - component: {fileID: -258010129894644014}
   m_Layer: 10
   m_Name: Building_OfficeMedium_Blue
   m_TagString: Building
@@ -133,19 +132,6 @@ MonoBehaviour:
   feedbackTimer: 0
   feedbackTimerReset: 0
   playerFeedback: 0
---- !u!114 &-258010129894644014
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 100000}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 28e614c6bb59cf74e8c783f69e41efed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  goodFeedback: {fileID: 2100000, guid: 90d906914e8c678489a284769c1f5b7a, type: 2}
 --- !u!1001 &4040564709131625883
 PrefabInstance:
   m_ObjectHideFlags: 0

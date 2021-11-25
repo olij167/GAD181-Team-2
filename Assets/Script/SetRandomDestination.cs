@@ -134,8 +134,7 @@ public class SetRandomDestination : MonoBehaviour
         if (playerFeedback)
         {
             ParticleSystem goodFeedbackParticles = destination.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
-            var emis = goodFeedbackParticles.emission;
-            emis.enabled = true;
+
             goodFeedbackParticles.Play();
 
             originalArrowMaterial = arrow.GetComponent<MeshRenderer>().material;
@@ -153,9 +152,10 @@ public class SetRandomDestination : MonoBehaviour
                 destination.layer = LayerMask.NameToLayer("BuildingLayer");
                 feedbackTimer = feedbackTimerReset;
 
-                goodFeedbackParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
 
                 SetDestination();
+                goodFeedbackParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+
                 playerFeedback = false;
             }
         }
