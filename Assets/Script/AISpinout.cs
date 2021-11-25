@@ -13,6 +13,8 @@ public class AISpinout : MonoBehaviour
     Material originalMaterial;
     public float feedbackTimer = 3, feedbackTimerReset = 3;
 
+    public GameObject collisionParticles;
+
     void Start()
     {
         rb = gameObject.GetComponent<Rigidbody>();
@@ -34,11 +36,12 @@ public class AISpinout : MonoBehaviour
         if (playerFeedback)
         {
             gameObject.GetComponent<MeshRenderer>().material = badFeedback;
-
+            collisionParticles.SetActive(true);
             feedbackTimer -= Time.deltaTime;
 
             if (feedbackTimer <= 0)
             {
+                collisionParticles.SetActive(false);
                 gameObject.GetComponent<MeshRenderer>().material = originalMaterial;
                 feedbackTimer = feedbackTimerReset;
                 playerFeedback = false;

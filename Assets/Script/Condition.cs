@@ -9,6 +9,7 @@ public class Condition : MonoBehaviour
     [HideInInspector] public int condition, maxCondition = 100;
     public TextMeshProUGUI mytext;
 
+
     private void Start()
     {
         mytext.text = condition.ToString();

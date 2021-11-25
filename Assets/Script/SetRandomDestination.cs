@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using UnityEngine.ParticleSystemJobs;
 
 
 public class SetRandomDestination : MonoBehaviour
@@ -34,6 +34,8 @@ public class SetRandomDestination : MonoBehaviour
     public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
     public Image pizzaEngagedBackground, pizzaEngagedBorder;
     public Material goodFeedback;
+    
+    //public GameObject deliveryCompleteParticles;
 
     //temp variables
     public float temp, resetTemp;
@@ -48,7 +50,6 @@ public class SetRandomDestination : MonoBehaviour
 
     void Start()
     {
-
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         warm = highlightedDestination.color;
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
@@ -130,22 +131,32 @@ public class SetRandomDestination : MonoBehaviour
 
         if (playerFeedback)
         {
+            ParticleSystem goodFeedbackParticles = destination.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>();
+
+            goodFeedbackParticles.Play();
+
             originalArrowMaterial = arrow.GetComponent<MeshRenderer>().material;
             feedbackTimer -= Time.deltaTime;
             destination.GetComponent<MeshRenderer>().material = goodFeedback;
             arrow.GetComponent<MeshRenderer>().material = goodFeedback;
+            
 
             if (feedbackTimer <= 0)
             {
+                
                 destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
                 arrow.GetComponent<MeshRenderer>().material = originalArrowMaterial;
 
                 destination.layer = LayerMask.NameToLayer("BuildingLayer");
                 feedbackTimer = feedbackTimerReset;
+
+
                 SetDestination();
+                goodFeedbackParticles.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+
                 playerFeedback = false;
             }
-        }            
+        }
     }
 
     public void SetDestination() // choose random destination
@@ -160,6 +171,7 @@ public class SetRandomDestination : MonoBehaviour
         destination = destinationArray[randDestination];
         originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
         destination.GetComponent<MeshRenderer>().material = highlightedDestination;
+        //destination.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Pause();
         destination.layer = LayerMask.NameToLayer("Destination");
     }
 
@@ -187,7 +199,7 @@ public class SetRandomDestination : MonoBehaviour
     public void DeliveryComplete()
     {
         deliveryCounter++;
-        playerFeedback = true;
+
         pizzaDelivered.Play();
 
         foreach (GameObject pizza in pizzaList)
@@ -204,7 +216,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
-        
+        playerFeedback = true;
     }
     void OnDrawGizmosSelected()
     {

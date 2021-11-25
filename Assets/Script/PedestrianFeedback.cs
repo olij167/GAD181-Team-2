@@ -10,6 +10,7 @@ public class PedestrianFeedback : MonoBehaviour
     GameObject child;
     public bool playerFeedback;
     public float feedbackTimer, feedbackTimerReset;
+    public GameObject collisionParticles;
 
     void Start()
     {
@@ -25,13 +26,17 @@ public class PedestrianFeedback : MonoBehaviour
             child.GetComponent<MeshRenderer>().material = badFeedback;
             gameObject.GetComponent<MeshRenderer>().material.color = badFeedback.color;
 
+            collisionParticles.SetActive(true);
             feedbackTimer -= Time.deltaTime;
 
             if (feedbackTimer <= 0)
             {
                 child.GetComponent<MeshRenderer>().material = originalHeadMaterial;
                 gameObject.GetComponent<MeshRenderer>().material.color = originalColour;
+
+                collisionParticles.SetActive(false);
                 feedbackTimer = feedbackTimerReset;
+
                 playerFeedback = false;
             }
         }
