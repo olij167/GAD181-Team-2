@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4555878708037683454}
   m_LocalRotation: {x: 0, y: 0.000000029802319, z: 0.000000014901159, w: 1}
-  m_LocalPosition: {x: 0, y: 2, z: -5}
-  m_LocalScale: {x: 1.071473, y: 0.5357367, z: 2.3939369}
+  m_LocalPosition: {x: 0, y: 2, z: -6.14}
+  m_LocalScale: {x: 1.7185355, y: 0.859268, z: 3.8396351}
   m_Children: []
   m_Father: {fileID: 7335864753914656197}
   m_RootOrder: 0
@@ -389,6 +389,7 @@ MonoBehaviour:
   pizzaEngagedBackground: {fileID: 0}
   pizzaEngagedBorder: {fileID: 0}
   goodFeedback: {fileID: 2100000, guid: 90d906914e8c678489a284769c1f5b7a, type: 2}
+  deliveryCompleteParticles: {fileID: 0}
   temp: 30
   resetTemp: 30
   tempUIValue: {fileID: 0}
