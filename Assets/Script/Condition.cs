@@ -27,6 +27,9 @@ private void OnCollisionEnter(Collision collision)
         {
             condition = condition - 5;
         }
+    }
+    private void Update()
+    {
         mytext.text = condition.ToString();
     }
 }
