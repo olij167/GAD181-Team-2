@@ -47,6 +47,9 @@ public class SetRandomDestination : MonoBehaviour
     // audio variables
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
+
+    //gameover chances
+    bool strike1, strike2, strike3;
   
 
     void Start()
@@ -117,8 +120,29 @@ public class SetRandomDestination : MonoBehaviour
         deliveriesCompleteUI.text = deliveryCounter.ToString();
 
         temp -= Time.deltaTime;
-        //Below is if the timer runs out the Game is over
-        if (temp <= 0)
+        //Below is if the timer runs out three times the Game is over
+        if (temp <= 0 && !strike1)
+        {
+            strike1 = true;
+            Debug.Log("strike 1");
+            SetDestination();
+        }
+
+        if (temp <= 0 && strike1 && !strike2)
+        {
+            strike2 = true;
+            Debug.Log("strike 2");
+            SetDestination();
+        }
+
+        if (temp <= 0 && strike2 && !strike3)
+        {
+            strike3 = true;
+            Debug.Log("strike 3");
+            SetDestination();
+        }
+
+        if (temp <= 0 && strike1 && strike2 && strike3)
         {
             SceneManager.LoadScene("LoseScreen");
         }
@@ -164,6 +188,11 @@ public class SetRandomDestination : MonoBehaviour
     {
         int randDestination = Random.Range(0, destinationArray.Length); //generate a random number within the amount of buildings
 
+        if (destination != null)
+        {
+            destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+        }
+        
         //for (int i = 0; i < destinationArray.Length; i++)
         //    destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
         temp = resetTemp;
@@ -172,14 +201,13 @@ public class SetRandomDestination : MonoBehaviour
         destination = destinationArray[randDestination];
         originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
         destination.GetComponent<MeshRenderer>().material = highlightedDestination;
-        //destination.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Pause();
+        
         destination.layer = LayerMask.NameToLayer("Destination");
     }
 
     public void EngagePizzaLauncher()
     {
-        //pizzaList = new List<GameObject>();
-
+        
         if (Input.GetKeyDown(KeyCode.Space)) // press space to shoot pizzas
         {
             
@@ -213,9 +241,9 @@ public class SetRandomDestination : MonoBehaviour
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
 
         //Below is the code for finishing the game after a certain amount of deliverys
-        if (deliveryCounter >= 2)
+        if (deliveryCounter >= numOfDeliveries)
         {
-            SceneManager.LoadScene("LoseScreen");
+            //SceneManager.LoadScene("LoseScreen");    -- this should be going to a win scene
         }
         playerFeedback = true;
     }
