@@ -1915,10 +1915,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -1926,6 +1922,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: feedbackTimerReset
       value: 5
@@ -13874,10 +13874,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -13885,6 +13881,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 1131662637, guid: 0a9aa5b2741d2d44b86fdad12b65b9f0, type: 3}
       propertyPath: feedbackTimerReset
       value: 5
@@ -16457,7 +16457,7 @@ MonoBehaviour:
   pedestrian: {fileID: 7220926856843305369, guid: dc7c444fd11ed9341b66cdc3fc957476, type: 3}
   pedestrianSpawn: []
   pedestrianList: []
-  pedestrianNum: 0
+  pedestrianNum: 30
   roadMask:
     serializedVersion: 2
     m_Bits: 64
@@ -16476,7 +16476,7 @@ MonoBehaviour:
   hubCar: {fileID: 5827861789765311647, guid: 3c525ae2b2e03a04a9f4dcfb77eb1046, type: 3}
   hubCarSpawn: []
   hubCarList: []
-  hubCarNum: 0
+  hubCarNum: 15
   grassMask:
     serializedVersion: 2
     m_Bits: 128
@@ -16550,7 +16550,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &853002348
 MonoBehaviour:
@@ -23440,7 +23440,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -25033,7 +25033,6 @@ GameObject:
   - component: {fileID: 1297054030}
   - component: {fileID: 1297054029}
   - component: {fileID: 1297054028}
-  - component: {fileID: 1297054033}
   m_Layer: 5
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -25054,7 +25053,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   observeable: {fileID: 1946817818}
-  aheadSpeed: 1
+  aheadSpeed: 1.5
   followDamping: 1
   cameraHeight: 50
 --- !u!81 &1297054029
@@ -25128,20 +25127,8 @@ Transform:
   m_LocalScale: {x: 1.3879, y: 1.3879, z: 1.3879}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 86.547, y: 14.53, z: 14.512}
---- !u!114 &1297054033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297054027}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42cd8dcae69d178488f5efa28e7c7e78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1299011238 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3263183690224709506, guid: a1fd54f39bcae1f47b0ce991e30bf8ed, type: 3}
@@ -33525,10 +33512,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -33536,6 +33519,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: feedbackTimerReset
       value: 5
@@ -36126,10 +36113,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
-      propertyPath: wrongDelivery
-      value: 
-      objectReference: {fileID: 118373263}
-    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: badFeedback
       value: 
       objectReference: {fileID: 2100000, guid: 51bcef1f633da2e41a2cbecf5dd9ed79, type: 2}
@@ -36137,6 +36120,10 @@ PrefabInstance:
       propertyPath: feedbackTimer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
+      propertyPath: wrongDelivery
+      value: 
+      objectReference: {fileID: 118373263}
     - target: {fileID: 329453669, guid: 71cdc73ebf46f6347a5db5f55af2273c, type: 3}
       propertyPath: feedbackTimerReset
       value: 5
@@ -41453,7 +41440,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4362962326910357444, guid: 32568b76084860244b77f7445568a867, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4362962326910357444, guid: 32568b76084860244b77f7445568a867, type: 3}
       propertyPath: m_LocalPosition.x

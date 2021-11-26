@@ -45,7 +45,7 @@ public class PlayerCar : MonoBehaviour
         Vector3 movement = transform.InverseTransformDirection(direction);
         lastPosition = transform.position;
 
-        _sideSlipAmount = movement.x;
+         _sideSlipAmount = movement.x;
 
     }
 
@@ -76,17 +76,20 @@ public class PlayerCar : MonoBehaviour
         float accelerationInput = acceleration * (Input.GetMouseButton(0) ? 1 : Input.GetMouseButton(1) ? -1 : 0) * Time.fixedDeltaTime;
 
         
-        if (Input.GetMouseButton(2)) // reduce velocity in all directions when middle mouse button down
+        if (Input.GetMouseButton(2) || Input.GetKey(KeyCode.LeftShift)) // reduce velocity in all directions when middle mouse button down
         {
-            _rigidBody.AddRelativeForce(Vector3.one * brakeForce);
+            
+            if (gameObject.transform.position != lastPosition)
+            _rigidBody.AddRelativeForce(Vector3.Normalize(Vector3.one) * brakeForce);
+ 
         }
         else // otherwise move as normal
         {
             _rigidBody.AddRelativeForce(Vector3.forward * accelerationInput);
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.fixedDeltaTime);
 
-        Debug.Log("Acceleration = " + accelerationInput + ", Speed = " + speed);
+        //Debug.Log("Acceleration = " + accelerationInput + ", Speed = " + speed);
     }
 }
