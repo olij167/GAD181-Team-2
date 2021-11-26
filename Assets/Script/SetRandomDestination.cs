@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using UnityEngine.ParticleSystemJobs;
 
 
@@ -15,7 +16,7 @@ public class SetRandomDestination : MonoBehaviour
     Material  originalDestinationMaterial, originalArrowMaterial;
 
     //destination finding and delivery complete variables
-    public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter, maxDeliveries; // look radius
+    public float deliveryRange, feedbackTimer, feedbackTimerReset; // look radius
     public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
     public LayerMask destinationLayer;
     public Vector3 distanceToDestination;
@@ -242,7 +243,7 @@ public class SetRandomDestination : MonoBehaviour
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
 
         //Below is the code for finishing the game after a certain amount of deliverys
-        if (deliveryCounter >= maxDeliveries)
+        if (deliveryCounter >= numOfDeliveries)
         {
             //SceneManager.LoadScene("LoseScreen");    -- this should be going to a win scene
         }
