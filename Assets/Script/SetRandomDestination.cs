@@ -16,7 +16,7 @@ public class SetRandomDestination : MonoBehaviour
     Material  originalDestinationMaterial, originalArrowMaterial;
 
     //destination finding and delivery complete variables
-    public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter; // look radius
+    public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter, numOfDeliveries; // look radius
     public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
     public LayerMask destinationLayer;
     public Vector3 distanceToDestination;
