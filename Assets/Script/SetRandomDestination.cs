@@ -52,7 +52,7 @@ public class SetRandomDestination : MonoBehaviour
     bool strike1, strike2, strike3;
   
 
-    void Awake()
+    void Start()
     {
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         warm = highlightedDestination.color;

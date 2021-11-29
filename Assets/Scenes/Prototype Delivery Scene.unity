@@ -41722,8 +41722,16 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7335864753882354941, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
+      propertyPath: turnSpeed
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335864753882354941, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: brakeForce
       value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7335864753882354941, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
+      propertyPath: acceleration
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 7335864753887473905, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: mytext
@@ -41863,7 +41871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7563552358600781352, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 1000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 7563552358600781352, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: InitialModule.startSize.scalar
@@ -42003,7 +42011,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7658285814343653496, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.34
+      value: 2.73
       objectReference: {fileID: 0}
     - target: {fileID: 8321824595846960179, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: m_RootOrder

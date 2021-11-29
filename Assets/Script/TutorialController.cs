@@ -6,106 +6,135 @@ using UnityEngine.UI;
 
 public class TutorialController : MonoBehaviour
 {
-    public Image introText, controlsText, pizzaLauncherText, pizzaLauncherDisplay;
-    public List<TextMeshProUGUI> introTextList, controlsTextList, pizzaLauncherTextList;
-    public GameObject player, introTrigger;
-    public bool pizzaLauncherActive;
+    public Image pizzaLauncherDisplay;
+    public List<GameObject> introTextList, controlsTextList, pizzaLauncherTextList;
+    public GameObject player;
+    public bool introTextActive, controlsTextActive, pizzaLauncherTextActive;
 
     // Start is called before the first frame update
     void Start()
     {
-        introText.enabled = false;
-        controlsText.enabled = true;
-        pizzaLauncherText.enabled = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (introText.enabled)
+        UIControls();
+
+        if (pizzaLauncherTextActive)
         {
-            foreach (TextMeshProUGUI tutorialText in introTextList)
-            {
-                tutorialText.enabled = true;
-            }
+            controlsTextActive = false;
+            introTextActive = false;
         }
-        else
+        if (controlsTextActive)
         {
-            foreach (TextMeshProUGUI tutorialText in introTextList)
-            {
-                tutorialText.enabled = false;
-                introText.enabled = false;
-            }
-
+            introTextActive = false;
+            pizzaLauncherTextActive = false;
         }
-
-        if (pizzaLauncherDisplay.enabled)
+        if (introTextActive)
         {
-            pizzaLauncherText.enabled = true;
-
-            foreach (TextMeshProUGUI tutorialText in pizzaLauncherTextList)
-            {
-                tutorialText.enabled = true;
-            }
-        }
-        else
-        {
-
-            pizzaLauncherText.enabled = false;
-
-            foreach (TextMeshProUGUI tutorialText in pizzaLauncherTextList)
-            {
-                tutorialText.enabled = false;
-            }
+            controlsTextActive = false;
+            pizzaLauncherTextActive = false;
         }
 
-        if (Input.GetKeyDown(KeyCode.C))
-        {
-            if (controlsText.enabled)
-            {
-                controlsText.enabled = false;
+        //if (!pizzaLauncherDisplay.enabled)
+        //{
+        //    pizzaLauncherTextActive = false;
+        //    foreach (GameObject tutorialText in pizzaLauncherTextList)
+        //    {
+        //        tutorialText.SetActive(false);
+        //    }
+        //}
+        //else if (pizzaLauncherDisplay.enabled)
+        //{
+        //    pizzaLauncherTextActive = true;
+        //    foreach (GameObject tutorialText in pizzaLauncherTextList)
+        //    {
+        //        tutorialText.SetActive(true);
+        //    }
+        //}
+    }
 
-                foreach (TextMeshProUGUI tutorialText in controlsTextList)
+    void UIControls()
+    {
+        if (Input.GetButtonDown("I"))
+        {
+            if (!introTextActive)
+            {
+                introTextActive = true;
+
+                foreach (GameObject tutorialText in introTextList)
                 {
-                    tutorialText.enabled = false;
+                    tutorialText.SetActive(true);
                 }
             }
             else
             {
-                controlsText.enabled = true;
 
-                foreach (TextMeshProUGUI tutorialText in controlsTextList)
+                introTextActive = false;
+
+                foreach (GameObject tutorialText in introTextList)
                 {
-                    tutorialText.enabled = true;
+                    tutorialText.SetActive(false);
                 }
             }
         }
 
+        if (Input.GetButtonDown("C"))
+        {
+            if (!controlsTextActive)
+            {
+                controlsTextActive = true;
+
+                foreach (GameObject tutorialText in controlsTextList)
+                {
+                    tutorialText.SetActive(true);
+                }
+            }
+            else
+            {
+                controlsTextActive = false;
+
+                foreach (GameObject tutorialText in controlsTextList)
+                {
+                    tutorialText.SetActive(false);
+                }
+            }
+        }
+
+        if (Input.GetButtonDown("L"))
+        {
+            if (!pizzaLauncherTextActive)
+            {
+                pizzaLauncherTextActive = true;
+
+                foreach (GameObject tutorialText in pizzaLauncherTextList)
+                {
+                    tutorialText.SetActive(true);
+                }
+            }
+            else
+            {
+
+                pizzaLauncherTextActive = false;
+
+                foreach (GameObject tutorialText in pizzaLauncherTextList)
+                {
+                    tutorialText.SetActive(false);
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == introTrigger)
+        if (other.gameObject.CompareTag("Restaurant"))
         {
-            introText.enabled = true;
-            foreach (TextMeshProUGUI tutorialText in introTextList)
+            foreach (GameObject tutorialText in introTextList)
             {
-                tutorialText.enabled = true;
+                tutorialText.SetActive(true);
             }
-        }
-        
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject != introTrigger)
-        {
-            introText.enabled = false;
-            foreach (TextMeshProUGUI tutorialText in introTextList)
-            {
-                tutorialText.enabled = false;
-            }
-
         }
     }
 }
