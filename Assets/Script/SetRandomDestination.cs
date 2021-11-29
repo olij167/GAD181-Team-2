@@ -42,7 +42,7 @@ public class SetRandomDestination : MonoBehaviour
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
     public Image tempBar;
-    Color hot, warm, cold;
+    [HideInInspector] public Color hot, warm, cold;
 
     // audio variables
     public AudioSource pizzaLaunched;
@@ -52,7 +52,7 @@ public class SetRandomDestination : MonoBehaviour
     bool strike1, strike2, strike3;
   
 
-    void Start()
+    void Awake()
     {
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         warm = highlightedDestination.color;
@@ -106,7 +106,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             if (pizza == null) pizzaList.Remove(pizza);
 
-            if (pizza != null)
+            else
             {
                 pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // move the pizza towards the position of the delivery destination
 
