@@ -12,7 +12,6 @@ public class PlayerCar : MonoBehaviour
     //this is to set the speed of which the car follows the mouse
     [SerializeField] float turnSpeed = 5; // 100 feels pretty good for this ~~ Oli
 
-    public float brakeForce;
     Quaternion targetRotation;
     Rigidbody _rigidBody;
 
@@ -45,7 +44,7 @@ public class PlayerCar : MonoBehaviour
         Vector3 movement = transform.InverseTransformDirection(direction);
         lastPosition = transform.position;
 
-        _sideSlipAmount = movement.x;
+         _sideSlipAmount = movement.x;
 
     }
 
@@ -71,22 +70,30 @@ public class PlayerCar : MonoBehaviour
 
         float speed = _rigidBody.velocity.magnitude / 1000;
 
+        float brakeForce = -speed;
+
         //this is the code for the click to drive
         //connected with acceletation
         float accelerationInput = acceleration * (Input.GetMouseButton(0) ? 1 : Input.GetMouseButton(1) ? -1 : 0) * Time.fixedDeltaTime;
 
         
-        if (Input.GetMouseButton(2)) // reduce velocity in all directions when middle mouse button down
+        if (Input.GetMouseButton(2) || Input.GetKey(KeyCode.LeftShift)) // reduce velocity in all directions when middle mouse button down
         {
-            _rigidBody.AddRelativeForce(Vector3.one * brakeForce);
+            Debug.Log(speed);
+            if (_rigidBody.velocity != Vector3.zero)
+            {
+                Vector3 one = Vector3.one;
+                 _rigidBody.AddRelativeForce(one *= Mathf.Clamp(brakeForce, -1, 1)* Time.deltaTime);
+            }
+ 
         }
         else // otherwise move as normal
         {
             _rigidBody.AddRelativeForce(Vector3.forward * accelerationInput);
         }
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.deltaTime);
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.fixedDeltaTime);
 
-        Debug.Log("Acceleration = " + accelerationInput + ", Speed = " + speed);
+        //Debug.Log("Acceleration = " + accelerationInput + ", Speed = " + speed);
     }
 }

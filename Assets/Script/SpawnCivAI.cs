@@ -50,7 +50,7 @@ public class SpawnCivAI : MonoBehaviour
         Vector3 secondVertexPosition = navMeshData.vertices[navMeshData.indices[secondVertexSelected]];
 
         // eliminate points that share a similar X or Z position to stop spawining in square grid line formations
-        if ((int)firstVertexPosition.x == (int)secondVertexPosition.x || (int)firstVertexPosition.z == (int)secondVertexPosition.z)
+        if ((int)firstVertexPosition.x == (int)secondVertexPosition.x || (int)firstVertexPosition.z == (int)secondVertexPosition.z || roadMask.Equals("roadMask"))
         {
             point = GetRandomSpawn(); // re-roll a position - I'm not happy with this recursion it could be better
         }

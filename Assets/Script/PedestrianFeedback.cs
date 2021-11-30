@@ -46,11 +46,13 @@ public class PedestrianFeedback : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Player"))
         {
+            collisionParticles.SetActive(false);
             playerFeedback = true;
         }
 
         if (collision.gameObject.tag.Equals("Pizza"))
         {
+            collisionParticles.SetActive(false);
             playerFeedback = true;
             Destroy(collision.gameObject);
         }

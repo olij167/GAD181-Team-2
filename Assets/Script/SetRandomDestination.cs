@@ -16,13 +16,11 @@ public class SetRandomDestination : MonoBehaviour
     Material  originalDestinationMaterial, originalArrowMaterial;
 
     //destination finding and delivery complete variables
-    public float deliveryRange, feedbackTimer, feedbackTimerReset; // look radius
+    public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter, numOfDeliveries; // look radius
     public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
     public LayerMask destinationLayer;
     public Vector3 distanceToDestination;
 
-
-    public int numOfDeliveries, deliveryCounter;
 
     // projectile variables
     public Transform shootPos;
@@ -44,7 +42,7 @@ public class SetRandomDestination : MonoBehaviour
     public float temp, resetTemp;
     public TextMeshProUGUI tempUIValue;
     public Image tempBar;
-    Color hot, warm, cold;
+    [HideInInspector] public Color hot, warm, cold;
 
     // audio variables
     public AudioSource pizzaLaunched;
@@ -106,8 +104,6 @@ public class SetRandomDestination : MonoBehaviour
         // send pizza to destination
         foreach (GameObject pizza in pizzaList)
         {
-            if (pizza == null) pizzaList.Remove(pizza);
-
             if (pizza != null)
             {
                 pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // move the pizza towards the position of the delivery destination
@@ -117,6 +113,7 @@ public class SetRandomDestination : MonoBehaviour
                 if (distanceToWalkPoint.magnitude < stopDistance) // check if pizza has reached destination
                     DeliveryComplete();
             }
+            else pizzaList.Remove(pizza);
         }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();

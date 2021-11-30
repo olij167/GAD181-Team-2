@@ -10,6 +10,7 @@ public class DestinationArrow : MonoBehaviour
     {
         target = GameObject.FindGameObjectWithTag("Player").GetComponent<SetRandomDestination>().destination.transform;
 
+
         transform.LookAt(target);
     }
 }
