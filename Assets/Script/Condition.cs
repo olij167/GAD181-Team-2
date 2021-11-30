@@ -14,7 +14,7 @@ public class Condition : MonoBehaviour
     {
         mytext.text = condition.ToString();
     }
-private void OnCollisionEnter(Collision collision)
+    private void OnCollisionEnter(Collision collision)
     {
         //Cars driving around
         if (collision.gameObject.CompareTag("HubWorldCar"))
@@ -36,3 +36,4 @@ private void OnCollisionEnter(Collision collision)
     {
         mytext.text = condition.ToString();
     }
+}
