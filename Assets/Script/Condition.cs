@@ -9,6 +9,7 @@ public class Condition : MonoBehaviour
     [HideInInspector] public int condition, maxCondition = 100;
     public TextMeshProUGUI mytext;
 
+
     private void Start()
     {
         mytext.text = condition.ToString();
@@ -30,14 +31,8 @@ private void OnCollisionEnter(Collision collision)
         {
             condition = condition - 5;
         }
-        mytext.text = condition.ToString();
     }
     private void Update()
     {
-       
-
-            maxCondition = maxCondition - 30;
-        }
-        //mytext.text = maxCondition.ToString();
-
+        mytext.text = condition.ToString();
     }

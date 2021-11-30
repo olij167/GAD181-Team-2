@@ -12,6 +12,7 @@ public class PlayerCar : MonoBehaviour
     //this is to set the speed of which the car follows the mouse
     [SerializeField] float turnSpeed = 5; // 100 feels pretty good for this ~~ Oli
 
+    public float brakeForce;
     Quaternion targetRotation;
     Rigidbody _rigidBody;
 
@@ -44,15 +45,8 @@ public class PlayerCar : MonoBehaviour
         Vector3 movement = transform.InverseTransformDirection(direction);
         lastPosition = transform.position;
 
-        _sideSlipAmount = movement.x;
+         _sideSlipAmount = movement.x;
 
-        if (!Input.GetMouseButton(0) && !Input.GetMouseButton(1))
-        {
-            if (_sideSlipAmount > 0)
-            {
-                _sideSlipAmount -= 2 * Time.deltaTime;
-            }
-        }
     }
 
 
@@ -80,8 +74,22 @@ public class PlayerCar : MonoBehaviour
         //this is the code for the click to drive
         //connected with acceletation
         float accelerationInput = acceleration * (Input.GetMouseButton(0) ? 1 : Input.GetMouseButton(1) ? -1 : 0) * Time.fixedDeltaTime;
-        _rigidBody.AddRelativeForce(Vector3.forward * accelerationInput);
 
-        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.deltaTime);
+        
+        if (Input.GetMouseButton(2) || Input.GetKey(KeyCode.LeftShift)) // reduce velocity in all directions when middle mouse button down
+        {
+            
+            if (gameObject.transform.position != lastPosition)
+            _rigidBody.AddRelativeForce(Vector3.Normalize(Vector3.one) * brakeForce);
+ 
+        }
+        else // otherwise move as normal
+        {
+            _rigidBody.AddRelativeForce(Vector3.forward * accelerationInput);
+        }
+
+        transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.fixedDeltaTime);
+
+        //Debug.Log("Acceleration = " + accelerationInput + ", Speed = " + speed);
     }
 }
