@@ -15,6 +15,7 @@ public class Condition : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log("Hi");
         //Cars driving around
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
@@ -28,20 +29,14 @@ public class Condition : MonoBehaviour
         //Buildins what can be delivered to
         else if (collision.gameObject.CompareTag("Building"))
         {
-            condition = condition - 15;
+            condition = condition - 5;
         }
-        //if (maxCondition < 0)
-        //{
-        //    Debug.Log("Hi");
-        //    SceneManager.LoadScene("LoseScreen");
-        //}
-        //mytext.text = condition.ToString();
+        mytext.text = condition.ToString();
     }
     private void Update()
     {
-        if (maxCondition < 0)
+        if (condition <= 0)
         {
-            Debug.Log("Hi");
             SceneManager.LoadScene("LoseScreen");
         }
 

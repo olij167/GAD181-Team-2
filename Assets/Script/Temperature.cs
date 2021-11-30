@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Temperature : MonoBehaviour
 {
     public GameObject textDisplay;
-    public int secondsLeft = 30;
+    public int secondsLeft = 10;
     public int resetSecondsLeft = 30;
     public bool takingAway = false;
     public GameObject player;
