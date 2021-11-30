@@ -49,6 +49,7 @@ public class SetRandomDestination : MonoBehaviour
     // audio variables
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
+    public AudioSource deliveryCheer;
 
     //gameover chances
     bool strike1, strike2, strike3;
@@ -232,6 +233,7 @@ public class SetRandomDestination : MonoBehaviour
         deliveryCounter++;
 
         pizzaDelivered.Play();
+        deliveryCheer.Play();
 
         foreach (GameObject pizza in pizzaList)
         {
