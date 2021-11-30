@@ -28,12 +28,22 @@ public class Condition : MonoBehaviour
         //Buildins what can be delivered to
         else if (collision.gameObject.CompareTag("Building"))
         {
-            condition = condition - 5;
+            condition = condition - 15;
         }
-        mytext.text = condition.ToString();
+        //if (maxCondition < 0)
+        //{
+        //    Debug.Log("Hi");
+        //    SceneManager.LoadScene("LoseScreen");
+        //}
+        //mytext.text = condition.ToString();
+    }
+    private void Update()
+    {
         if (maxCondition < 0)
         {
+            Debug.Log("Hi");
             SceneManager.LoadScene("LoseScreen");
         }
+
     }
 }

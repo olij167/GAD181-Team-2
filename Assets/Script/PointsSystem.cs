@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PointsSystem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public int points;
+    private GameObject TriggeringObj;
+
+
+    private void Update()
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Fuel")
+        {
+            points += 50;
+            TriggeringObj = other.gameObject;
+            Destroy(TriggeringObj);
+        }
     }
 }

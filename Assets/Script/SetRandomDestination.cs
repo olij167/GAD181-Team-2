@@ -200,7 +200,7 @@ public class SetRandomDestination : MonoBehaviour
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
 
         //Below is the code for finishing the game after a certain amount of deliverys
-        if (deliveryCounter >= 2)
+        if (deliveryCounter == 10)
         {
             SceneManager.LoadScene("LoseScreen");
         }
