@@ -21,6 +21,7 @@ TagManager:
   - MAST_Holder
   - Footpath
   - Restaurant
+  - PizzaUI
   layers:
   - Default
   - TransparentFX

@@ -44,6 +44,9 @@ public class SetRandomDestination : MonoBehaviour
     public Image tempBar;
     [HideInInspector] public Color hot, warm, cold;
 
+    //condition ui variables
+
+
     // audio variables
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
@@ -51,6 +54,7 @@ public class SetRandomDestination : MonoBehaviour
 
     //gameover chances
     bool strike1, strike2, strike3;
+    public List<GameObject> strikeUIList;
   
 
     void Start()
@@ -58,6 +62,11 @@ public class SetRandomDestination : MonoBehaviour
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         warm = highlightedDestination.color;
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
+
+        strikeUIList[0].SetActive(false);
+        strikeUIList[1].SetActive(false);
+        strikeUIList[2].SetActive(false);
+
 
         pizzaEngagedBackground.color = hot;
 
@@ -125,6 +134,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             strike1 = true;
             Debug.Log("strike 1");
+            strikeUIList[0].SetActive(true);
             SetDestination();
         }
 
@@ -132,6 +142,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             strike2 = true;
             Debug.Log("strike 2");
+            strikeUIList[1].SetActive(true);
             SetDestination();
         }
 
@@ -139,6 +150,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             strike3 = true;
             Debug.Log("strike 3");
+            strikeUIList[2].SetActive(true);
             SetDestination();
         }
 
@@ -151,8 +163,10 @@ public class SetRandomDestination : MonoBehaviour
         float fillAmount = temp / resetTemp;
         tempBar.fillAmount = fillAmount;
         if (temp > resetTemp/2)
-            tempBar.color = Color.Lerp(warm, hot, temp / resetTemp);
-        else tempBar.color = Color.Lerp(cold, warm, temp / resetTemp);
+            tempBar.color = Color.Lerp(warm, hot, fillAmount);
+        else tempBar.color = Color.Lerp(cold, warm, fillAmount);
+
+
 
         if (playerFeedback)
         {
@@ -197,6 +211,9 @@ public class SetRandomDestination : MonoBehaviour
         //    destinationArray[i].layer = LayerMask.NameToLayer("BuildingLayer");
         temp = resetTemp;
         gameObject.GetComponent<Condition>().condition = gameObject.GetComponent<Condition>().maxCondition;
+        gameObject.GetComponent<Condition>().conditionImage.fillAmount = 1f;
+        gameObject.GetComponent<Condition>().mytext.text = gameObject.GetComponent<Condition>().condition.ToString();
+
 
         destination = destinationArray[randDestination];
         originalDestinationMaterial = destination.GetComponent<MeshRenderer>().material;
