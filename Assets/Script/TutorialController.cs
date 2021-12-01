@@ -9,7 +9,9 @@ public class TutorialController : MonoBehaviour
     public Image pizzaLauncherDisplay;
     public List<GameObject> tutorialTextList, tutorialInputsList, tutorialBodyTextList, tutorialChecksList;
     bool driveForwardActive, reverseActive, brakeActive, destinationActive, launcherActive, returnActive, tutorialComplete;
+    public bool driveForwardFinished, reverseFinished, brakeFinished, confirmationTimerActive;
     int clickNum;
+    public float confirmationTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -39,6 +41,10 @@ public class TutorialController : MonoBehaviour
 
     private void Update()
     {
+        if (confirmationTimerActive)
+        {
+            ConfirmationTimer();
+        }
         if (driveForwardActive)
         {
             DriveForward();
@@ -99,6 +105,29 @@ public class TutorialController : MonoBehaviour
         }
     }
 
+    void ConfirmationTimer()
+    {
+        confirmationTimer -= Time.deltaTime;
+
+        if (confirmationTimer <= 0)
+        {
+            if (driveForwardFinished)
+            {
+                ReverseVariables();
+            }
+
+            if (reverseFinished)
+            {
+                BrakeVariables();
+            }
+
+            if (brakeFinished)
+            {
+                FindDestinationVariables();
+            }
+            confirmationTimerActive = false;
+        }
+    }
     void DriveForwardVariables()
     {
 
@@ -107,8 +136,10 @@ public class TutorialController : MonoBehaviour
         tutorialChecksList[3].SetActive(true);
         tutorialChecksList[4].SetActive(true);
         tutorialChecksList[5].SetActive(true);
+        confirmationTimerActive = false;
 
         clickNum = 0;
+        confirmationTimer = 1;
 
         driveForwardActive = true;
     }
@@ -137,7 +168,10 @@ public class TutorialController : MonoBehaviour
                 {
                     tutorialChecksList[5].SetActive(false);
                     tutorialChecksList[2].SetActive(true);
-                    ReverseVariables();
+                    driveForwardFinished = true;
+
+                    confirmationTimerActive = true;
+                    ConfirmationTimer();
                     break;
                 }
             default:
@@ -176,8 +210,9 @@ public class TutorialController : MonoBehaviour
 
         tutorialTextList[3].SetActive(true);
         tutorialInputsList[1].SetActive(true);
-
+        confirmationTimerActive = false;
         clickNum = 0;
+        confirmationTimer = 1;
 
         reverseActive = true;
     }
@@ -206,7 +241,9 @@ public class TutorialController : MonoBehaviour
                 {
                     tutorialChecksList[5].SetActive(false);
                     tutorialChecksList[2].SetActive(true);
-                    BrakeVariables();
+
+                    reverseFinished = true;
+                    ConfirmationTimer();
                     break;
                 }
             default:
@@ -246,8 +283,10 @@ public class TutorialController : MonoBehaviour
 
         tutorialTextList[4].SetActive(true);
         tutorialInputsList[2].SetActive(true);
+        confirmationTimerActive = false;
 
         clickNum = 0;
+        confirmationTimer = 1;
 
         brakeActive = true;
     }
@@ -276,7 +315,10 @@ public class TutorialController : MonoBehaviour
                 {
                     tutorialChecksList[5].SetActive(false);
                     tutorialChecksList[2].SetActive(true);
-                    FindDestinationVariables();
+                    brakeFinished = true;
+
+                    confirmationTimerActive = true;
+                    ConfirmationTimer();
                     return;
                 }
             default:
@@ -320,6 +362,7 @@ public class TutorialController : MonoBehaviour
         tutorialTextList[6].SetActive(true);
         tutorialBodyTextList[2].SetActive(true);
         destinationActive = true;
+
     }
     void FindDestination()
     {
