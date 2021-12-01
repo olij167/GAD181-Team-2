@@ -741,6 +741,7 @@ MonoBehaviour:
   tempBar: {fileID: 0}
   pizzaLaunched: {fileID: 0}
   pizzaDelivered: {fileID: 0}
+  deliveryCheer: {fileID: 0}
 --- !u!82 &7335864753882354884
 AudioSource:
   m_ObjectHideFlags: 0
@@ -862,10 +863,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 55f0dfcec7ebddc4cbc4f4f6d04fba2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  points: 0
-  MySound: {fileID: 8300000, guid: 6e73f2b4fe8b410408506b2cc042895d, type: 3}
-  text: {fileID: 0}
---- !u!114 &7335864753882354880
+  acceleration: 1300
+  turnSpeed: 85
+--- !u!114 &7335864753887473905
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
