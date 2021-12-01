@@ -30,6 +30,7 @@ public class SetRandomDestination : MonoBehaviour
     public bool launcherActive;
 
     int destinationNum;
+    bool strike1, strike2, strike3;
 
     // delivery complete placeholder UI
     public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;

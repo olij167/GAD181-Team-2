@@ -15,11 +15,11 @@ D:/Local Account/Documents/GitHub/GAD181-Team-2
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-57179
+53912
 Successfully changed project path to: D:/Local Account/Documents/GitHub/GAD181-Team-2
 D:/Local Account/Documents/GitHub/GAD181-Team-2
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 101.20 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 95.18 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.18f1 (a7d1c678663c)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
@@ -35,39 +35,39 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56240
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56488
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002500 seconds.
+Registered in 0.002529 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 97.66 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 96.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.210 seconds
+- Completed reload, in  1.189 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1210ms)
-		BeginReloadAssembly (54ms)
+	ReloadAssembly (1189ms)
+		BeginReloadAssembly (50ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (0ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (1ms)
-		EndReloadAssembly (469ms)
-			LoadAssemblies (52ms)
+		EndReloadAssembly (453ms)
+			LoadAssemblies (48ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (146ms)
+			SetupTypeCache (138ms)
 			ReleaseScriptCaches (0ms)
-			RebuildScriptCaches (29ms)
-			SetupLoadedEditorAssemblies (223ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (215ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
-				RefreshPlugins (98ms)
+				RefreshPlugins (97ms)
 				BeforeProcessingInitializeOnLoad (15ms)
-				ProcessInitializeOnLoadAttributes (79ms)
+				ProcessInitializeOnLoadAttributes (72ms)
 				ProcessInitializeOnLoadMethodAttributes (26ms)
 				AfterProcessingInitializeOnLoad (0ms)
 				EditorAssembliesLoaded (0ms)
@@ -75,54 +75,54 @@ Domain Reload Profiling:
 			AwakeInstancesAfterBackupRestoration (0ms)
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.004678 seconds.
+Registered in 0.004788 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.187 seconds
+- Completed reload, in  1.281 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1188ms)
-		BeginReloadAssembly (140ms)
+	ReloadAssembly (1282ms)
+		BeginReloadAssembly (133ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
 			CreateAndSetChildDomain (16ms)
-		EndReloadAssembly (990ms)
-			LoadAssemblies (96ms)
+		EndReloadAssembly (1091ms)
+			LoadAssemblies (86ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (350ms)
+			SetupTypeCache (313ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (58ms)
-			SetupLoadedEditorAssemblies (397ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (544ms)
 				LogAssemblyErrors (0ms)
 				InitializePlatformSupportModulesInManaged (6ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (96ms)
-				ProcessInitializeOnLoadAttributes (284ms)
-				ProcessInitializeOnLoadMethodAttributes (3ms)
-				AfterProcessingInitializeOnLoad (7ms)
+				BeforeProcessingInitializeOnLoad (97ms)
+				ProcessInitializeOnLoadAttributes (428ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (8ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (6ms)
+			AwakeInstancesAfterBackupRestoration (8ms)
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.75 ms, found 3 plugins.
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.09 seconds
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3342 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 147.6 MB.
+Unloading 3340 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.5 MB.
 System memory in use after: 147.5 MB.
 
-Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3796.
-Total: 3.193800 ms (FindLiveObjects: 0.282900 ms CreateObjectMapping: 0.146800 ms MarkObjects: 2.495100 ms  DeleteObjects: 0.268100 ms)
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3795.
+Total: 3.355000 ms (FindLiveObjects: 0.343900 ms CreateObjectMapping: 0.188300 ms MarkObjects: 2.684400 ms  DeleteObjects: 0.137300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
@@ -136,339 +136,91 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/SimpleTown/Materials/Road.mat
-  artifactKey: Guid(2191478c1f641c245b4fe9449817a0b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/Road.mat using Guid(2191478c1f641c245b4fe9449817a0b7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3c903b4778715a9d62e4ddabf57e1e77') in 0.100057 seconds 
-  Import took 0.105177 seconds .
+  path: Assets/Scenes/Prototype Delivery Scene.unity
+  artifactKey: Guid(df04e6537ad42244ca40229320c2e1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Prototype Delivery Scene.unity using Guid(df04e6537ad42244ca40229320c2e1dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56ea6c91177628ee8c3b0098d7a0a663') in 0.018669 seconds 
+  Import took 0.063670 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000235 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring3.mat
-  artifactKey: Guid(1d614f3d551c4444484365870e44b67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring3.mat using Guid(1d614f3d551c4444484365870e44b67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c2dd75de678c09b204ad2e96bdd135cc') in 0.047890 seconds 
-  Import took 0.052612 seconds .
+  Time since last request: 7.216328 seconds.
+  path: Assets/Scenes/Main Menu.unity
+  artifactKey: Guid(d613baf807644b942867ff422021795b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Main Menu.unity using Guid(d613baf807644b942867ff422021795b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '992fb7e9ac39ce0680961caa25419dc2') in 0.007792 seconds 
+  Import took 0.044965 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000223 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Particle.mat
-  artifactKey: Guid(e252ebe03637ede45ab53f0c045e6f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Particle.mat using Guid(e252ebe03637ede45ab53f0c045e6f67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0b88dbfd869c5df9aa0c04c20c9fa567') in 0.013551 seconds 
-  Import took 0.018398 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000247 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/SnowCrystal.mat
-  artifactKey: Guid(412c1c87c8bf88d41be9917ecf91390d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/SnowCrystal.mat using Guid(412c1c87c8bf88d41be9917ecf91390d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f578d121053a8f7b747c1121ed000e2e') in 0.012664 seconds 
-  Import took 0.017652 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000176 seconds.
-  path: Assets/SimpleTown/Materials/Props_Billboard.mat
-  artifactKey: Guid(219967ce9dc9a8f4d9ab8a7d1d14cf9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/Props_Billboard.mat using Guid(219967ce9dc9a8f4d9ab8a7d1d14cf9d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4119aed980d78c8b13fdb7af469d5f6') in 0.014717 seconds 
-  Import took 0.019762 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000221 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke7.mat
-  artifactKey: Guid(191574f46320e4c4899893a4a0a7e359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke7.mat using Guid(191574f46320e4c4899893a4a0a7e359) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea7aa62dcf016fabe2402eafab997ef7') in 0.014701 seconds 
-  Import took 0.019541 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000182 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke2.mat
-  artifactKey: Guid(e7fe729e9ec95e2439d2c646b543f08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke2.mat using Guid(e7fe729e9ec95e2439d2c646b543f08d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fe63a092b3f78afa35fc3f9b8f5de62') in 0.016021 seconds 
-  Import took 0.021071 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000199 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/SnowCrystal4.mat
-  artifactKey: Guid(0988637850bb9194e99c94ec05c10305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/SnowCrystal4.mat using Guid(0988637850bb9194e99c94ec05c10305) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8edbf269536522cded9aba11b91dbcaf') in 0.014125 seconds 
-  Import took 0.018849 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Spark2.mat
-  artifactKey: Guid(a1ebb5132f727d043b53629a18b54fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Spark2.mat using Guid(a1ebb5132f727d043b53629a18b54fb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f87eccfc4a3c49ad1b16d635eca4544b') in 0.016763 seconds 
-  Import took 0.021531 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/StarterParticles/Materials/Particles Mobile Alpha.mat
-  artifactKey: Guid(0586fb390af6e4d56987fb75b880d2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/Particles Mobile Alpha.mat using Guid(0586fb390af6e4d56987fb75b880d2b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '31f9aaa442bf7277bb36fe7f1a373b1a') in 0.032502 seconds 
-  Import took 0.037118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000192 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring8.mat
-  artifactKey: Guid(8280e9d847cf7154aa2a72ce1c89d59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring8.mat using Guid(8280e9d847cf7154aa2a72ce1c89d59d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fbd3ca98afad29e86ea515b02f6061') in 0.018399 seconds 
-  Import took 0.022871 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000164 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke4.mat
-  artifactKey: Guid(6d7056011f1a430418a308ed22098905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke4.mat using Guid(6d7056011f1a430418a308ed22098905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4e568952b8d07427c95c5b6f7ce2fbc') in 0.013554 seconds 
-  Import took 0.019138 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000162 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke5.mat
-  artifactKey: Guid(43e33c0d66f41ee4c9a6f94ed7c73160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke5.mat using Guid(43e33c0d66f41ee4c9a6f94ed7c73160) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '89e8853d9ff51e05bd51bb51a20b2953') in 0.017145 seconds 
-  Import took 0.021784 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000191 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring.mat
-  artifactKey: Guid(2fa09479d6bc66f4baa4f46c8f710867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring.mat using Guid(2fa09479d6bc66f4baa4f46c8f710867) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c13a3320dc3e4382a3fe7251e5a2e8e') in 0.011694 seconds 
-  Import took 0.016223 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring7.mat
-  artifactKey: Guid(726165da5ee6f0c42873838ea5757cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring7.mat using Guid(726165da5ee6f0c42873838ea5757cdb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '13576efe407573e7f93b5dc0d6b434da') in 0.011492 seconds 
-  Import took 0.025682 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke6.mat
-  artifactKey: Guid(27f647092701743478e8a6f6b8b9b0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke6.mat using Guid(27f647092701743478e8a6f6b8b9b0ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fb0cc60e00537cd0e95fd2d25e2bda65') in 0.011375 seconds 
-  Import took 0.015955 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000248 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/SnowCrystal2.mat
-  artifactKey: Guid(2580527c6caaf0d40aee14435b63a2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/SnowCrystal2.mat using Guid(2580527c6caaf0d40aee14435b63a2d1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a13b199579512d8a0de1da61e1f9ea19') in 0.011171 seconds 
-  Import took 0.015998 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000161 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke3.mat
-  artifactKey: Guid(be7533a6f81a2e14d9ab9d57915552ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke3.mat using Guid(be7533a6f81a2e14d9ab9d57915552ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12b2c7179bfcd7d0044bca559703e0ca') in 0.011829 seconds 
-  Import took 0.016735 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000167 seconds.
-  path: Assets/StarterParticles/Materials/SmokePuffs3.mat
-  artifactKey: Guid(0e614e05d1c7a4bcdbbe24547504eeb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/SmokePuffs3.mat using Guid(0e614e05d1c7a4bcdbbe24547504eeb9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67deb43900daa0b0e99c382ad80e3902') in 0.015992 seconds 
-  Import took 0.021037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000185 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring6.mat
-  artifactKey: Guid(ac54cfdbacf954346904cd054091cb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring6.mat using Guid(ac54cfdbacf954346904cd054091cb49) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9ea253c6eaf8c6662f6e7b84d92f62c') in 0.012127 seconds 
-  Import took 0.017161 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000204 seconds.
-  path: Assets/SimpleTown/Materials/Nature.mat
-  artifactKey: Guid(83df962484e785f438feef86157b6e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/Nature.mat using Guid(83df962484e785f438feef86157b6e99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d37a360a10d07b2e9a58083fc19cac') in 0.011584 seconds 
-  Import took 0.017120 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000254 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring5.mat
-  artifactKey: Guid(4db05a28dbb8a1747a2a366e8ebbf370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring5.mat using Guid(4db05a28dbb8a1747a2a366e8ebbf370) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '063efeeb88b364a559efc73c74390463') in 0.013986 seconds 
-  Import took 0.019129 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000180 seconds.
-  path: Assets/StarterParticles/Materials/Particles Mobile Add.mat
-  artifactKey: Guid(aebc2fcd4311946738874768112cd326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/Particles Mobile Add.mat using Guid(aebc2fcd4311946738874768112cd326) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '792f319db58556de0133a8eb7affe5e6') in 0.010943 seconds 
-  Import took 0.015797 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000178 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring4.mat
-  artifactKey: Guid(ce1a2cdc9db22ed4190e11159c00f4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring4.mat using Guid(ce1a2cdc9db22ed4190e11159c00f4d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '18e1f0e7b68b24d09324cd6813227883') in 0.010533 seconds 
-  Import took 0.015414 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000155 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Smoke.mat
-  artifactKey: Guid(e59de0e3c6b519c479c450ea945289d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Smoke.mat using Guid(e59de0e3c6b519c479c450ea945289d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '67dc835fee8e6449183e162e7656b0c9') in 0.011113 seconds 
-  Import took 0.016093 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000252 seconds.
-  path: Assets/StarterParticles/Materials/SmashCracksMat.mat
-  artifactKey: Guid(c47160a4437d84aedb3c9d12fef8ae67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/SmashCracksMat.mat using Guid(c47160a4437d84aedb3c9d12fef8ae67) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e61722e3b5ee397a0bda678da3595cfb') in 0.035467 seconds 
-  Import took 0.064329 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000400 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/Ring2.mat
-  artifactKey: Guid(4186e9b6090f86f44ba623f55e461f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/Ring2.mat using Guid(4186e9b6090f86f44ba623f55e461f6f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db0fdcd5838799d94d98f993d8949a1d') in 0.017296 seconds 
-  Import took 0.025378 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000226 seconds.
-  path: Assets/48 Particle Effect Pack/Texture/SnowCrystal3.mat
-  artifactKey: Guid(2ddb0a58e3b129649b0e330a964e50a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/48 Particle Effect Pack/Texture/SnowCrystal3.mat using Guid(2ddb0a58e3b129649b0e330a964e50a8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab0edc44a648a832d80cb3121cb72a6f') in 0.010416 seconds 
-  Import took 0.015544 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000161 seconds.
-  path: Assets/StarterParticles/Materials/SmokePuffs1.mat
-  artifactKey: Guid(77f3d6625c44647da8e5c503bea7d4c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/SmokePuffs1.mat using Guid(77f3d6625c44647da8e5c503bea7d4c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a35565a098ab95a4009777a1c537e2a9') in 0.013731 seconds 
-  Import took 0.018981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000230 seconds.
-  path: Assets/StarterParticles/Materials/SmokePuffs2.mat
-  artifactKey: Guid(80e18054a2d9246a89ee4af89ba542f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/SmokePuffs2.mat using Guid(80e18054a2d9246a89ee4af89ba542f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '857ee60c1526004777a4ddab64a545fb') in 0.011516 seconds 
-  Import took 0.016441 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000228 seconds.
-  path: Assets/SimpleTown/Materials/Props_Dumpster.mat
-  artifactKey: Guid(368fc3419e8bed246ae940f068c776bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/Props_Dumpster.mat using Guid(368fc3419e8bed246ae940f068c776bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0d1d26280f6dc42fe53d263167f2ab7') in 0.010358 seconds 
-  Import took 0.015820 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/SimpleTown/Materials/props.mat
-  artifactKey: Guid(1fd6e614640236b45bb310cd7610a657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/props.mat using Guid(1fd6e614640236b45bb310cd7610a657) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5e9a16a6ed09c36bee4e0f851d1fe341') in 0.013119 seconds 
-  Import took 0.018122 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000193 seconds.
-  path: Assets/SimpleTown/Materials/Props_Street.mat
-  artifactKey: Guid(3e979b3745b4a024bbbd5806d425fa75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/Props_Street.mat using Guid(3e979b3745b4a024bbbd5806d425fa75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdbbd81e4742f54dae843f1b45acd329') in 0.014023 seconds 
-  Import took 0.019196 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/SimpleTown/Materials/Road_divider.mat
-  artifactKey: Guid(b1b815268ecf4b142b55c74c55d25872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/SimpleTown/Materials/Road_divider.mat using Guid(b1b815268ecf4b142b55c74c55d25872) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a97ac0ddf01f5f6825f9a03f9ac49be1') in 0.010782 seconds 
-  Import took 0.015789 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000168 seconds.
-  path: Assets/StarterParticles/Materials/SmokePuff3Alpha.mat
-  artifactKey: Guid(d1a40a4c96c7244d8b85f624de7618bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/StarterParticles/Materials/SmokePuff3Alpha.mat using Guid(d1a40a4c96c7244d8b85f624de7618bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bfe941402f77af4180c1e471f3ab133') in 0.033399 seconds 
-  Import took 0.038359 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 37.445179 seconds.
+  Time since last request: 1.150035 seconds.
   path: Assets/Scenes/LoseScreen.unity
   artifactKey: Guid(8ce8b834d1a415241823323fd361aa43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/LoseScreen.unity using Guid(8ce8b834d1a415241823323fd361aa43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c662428ddd34ec0a035b977b92b5e14') in 0.005497 seconds 
-  Import took 0.049521 seconds .
+Start importing Assets/Scenes/LoseScreen.unity using Guid(8ce8b834d1a415241823323fd361aa43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1ace8e31810e1c1fa0efd707493d36c') in 0.007185 seconds 
+  Import took 0.012067 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.878589 seconds.
+  path: Assets/Scenes/Start Scene.unity
+  artifactKey: Guid(7ac3996f1d4e7f64a9ec7b2d4680f3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Start Scene.unity using Guid(7ac3996f1d4e7f64a9ec7b2d4680f3cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32edd7bd3811946bbc34efb58162dfd4') in 0.007148 seconds 
+  Import took 0.012486 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.018476 seconds.
+  path: Assets/Scenes/Tutorial Scene.unity
+  artifactKey: Guid(9e4741139de8a584ea0ec234712c6d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/Tutorial Scene.unity using Guid(9e4741139de8a584ea0ec234712c6d0d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '076b0be50ce1854ee6c0e7d391465537') in 0.006219 seconds 
+  Import took 0.011314 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.005684 seconds.
+Registered in 0.004990 seconds.
 Begin MonoManager ReloadAssembly
 Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
 Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
-Refreshing native plugins compatible for Editor in 0.83 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.77 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.502 seconds
+- Completed reload, in  1.080 seconds
 Domain Reload Profiling:
-	ReloadAssembly (1502ms)
-		BeginReloadAssembly (144ms)
+	ReloadAssembly (1080ms)
+		BeginReloadAssembly (115ms)
 			ExecutionOrderSort (0ms)
 			DisableScriptedObjects (4ms)
 			BackupInstance (0ms)
 			ReleaseScriptingObjects (0ms)
-			CreateAndSetChildDomain (43ms)
-		EndReloadAssembly (1281ms)
-			LoadAssemblies (118ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (906ms)
+			LoadAssemblies (90ms)
 			RebuildTransferFunctionScriptingTraits (0ms)
-			SetupTypeCache (423ms)
+			SetupTypeCache (315ms)
 			ReleaseScriptCaches (1ms)
-			RebuildScriptCaches (51ms)
-			SetupLoadedEditorAssemblies (562ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (365ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (7ms)
-				SetLoadedEditorAssemblies (1ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (1ms)
-				BeforeProcessingInitializeOnLoad (99ms)
-				ProcessInitializeOnLoadAttributes (415ms)
-				ProcessInitializeOnLoadMethodAttributes (19ms)
-				AfterProcessingInitializeOnLoad (19ms)
+				BeforeProcessingInitializeOnLoad (79ms)
+				ProcessInitializeOnLoadAttributes (268ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (7ms)
 				EditorAssembliesLoaded (0ms)
 			ExecutionOrderSort2 (0ms)
-			AwakeInstancesAfterBackupRestoration (11ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3290 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 146.4 MB.
-System memory in use after: 146.3 MB.
+Unloading 3288 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 143.0 MB.
+System memory in use after: 143.0 MB.
 
-Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3842.
-Total: 4.425500 ms (FindLiveObjects: 0.376500 ms CreateObjectMapping: 0.209800 ms MarkObjects: 3.693000 ms  DeleteObjects: 0.145000 ms)
+Unloading 21 unused Assets to reduce memory usage. Loaded Objects now: 3797.
+Total: 3.079300 ms (FindLiveObjects: 0.279800 ms CreateObjectMapping: 0.147000 ms MarkObjects: 2.530100 ms  DeleteObjects: 0.121300 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
