@@ -9,6 +9,9 @@ public class Condition : MonoBehaviour
     [HideInInspector] public int condition, maxCondition = 100;
     public TextMeshProUGUI mytext;
 
+    public bool playerFeedback;
+    public float feedbackTimer, feedbackTimerReset;
+    public GameObject collisionParticles;
 
     private void Start()
     {
@@ -30,10 +33,32 @@ private void OnCollisionEnter(Collision collision)
         else if (collision.gameObject.CompareTag("Building"))
         {
             condition = condition - 5;
+            collisionParticles.SetActive(false);
+
+            if (feedbackTimer != feedbackTimerReset)
+            {
+                feedbackTimer = 0;
+                feedbackTimer = feedbackTimerReset;
+            }
+            playerFeedback = true;
         }
     }
     private void Update()
     {
         mytext.text = condition.ToString();
+
+        if (playerFeedback)
+        {
+            collisionParticles.SetActive(true);
+            feedbackTimer -= Time.deltaTime;
+
+            if (feedbackTimer <= 0)
+            {
+                collisionParticles.SetActive(false);
+                feedbackTimer = feedbackTimerReset;
+
+                playerFeedback = false;
+            }
+        }
     }
 }

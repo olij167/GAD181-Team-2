@@ -47,12 +47,13 @@ public class SetRandomDestination : MonoBehaviour
     // audio variables
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
+    public AudioSource deliveryCheer;
 
     //gameover chances
     bool strike1, strike2, strike3;
   
 
-    void Awake()
+    void Start()
     {
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         warm = highlightedDestination.color;
@@ -104,9 +105,7 @@ public class SetRandomDestination : MonoBehaviour
         // send pizza to destination
         foreach (GameObject pizza in pizzaList)
         {
-            if (pizza == null) pizzaList.Remove(pizza);
-
-            else
+            if (pizza != null)
             {
                 pizza.transform.position = Vector3.MoveTowards(pizza.transform.position, destination.transform.position, shotPower * Time.deltaTime); // move the pizza towards the position of the delivery destination
 
@@ -115,6 +114,7 @@ public class SetRandomDestination : MonoBehaviour
                 if (distanceToWalkPoint.magnitude < stopDistance) // check if pizza has reached destination
                     DeliveryComplete();
             }
+            else pizzaList.Remove(pizza);
         }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
@@ -230,6 +230,7 @@ public class SetRandomDestination : MonoBehaviour
         deliveryCounter++;
 
         pizzaDelivered.Play();
+        deliveryCheer.Play();
 
         foreach (GameObject pizza in pizzaList)
         {

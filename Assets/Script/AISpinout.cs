@@ -51,6 +51,13 @@ public class AISpinout : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (collision.gameObject)
+        {
+            collisionParticles.SetActive(false);
+            playerFeedback = true;
+
+        }
+
         if (collision.gameObject.CompareTag("Player"))
         {
             gameObject.GetComponent<NavMeshAgent>().enabled = false;
@@ -58,16 +65,13 @@ public class AISpinout : MonoBehaviour
 
             Vector3 smashForce = new Vector3(collision.relativeVelocity.x * spinSpeed, 0, collision.relativeVelocity.z * spinSpeed);
             rb.AddForce(smashForce * Time.deltaTime);
-
-            
-            if (collision.gameObject)
-                playerFeedback = true;
-
-            if (collision.gameObject.CompareTag("Pizza"))
-            {
-                Destroy(collision.gameObject);
-            }
-            
         }
+
+        if (collision.gameObject.CompareTag("Pizza"))
+        {
+            Destroy(collision.gameObject);
+        }
+            
+        
     }
 }
