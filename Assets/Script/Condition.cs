@@ -1,20 +1,27 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
-using UnityEngine.SceneManagement;
+//using UnityEngine.SceneManagement;
 
 public class Condition : MonoBehaviour
 {
-    [HideInInspector] public int condition, maxCondition = 100;
+    [HideInInspector] public float condition, maxCondition = 100;
     public TextMeshProUGUI mytext;
 
     public bool playerFeedback;
     public float feedbackTimer, feedbackTimerReset;
     public GameObject collisionParticles;
 
+    public Image conditionImage;
+    Color badConditionColour;
+
     private void Start()
     {
+
+        badConditionColour = new Color(0.509804f, 1f, 0.5490196f, 1f);
+
         mytext.text = condition.ToString();
     }
 private void OnCollisionEnter(Collision collision)
@@ -23,16 +30,19 @@ private void OnCollisionEnter(Collision collision)
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
             condition = condition - 5;
+            conditionImage.fillAmount = conditionImage.fillAmount - 0.05f;
         }
         //little guys walking around
         else if (collision.gameObject.CompareTag("Pedestrian"))
         {
             condition = condition - 1;
+            conditionImage.fillAmount = conditionImage.fillAmount - 0.01f;
         }
         //Buildins what can be delivered to
         else if (collision.gameObject.CompareTag("Building"))
         {
             condition = condition - 5;
+            conditionImage.fillAmount = conditionImage.fillAmount - 0.05f;
             collisionParticles.SetActive(false);
 
             if (feedbackTimer != feedbackTimerReset)
@@ -42,15 +52,17 @@ private void OnCollisionEnter(Collision collision)
             }
             playerFeedback = true;
         }
+        mytext.text = condition.ToString();
     }
     private void Update()
     {
-        mytext.text = condition.ToString();
 
         if (playerFeedback)
         {
             collisionParticles.SetActive(true);
+            conditionImage.color = Color.Lerp(badConditionColour, Color.white, Mathf.Clamp(condition / maxCondition, 0, 1f));
             feedbackTimer -= Time.deltaTime;
+            
 
             if (feedbackTimer <= 0)
             {
