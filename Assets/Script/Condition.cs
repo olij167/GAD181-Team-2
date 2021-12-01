@@ -16,6 +16,7 @@ public class Condition : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
+        //Debug.Log("Hi");
         //Cars driving around
         if (collision.gameObject.CompareTag("HubWorldCar"))
         {
@@ -34,6 +35,10 @@ public class Condition : MonoBehaviour
     }
     private void Update()
     {
-        mytext.text = condition.ToString();
+        if (condition <= 0)
+        {
+            SceneManager.LoadScene("LoseScreen");
+        }
+
     }
 }

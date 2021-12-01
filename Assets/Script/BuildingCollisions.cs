@@ -36,7 +36,6 @@ public class BuildingCollisions : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Pizza"))
         {
-            Debug.Log(gameObject.layer);
             if (!gameObject.layer.Equals(9))
             {
                 playerFeedback = true;

@@ -12,9 +12,13 @@ public class CarCollisionSound : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void OnCollisionEnter()
+    void OnCollisionEnter(Collision other)
     {
-        audioSource.PlayOneShot(impact, 0.7F);
+        if (!other.gameObject.CompareTag("Grass"))
+        {
+            audioSource.PlayOneShot(impact, 0.7F);
+        }
+        //audioSource.PlayOneShot(impact, 0.7F);
    
     }
 

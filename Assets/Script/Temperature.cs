@@ -29,7 +29,7 @@ public class Temperature : MonoBehaviour
         {
             StartCoroutine(TimerTake());
         }
-        if (secondsLeft < 0)
+        if (secondsLeft <= 0)
         {
             SceneManager.LoadScene("LoseScreen");
         }
@@ -49,6 +49,7 @@ public class Temperature : MonoBehaviour
             textDisplay.GetComponent<Text>().text = "00:" + secondsLeft;
         }
         takingAway = false;
+
     }
 
 }
