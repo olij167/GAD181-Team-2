@@ -44,7 +44,12 @@ public class SetRandomDestination : MonoBehaviour
     // audio variables
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
-  
+
+    //points
+    public int points = 0;
+    private GameObject TriggeringObj;
+    public Text text; 
+
 
     void Start()
     {
@@ -204,12 +209,25 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");
         }
-        
+        points = points + 100;
+        text.text = points.ToString();
+
+
+
     }
     void OnDrawGizmosSelected()
     {
         // look radius visualiser
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, deliveryRange);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        //if (other.tag == "Fuel")
+        //{
+        //    points = points + 50;
+        //    TriggeringObj = other.gameObject;
+        //    Destroy(TriggeringObj);
+        //}
     }
 }
