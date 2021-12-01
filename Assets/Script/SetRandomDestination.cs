@@ -17,7 +17,7 @@ public class SetRandomDestination : MonoBehaviour
 
     //destination finding and delivery complete variables
     public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter, numOfDeliveries; // look radius
-    public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
+    public bool destinationSet, destinationInRange, playerFeedback, deliveryLimit; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
     public LayerMask destinationLayer;
     public Vector3 distanceToDestination;
 
@@ -32,7 +32,7 @@ public class SetRandomDestination : MonoBehaviour
     int destinationNum;
 
     // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
+    public TextMeshProUGUI deliveriesCompleteUI, deliveryNumUI, pizzaLauncherText, engagedText, distanceToDestinationText;
     public Image pizzaEngagedBackground, pizzaEngagedBorder;
     public Material goodFeedback;
     
@@ -67,6 +67,11 @@ public class SetRandomDestination : MonoBehaviour
         strikeUIList[1].SetActive(false);
         strikeUIList[2].SetActive(false);
 
+        if (deliveryLimit)
+        {
+            deliveryNumUI.enabled = true;
+        }
+        else deliveryNumUI.enabled = false;
 
         pizzaEngagedBackground.color = hot;
 
@@ -127,6 +132,11 @@ public class SetRandomDestination : MonoBehaviour
         }
 
         deliveriesCompleteUI.text = deliveryCounter.ToString();
+
+        if (deliveryLimit)
+        {
+            deliveryNumUI.text = "/ " + numOfDeliveries.ToString();
+        }
 
         temp -= Time.deltaTime;
         //Below is if the timer runs out three times the Game is over
@@ -257,13 +267,14 @@ public class SetRandomDestination : MonoBehaviour
         pizzaList.Clear();
 
         destination.GetComponent<MeshRenderer>().material = originalDestinationMaterial;
+        playerFeedback = true;
 
         //Below is the code for finishing the game after a certain amount of deliverys
-        if (deliveryCounter >= numOfDeliveries)
+        if (deliveryLimit && deliveryCounter >= numOfDeliveries)
         {
-            //SceneManager.LoadScene("LoseScreen");    -- this should be going to a win scene
+            SceneManager.LoadScene("LoseScreen");    //-- this should be going to a win scene
         }
-        playerFeedback = true;
+        
     }
     void OnDrawGizmosSelected()
     {
