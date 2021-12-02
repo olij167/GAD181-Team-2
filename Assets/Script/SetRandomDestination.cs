@@ -9,6 +9,8 @@ using UnityEngine.ParticleSystemJobs;
 
 public class SetRandomDestination : MonoBehaviour
 {
+    public Material carColour;
+
     // destination indicator variables
     public GameObject[] destinationArray; // all potential destinations
     public GameObject destination, arrow; // selected destination
@@ -62,6 +64,8 @@ public class SetRandomDestination : MonoBehaviour
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
         warm = highlightedDestination.color;
         hot = new Color(0.6235294f, 0.2282118f, 0.227451f, 1f);
+
+        gameObject.GetComponent<MeshRenderer>().material.color = carColour.color;
 
         strikeUIList[0].SetActive(false);
         strikeUIList[1].SetActive(false);
