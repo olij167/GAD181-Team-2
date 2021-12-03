@@ -6456,10 +6456,10 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 1
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.5
     m_Bias: 0.05
     m_NormalBias: 0.4
     m_NearPlane: 0.2
@@ -43329,7 +43329,7 @@ PrefabInstance:
     - target: {fileID: 8997552303208710932, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: carColour
       value: 
-      objectReference: {fileID: 2100000, guid: 1f29380795ac2654baa3e7ebceb0d7d3, type: 2}
+      objectReference: {fileID: 2100000, guid: 80125052e807291469287820964eaf77, type: 2}
     - target: {fileID: 8997552303208710932, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: resetTemp
       value: 30
