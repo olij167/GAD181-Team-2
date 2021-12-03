@@ -1173,7 +1173,7 @@ ParticleSystem:
         m_RotationOrder: 0
     separateAxes: 0
   ColorModule:
-    enabled: 0
+    enabled: 1
     gradient:
       serializedVersion: 2
       minMaxState: 1
@@ -1182,22 +1182,22 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0, g: 0.627451, b: 1, a: 1}
-        key2: {r: 1, g: 0, b: 0.45490196, a: 0}
+        key1: {r: 1, g: 0.93725497, b: 0, a: 1}
+        key2: {r: 1, g: 0.502, b: 0.9358797, a: 0}
         key3: {r: 1, g: 0.92941177, b: 0, a: 0}
         key4: {r: 0.94509804, g: 1, b: 0, a: 0}
         key5: {r: 0.99607843, g: 0.003921569, b: 0.45882353, a: 0}
         key6: {r: 0.99607843, g: 0.007843138, b: 0.45882353, a: 0}
         key7: {r: 1, g: 1, b: 1, a: 0}
-        ctime0: 0
-        ctime1: 4626
-        ctime2: 10409
+        ctime0: 19661
+        ctime1: 65535
+        ctime2: 36237
         ctime3: 16769
         ctime4: 29105
         ctime5: 32768
         ctime6: 53392
         ctime7: 55512
-        atime0: 0
+        atime0: 40670
         atime1: 65535
         atime2: 65535
         atime3: 0
@@ -1206,7 +1206,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 8
+        m_NumColorKeys: 2
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
@@ -5876,23 +5876,23 @@ ParticleSystem:
       maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
-        key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0, g: 0.627451, b: 1, a: 1}
-        key2: {r: 1, g: 0, b: 0.45490196, a: 0}
+        key0: {r: 0, g: 1, b: 0.9904158, a: 1}
+        key1: {r: 1, g: 0.8497687, b: 0, a: 1}
+        key2: {r: 1, g: 0, b: 0.7205224, a: 0}
         key3: {r: 1, g: 0.92941177, b: 0, a: 0}
         key4: {r: 0.94509804, g: 1, b: 0, a: 0}
         key5: {r: 0.99607843, g: 0.003921569, b: 0.45882353, a: 0}
         key6: {r: 0.99607843, g: 0.007843138, b: 0.45882353, a: 0}
         key7: {r: 1, g: 1, b: 1, a: 0}
-        ctime0: 0
-        ctime1: 4626
-        ctime2: 10409
+        ctime0: 2120
+        ctime1: 30262
+        ctime2: 51850
         ctime3: 16769
         ctime4: 29105
         ctime5: 32768
         ctime6: 53392
         ctime7: 55512
-        atime0: 0
+        atime0: 1735
         atime1: 65535
         atime2: 65535
         atime3: 0
@@ -5901,7 +5901,7 @@ ParticleSystem:
         atime6: 0
         atime7: 0
         m_Mode: 0
-        m_NumColorKeys: 8
+        m_NumColorKeys: 3
         m_NumAlphaKeys: 2
       minGradient:
         serializedVersion: 2
