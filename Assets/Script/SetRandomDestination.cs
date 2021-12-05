@@ -57,6 +57,12 @@ public class SetRandomDestination : MonoBehaviour
     public List<GameObject> strikeUIList;
   
 
+    //points
+    public int points = 0;
+    private GameObject TriggeringObj;
+    public Text text; 
+
+
     void Start()
     {
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
@@ -274,12 +280,25 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");    //-- this should be going to a win scene
         }
-        
+        points = points + 100;
+        text.text = points.ToString();
+
+
+
     }
     void OnDrawGizmosSelected()
     {
         // look radius visualiser
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, deliveryRange);
+    }
+    void OnTriggerEnter(Collider other)
+    {
+        //if (other.tag == "Fuel")
+        //{
+        //    points = points + 50;
+        //    TriggeringObj = other.gameObject;
+        //    Destroy(TriggeringObj);
+        //}
     }
 }
