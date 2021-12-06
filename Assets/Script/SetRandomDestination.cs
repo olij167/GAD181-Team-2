@@ -59,6 +59,12 @@ public class SetRandomDestination : MonoBehaviour
     public List<GameObject> strikeUIList;
   
 
+    //points
+    public int points = 0;
+    private GameObject TriggeringObj;
+    public Text text; 
+
+
     void Start()
     {
         cold = new Color(0.2282118f, 0.2282118f, 0.6235294f, 1f);
