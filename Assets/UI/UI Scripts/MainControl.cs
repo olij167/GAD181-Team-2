@@ -16,7 +16,8 @@ public class MainControl : MonoBehaviour
     [SerializeField] private TMP_Text ControllerSenTextValue = null;
     [SerializeField] private Slider ControllerSenSlider = null;
     [SerializeField] private int defaultSen = 4;
-    public int MainControllerSen = 4;
+    [SerializeField] public int MainControllerSen = 4;
+
 
     [Header("Toggler Settings")]
     [SerializeField] private Toggle InvertYToggle = null;
@@ -73,12 +74,18 @@ public class MainControl : MonoBehaviour
     }
 
 
-    [Header("level to load")]
-    public string _newgamelevel;
+    [Header("Level to Load")]
+    public string _NewGameLevel;
+    public string _TutorialLevel;
 
     public void NewGameDialogYes()
     {
-        SceneManager.LoadScene(_newgamelevel);
+        SceneManager.LoadScene(_NewGameLevel);
+    }
+
+    public void TutorialLevelYes()
+    {
+        SceneManager.LoadScene(_TutorialLevel);
     }
 
     public void QuitButton()

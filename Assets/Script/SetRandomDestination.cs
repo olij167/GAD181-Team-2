@@ -9,50 +9,67 @@ using UnityEngine.ParticleSystemJobs;
 
 public class SetRandomDestination : MonoBehaviour
 {
-    // destination indicator variables
-    public GameObject[] destinationArray; // all potential destinations
-    public GameObject destination, arrow; // selected destination
-    public Material highlightedDestination;
-    Material  originalDestinationMaterial, originalArrowMaterial;
 
-    //destination finding and delivery complete variables
-    public float deliveryRange, feedbackTimer, feedbackTimerReset; // look radius
-    public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
-    public LayerMask destinationLayer;
-    public Vector3 distanceToDestination;
+    [Header("Custom Mode")]
+    //[SerializeField] private TMP_Text NumOfDeliveriesTextValue = null;
+    //[SerializeField] private TMP_Text NumOfAICarsTextValue = null;
+    //[SerializeField] private TMP_Text NumOfPedestrainsTextValue = null;
+    //[SerializeField] private Slider NumOfDeliveriesSldier = null;
+    //[SerializeField] private Slider NumOfAICarsSldier = null;
+    //[SerializeField] private Slider NumOfPedestrainsSldier = null;
+    //[SerializeField] private float defaultNumOfDeliveries = 4;
+    //[SerializeField] private int defaultNumOfAICars = 4;
+    //[SerializeField] private int defaultNumOfPedestrains = 4;
+    //[SerializeField] public int NumOfDeliveries = 4;
+    //[SerializeField] public int NumOfAICars = 4;
+    //[SerializeField] public int NumOfPedestrains = 4;
 
+    [Header("Destination Indicator Variables")]
+    [SerializeField] public GameObject[] destinationArray; // all potential destinations
+    [SerializeField] public GameObject destination, arrow; // selected destination
+    [SerializeField] public Material highlightedDestination;
+    [SerializeField] Material  originalDestinationMaterial, originalArrowMaterial;
 
-    public int numOfDeliveries, deliveryCounter;
+    [Header("Destination Finding and Delivery Complete Variables")]
+    [SerializeField] public float deliveryRange, feedbackTimer, feedbackTimerReset; // look radius
+    [SerializeField] public bool destinationSet, destinationInRange, playerFeedback; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
+    [SerializeField] public LayerMask destinationLayer;
+    [SerializeField] public Vector3 distanceToDestination;
 
-    // projectile variables
-    public Transform shootPos;
-    public GameObject pizza;
-    public List<GameObject> pizzaList; // control pizzas
-    public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
-    public bool launcherActive;
+    [Header("Custom Deliveries")]
+    [SerializeField] public int numOfDeliveries, deliveryCounter;
+    [SerializeField] public GameObject textGameObject;
 
-    int destinationNum;
+    [Header("Projectile Variables")]
+    [SerializeField] public Transform shootPos;
+    [SerializeField] public GameObject pizza;
+    [SerializeField] public List<GameObject> pizzaList; // control pizzas
+    [SerializeField] public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
+    [SerializeField] public bool launcherActive;
 
-    // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
-    public Image pizzaEngagedBackground, pizzaEngagedBorder;
-    public Material goodFeedback;
-    
+    [Header("DestinationNum")]
+    [SerializeField] int destinationNum;
+
+    [Header("Delivery Complete Placeholder UI")]
+    [SerializeField] public TextMeshProUGUI deliveriesCompleteUI, pizzaLauncherText, engagedText, distanceToDestinationText;
+    [SerializeField] public Image pizzaEngagedBackground, pizzaEngagedBorder;
+    [SerializeField] public Material goodFeedback;
+
     //public GameObject deliveryCompleteParticles;
 
-    //temp variables
-    public float temp, resetTemp;
-    public TextMeshProUGUI tempUIValue;
-    public Image tempBar;
-    Color hot, warm, cold;
+    [Header("Temp Variables")]
+    [SerializeField] public float temp, resetTemp;
+    [SerializeField] public TextMeshProUGUI tempUIValue;
+    [SerializeField] public Image tempBar;
+    [SerializeField] Color hot, warm, cold;
 
-    // audio variables
-    public AudioSource pizzaLaunched;
-    public AudioSource pizzaDelivered;
-    public AudioSource deliveryCheer;
+    [Header("Audio Variables")]
+    [SerializeField] public AudioSource pizzaLaunched;
+    [SerializeField] public AudioSource pizzaDelivered;
+    [SerializeField] public AudioSource deliveryCheer;
 
-    //gameover chances
-    bool strike1, strike2, strike3;
+    [Header("Gameover Chances")]
+    [SerializeField] bool strike1, strike2, strike3;
   
 
     void Start()
@@ -257,4 +274,6 @@ public class SetRandomDestination : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, deliveryRange);
     }
+
+
 }
