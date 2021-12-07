@@ -53,9 +53,9 @@ public class SetRandomDestination : MonoBehaviour
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
     public AudioSource deliveryCheer;
-    public AudioSource giveStrike1;
-    public AudioSource giveStrike2;
-    public AudioSource giveStrike3;
+    public AudioSource sfxStrike;
+    public AudioSource collision;
+    
 
     //gameover chances
     bool strike1, strike2, strike3;
@@ -157,6 +157,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             
             strike1 = true;
+            sfxStrike.Play();
             Debug.Log("strike 1");
             strikeUIList[0].SetActive(true);
             SetDestination();
@@ -167,6 +168,7 @@ public class SetRandomDestination : MonoBehaviour
         {
             
             strike2 = true;
+            sfxStrike.Play();
             Debug.Log("strike 2");
             strikeUIList[1].SetActive(true);
             SetDestination();
@@ -177,6 +179,7 @@ public class SetRandomDestination : MonoBehaviour
         {
            
             strike3 = true;
+            sfxStrike.Play();
             Debug.Log("strike 3");
             strikeUIList[2].SetActive(true);
             SetDestination();
@@ -309,5 +312,13 @@ public class SetRandomDestination : MonoBehaviour
         //    TriggeringObj = other.gameObject;
         //    Destroy(TriggeringObj);
         //}
+    }
+
+     void OnCollisionEnter(Collision other)
+    {
+        if (!other.gameObject.CompareTag("Grass"))
+        {
+            collision.Play();
+        }
     }
 }

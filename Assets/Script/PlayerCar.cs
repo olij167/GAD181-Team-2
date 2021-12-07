@@ -12,6 +12,15 @@ public class PlayerCar : MonoBehaviour
     //this is to set the speed of which the car follows the mouse
     [SerializeField] float turnSpeed = 5; // 100 feels pretty good for this ~~ Oli
 
+    public static PlayerCar cc;
+
+    public float carMaxSpeed = 100;
+    public float carCurrentSpeed = 0;
+
+    public AudioSource drift;
+
+    Rigidbody rb;
+
     Quaternion targetRotation;
     Rigidbody _rigidBody;
 
@@ -30,6 +39,9 @@ public class PlayerCar : MonoBehaviour
     {
         //this is generating a rigid body right at the start
         _rigidBody = GetComponent<Rigidbody>();
+
+        cc = this;
+        rb = GetComponent<Rigidbody>();
     }
 
      void Update()
@@ -76,9 +88,15 @@ public class PlayerCar : MonoBehaviour
         //connected with acceletation
         float accelerationInput = acceleration * (Input.GetMouseButton(0) ? 1 : Input.GetMouseButton(1) ? -1 : 0) * Time.fixedDeltaTime;
 
+        if (Input.GetMouseButton(0))
+        {
+            carCurrentSpeed = (rb.velocity.magnitude * 3.6f) / carMaxSpeed;
+        }
+
         
         if (Input.GetMouseButton(2) || Input.GetKey(KeyCode.LeftShift)) // reduce velocity in all directions when middle mouse button down
         {
+            
             Debug.Log(speed);
             if (_rigidBody.velocity != Vector3.zero)
             {
@@ -93,6 +111,15 @@ public class PlayerCar : MonoBehaviour
         }
 
         transform.rotation = Quaternion.Lerp(transform.rotation, targetRotation, turnSpeed * Mathf.Clamp(speed, -1, 1) * Time.fixedDeltaTime);
+
+        if (Input.GetButtonDown("Fire3"))
+        {
+            drift.Play();
+        }
+        else if (Input.GetButtonUp("Fire3"))
+        {
+            drift.Stop();
+        }
 
         //Debug.Log("Acceleration = " + accelerationInput + ", Speed = " + speed);
     }
