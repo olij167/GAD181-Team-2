@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4362962325829762824}
   - component: {fileID: 4362962325826371368}
   - component: {fileID: 4362962325827468776}
+  - component: {fileID: 7501280899737413421}
   m_Layer: 10
   m_Name: Restaurant
   m_TagString: Untagged
@@ -81,6 +82,19 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!65 &7501280899737413421
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4362962325829395240}
+  m_Material: {fileID: 13400000, guid: 5b98ac58c566fe449bb24c46b6d0c235, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.84, y: 10.65, z: 8.69}
+  m_Center: {x: 0, y: 5.5, z: 1.74}
 --- !u!1 &4362962326269539749
 GameObject:
   m_ObjectHideFlags: 0
@@ -109,7 +123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4362962326269539749}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.41909224, y: -0.31363487, z: -12.183939}
+  m_LocalPosition: {x: 0.41909224, y: 0, z: -12.183939}
   m_LocalScale: {x: 14, y: 1, z: 14}
   m_Children: []
   m_Father: {fileID: 4362962326910357444}
