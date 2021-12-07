@@ -53,6 +53,9 @@ public class SetRandomDestination : MonoBehaviour
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
     public AudioSource deliveryCheer;
+    public AudioSource giveStrike1;
+    public AudioSource giveStrike2;
+    public AudioSource giveStrike3;
 
     //gameover chances
     bool strike1, strike2, strike3;
@@ -152,26 +155,32 @@ public class SetRandomDestination : MonoBehaviour
         //Below is if the timer runs out three times the Game is over
         if (temp <= 0 && !strike1)
         {
+            
             strike1 = true;
             Debug.Log("strike 1");
             strikeUIList[0].SetActive(true);
             SetDestination();
+            
         }
 
         if (temp <= 0 && strike1 && !strike2)
         {
+            
             strike2 = true;
             Debug.Log("strike 2");
             strikeUIList[1].SetActive(true);
             SetDestination();
+            
         }
 
         if (temp <= 0 && strike2 && !strike3)
         {
+           
             strike3 = true;
             Debug.Log("strike 3");
             strikeUIList[2].SetActive(true);
             SetDestination();
+            
         }
 
         if (temp <= 0 && strike1 && strike2 && strike3)
