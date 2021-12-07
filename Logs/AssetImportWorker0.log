@@ -1,0 +1,606 @@
+Using pre-set license
+Built from '2020.3/staging' branch; Version is '2020.3.18f1 (a7d1c678663c) revision 10998214'; Using compiler version '192528614'; Build Type 'Release'
+OS: 'Windows 10 Home; OS build 19042.1348; Version 2009; 64bit' Language: 'en' Physical Memory: 16328 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 0
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2020.3.18f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+D:/Local Account/Documents/GitHub/GAD181-Team-2
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+55961
+Successfully changed project path to: D:/Local Account/Documents/GitHub/GAD181-Team-2
+D:/Local Account/Documents/GitHub/GAD181-Team-2
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 114.27 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.18f1 (a7d1c678663c)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/Local Account/Documents/GitHub/GAD181-Team-2/Assets
+GfxDevice: creating device client; threaded=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: Radeon RX 580 Series (ID=0x67df)
+    Vendor:   
+    VRAM:     8171 MB
+    Driver:   30.0.13025.1000
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.18f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002522 seconds.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 113.78 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.235 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1235ms)
+		BeginReloadAssembly (51ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (489ms)
+			LoadAssemblies (49ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (146ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (31ms)
+			SetupLoadedEditorAssemblies (241ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (5ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (114ms)
+				BeforeProcessingInitializeOnLoad (16ms)
+				ProcessInitializeOnLoadAttributes (78ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.005228 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.91 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.200 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1201ms)
+		BeginReloadAssembly (141ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (17ms)
+		EndReloadAssembly (999ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (327ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (53ms)
+			SetupLoadedEditorAssemblies (434ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (103ms)
+				ProcessInitializeOnLoadAttributes (313ms)
+				ProcessInitializeOnLoadMethodAttributes (4ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.13 seconds
+Refreshing native plugins compatible for Editor in 0.85 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3342 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 147.8 MB.
+System memory in use after: 147.8 MB.
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 3798.
+Total: 3.403600 ms (FindLiveObjects: 0.272100 ms CreateObjectMapping: 0.139000 ms MarkObjects: 2.858800 ms  DeleteObjects: 0.132600 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Cross SIngleLane.dae
+  artifactKey: Guid(24e6433201fc69a44bf1c8f256d8b997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Cross SIngleLane.dae using Guid(24e6433201fc69a44bf1c8f256d8b997) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '68f5419d3d7eb08632e234e06ffeb339') in 0.324771 seconds 
+  Import took 0.361756 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Curve.dae
+  artifactKey: Guid(391f4d072c0c3df4884006cdbef382ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Curve.dae using Guid(391f4d072c0c3df4884006cdbef382ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c6e506abe361275f497437fcf35b35d') in 0.169226 seconds 
+  Import took 0.240913 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000309 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Cross Road.dae
+  artifactKey: Guid(8a74d4154e3078a498c1bf96dc3d1660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Cross Road.dae using Guid(8a74d4154e3078a498c1bf96dc3d1660) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '58449ded4d7ec0902fa77bbc8e8eeef6') in 0.183328 seconds 
+  Import took 0.196770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000285 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane Straight 2.dae
+  artifactKey: Guid(78a8961655872db4b843048acb88450a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane Straight 2.dae using Guid(78a8961655872db4b843048acb88450a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6d16f9c77c8e613456ba097e402407ad') in 0.154129 seconds 
+  Import took 0.170773 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000269 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Join SIngleLane.dae
+  artifactKey: Guid(b85b6366741d14e4a96828e1afad90e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Join SIngleLane.dae using Guid(b85b6366741d14e4a96828e1afad90e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ccd58ff66fdfb3bdbe0516c1f11b658') in 0.135652 seconds 
+  Import took 0.159681 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000218 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Join Road.dae
+  artifactKey: Guid(1869066258e66524dabd0031005b03ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Join Road.dae using Guid(1869066258e66524dabd0031005b03ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd71b390dfc615bef32dddb14b46757a0') in 0.149056 seconds 
+  Import took 0.190341 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.006517 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 1.15 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.182 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1183ms)
+		BeginReloadAssembly (146ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (62ms)
+		EndReloadAssembly (974ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (343ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (397ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (86ms)
+				ProcessInitializeOnLoadAttributes (292ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3289 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.3 MB.
+System memory in use after: 146.3 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3810.
+Total: 3.887900 ms (FindLiveObjects: 0.417000 ms CreateObjectMapping: 0.213900 ms MarkObjects: 3.119500 ms  DeleteObjects: 0.136500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 2954.325146 seconds.
+  path: Assets/SimpleTown/Models/ute_mesh.fbx
+  artifactKey: Guid(954f4055e633ff14694fe6a4f030bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleTown/Models/ute_mesh.fbx using Guid(954f4055e633ff14694fe6a4f030bb89) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30447fcdee72f4ec06660d31997e89f6') in 0.135545 seconds 
+  Import took 0.197407 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000252 seconds.
+  path: Assets/SimpleFX/Models/FX_Lightray.fbx
+  artifactKey: Guid(e27c39df43b866b469e491273c885c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleFX/Models/FX_Lightray.fbx using Guid(e27c39df43b866b469e491273c885c51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab5f9307aa86ce9cfbe68536073159b6') in 0.039767 seconds 
+  Import took 0.072493 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000222 seconds.
+  path: Assets/SimpleFX/Models/FX_PoolSplash_02.fbx
+  artifactKey: Guid(7f803617a1072ec42820168bc40edb46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleFX/Models/FX_PoolSplash_02.fbx using Guid(7f803617a1072ec42820168bc40edb46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '49368e892fb1731f074b2c7ae118e35c') in 0.064800 seconds 
+  Import took 0.095116 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000257 seconds.
+  path: Assets/FSP/Modular Pixel Forest/Meshes/mesh_Tree Point Up.asset
+  artifactKey: Guid(6e456a550afa06e4e9c1043bc18f8211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FSP/Modular Pixel Forest/Meshes/mesh_Tree Point Up.asset using Guid(6e456a550afa06e4e9c1043bc18f8211) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9cd553d7ad53db588b93854839f785d8') in 0.038861 seconds 
+  Import took 0.072410 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000211 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane End.dae
+  artifactKey: Guid(4887d8bc9c96f564c944f169b9acb35d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane End.dae using Guid(4887d8bc9c96f564c944f169b9acb35d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '78041772d74b16b97bf54976afcd766c') in 0.218887 seconds 
+  Import took 0.237299 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000226 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Corner 1.dae
+  artifactKey: Guid(73b78b99c269f4e4982b125270a38b14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Corner 1.dae using Guid(73b78b99c269f4e4982b125270a38b14) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0366e1c63dc0e617a334619cd399fbf6') in 0.180265 seconds 
+  Import took 0.214118 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000182 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Entrance 2.dae
+  artifactKey: Guid(42e238ecb6fe5c34381c1899f40cdc59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Entrance 2.dae using Guid(42e238ecb6fe5c34381c1899f40cdc59) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3826daac40154b61f2141b8f9b28ac89') in 0.020838 seconds 
+  Import took 0.030102 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/FSP/Modular Pixel Forest/Meshes/mesh_Temple Steps.asset
+  artifactKey: Guid(ddaba58e2eada524cbf6f6669b49868c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FSP/Modular Pixel Forest/Meshes/mesh_Temple Steps.asset using Guid(ddaba58e2eada524cbf6f6669b49868c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f04a0742a11397c65e151d9f8c241dc7') in 0.039275 seconds 
+  Import took 0.066345 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000173 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Corner 3.dae
+  artifactKey: Guid(1adf648894424ae47bca5445562efba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Corner 3.dae using Guid(1adf648894424ae47bca5445562efba8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3803e3ad643c2bf47e439f5c7ea4a455') in 0.151997 seconds 
+  Import took 0.177291 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000284 seconds.
+  path: Assets/FSP/Modular Pixel Forest/Meshes/mesh_Water.asset
+  artifactKey: Guid(be6f3ec8e04a07b4fb3e02c9ca5817c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FSP/Modular Pixel Forest/Meshes/mesh_Water.asset using Guid(be6f3ec8e04a07b4fb3e02c9ca5817c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2cac395f895b6cbef70724969b7179a3') in 0.023880 seconds 
+  Import took 0.039926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000272 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 4.dae
+  artifactKey: Guid(de7d72739316cac4eae2ef92efa78c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 4.dae using Guid(de7d72739316cac4eae2ef92efa78c8d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '323166e0555e8bc517ea643ee39f0163') in 0.146160 seconds 
+  Import took 0.162072 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000274 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road S-Curve.dae
+  artifactKey: Guid(1f10034eb2d822e47b73756fa15f8b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road S-Curve.dae using Guid(1f10034eb2d822e47b73756fa15f8b69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12dc63960af5da048fa0f126a1b00b90') in 0.025986 seconds 
+  Import took 0.034585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000256 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Curve.dae
+  artifactKey: Guid(e8591f65a7fdd114bba6dd41852de0a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Curve.dae using Guid(e8591f65a7fdd114bba6dd41852de0a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ad93814a4bd67b49f68e206a02248bc') in 0.148424 seconds 
+  Import took 0.160574 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Lift Highway.dae
+  artifactKey: Guid(ebec32a200e40f84ba441fb26dd604c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Lift Highway.dae using Guid(ebec32a200e40f84ba441fb26dd604c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3d782c20559d2bcba975ad3cc70e1565') in 0.023871 seconds 
+  Import took 0.034855 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000260 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Entrance.dae
+  artifactKey: Guid(c123f92dda3cc22459ede19497c88734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Entrance.dae using Guid(c123f92dda3cc22459ede19497c88734) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30eea1dda2cb132179184e9a4dc358e4') in 0.149334 seconds 
+  Import took 0.154364 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000152 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Straight 1.dae
+  artifactKey: Guid(9ebbcf9ad75b23c4b8f2a497607627bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Straight 1.dae using Guid(9ebbcf9ad75b23c4b8f2a497607627bb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db55889e17f92f266936ea1b917dd076') in 0.150508 seconds 
+  Import took 0.160261 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000278 seconds.
+  path: Assets/SimpleFX/Models/FX_PoolSplash_03.fbx
+  artifactKey: Guid(104d9f0364dc5e8438f4350ff7e726dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleFX/Models/FX_PoolSplash_03.fbx using Guid(104d9f0364dc5e8438f4350ff7e726dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2347fad8d7d402a2ba47459dcc72ef42') in 0.035248 seconds 
+  Import took 0.059390 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000287 seconds.
+  path: Assets/SimpleFX/Models/FX_Rubble.fbx
+  artifactKey: Guid(42e0384be8104584cbcc3a1fadaafb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleFX/Models/FX_Rubble.fbx using Guid(42e0384be8104584cbcc3a1fadaafb79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b578e1fe1a76ce5c1dd1ad63efdaca86') in 0.017080 seconds 
+  Import took 0.033180 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000207 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 3.dae
+  artifactKey: Guid(6b8e147014e34144f90043861e0abe99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 3.dae using Guid(6b8e147014e34144f90043861e0abe99) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a97de1461eedd00f02e9d988057418') in 0.016568 seconds 
+  Import took 0.022795 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000212 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 1.dae
+  artifactKey: Guid(71a6712b53f17d642b18dd7dd3873131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 1.dae using Guid(71a6712b53f17d642b18dd7dd3873131) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '256291c9ddc51260938a98d33ee51564') in 0.022530 seconds 
+  Import took 0.030329 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000231 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Straight 1.dae
+  artifactKey: Guid(b4923c0dba942fa43a6c6e6831a89113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Straight 1.dae using Guid(b4923c0dba942fa43a6c6e6831a89113) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '476da144d286d05a35615e201928dae3') in 0.153746 seconds 
+  Import took 0.159277 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000167 seconds.
+  path: Assets/FSP/Modular Pixel Forest/Meshes/mesh_Tree Sphere.asset
+  artifactKey: Guid(c8842cff312efa2458d2d4b9ff4346e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FSP/Modular Pixel Forest/Meshes/mesh_Tree Sphere.asset using Guid(c8842cff312efa2458d2d4b9ff4346e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fc63716f0519022d43d454104730765f') in 0.029822 seconds 
+  Import took 0.066256 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000180 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane Curve.dae
+  artifactKey: Guid(61ebcd8c80cab1a4e9864d570e883fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane Curve.dae using Guid(61ebcd8c80cab1a4e9864d570e883fe2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7c8fec6293963c46df15a11f67c812ea') in 0.145381 seconds 
+  Import took 0.174448 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000266 seconds.
+  path: Assets/SimpleFX/Models/FX_GunFlash.fbx
+  artifactKey: Guid(50a5b61475aba5649a793b8d076e8681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleFX/Models/FX_GunFlash.fbx using Guid(50a5b61475aba5649a793b8d076e8681) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e86ffb11e9c1ca5e8304095ef0606b43') in 0.026532 seconds 
+  Import took 0.047972 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000300 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane Cross SingleLane.dae
+  artifactKey: Guid(36d41065887b764468cd330f24e28531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/SingleLane Cross SingleLane.dae using Guid(36d41065887b764468cd330f24e28531) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b53d32c3cfc6e231883a864e7e2c13d9') in 0.149752 seconds 
+  Import took 0.179071 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000189 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Looping.dae
+  artifactKey: Guid(3489a6b45e153324991c8f803c6e0bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Looping.dae using Guid(3489a6b45e153324991c8f803c6e0bb3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4fe24d6fd3e9554e3457a7e1c502e872') in 0.150018 seconds 
+  Import took 0.229697 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000209 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Straight 2.dae
+  artifactKey: Guid(23337dac036abd34499f9f5131a19858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Straight 2.dae using Guid(23337dac036abd34499f9f5131a19858) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ed3d6ff7168bb428af39621dcc47058') in 0.161031 seconds 
+  Import took 0.174168 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000261 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Center 3.dae
+  artifactKey: Guid(84f030ebdfeda2448bc8b294323ceeec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Center 3.dae using Guid(84f030ebdfeda2448bc8b294323ceeec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f76ff91df48a4cf78dc7a5db47733f31') in 0.036021 seconds 
+  Import took 0.041078 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000263 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Road Jump.dae
+  artifactKey: Guid(0f18aa325d40e124db7ca43efb3adacf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Road Jump.dae using Guid(0f18aa325d40e124db7ca43efb3adacf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f41fbfab09ede12022484f559518daf') in 0.024067 seconds 
+  Import took 0.035736 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000277 seconds.
+  path: Assets/FSP/Modular Pixel Forest/Meshes/mesh_Tree Point Down.asset
+  artifactKey: Guid(247ac9b9e0a2dc84b8ad9366bb062363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FSP/Modular Pixel Forest/Meshes/mesh_Tree Point Down.asset using Guid(247ac9b9e0a2dc84b8ad9366bb062363) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '587ea914d6ad07d3ae2b64041233935a') in 0.025306 seconds 
+  Import took 0.030699 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Straight 4.dae
+  artifactKey: Guid(f5363fa7f00d1a14dace523483cf17f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Straight 4.dae using Guid(f5363fa7f00d1a14dace523483cf17f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5f9bdb9e3c3e3479082bd589e011a82') in 0.147487 seconds 
+  Import took 0.152385 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000246 seconds.
+  path: Assets/SimpleFX/Models/FX_PoolSplash_01.fbx
+  artifactKey: Guid(89f5c0aef85208c47827ce19d9767acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SimpleFX/Models/FX_PoolSplash_01.fbx using Guid(89f5c0aef85208c47827ce19d9767acb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6c557c76c6619bf238c99b7b5c688561') in 0.021700 seconds 
+  Import took 0.045386 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000258 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 2.dae
+  artifactKey: Guid(f05a64e3c823b5247ad0f4f8f37f52f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Edge 2.dae using Guid(f05a64e3c823b5247ad0f4f8f37f52f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48744f7888bef0223a3b37f4cd397906') in 0.019209 seconds 
+  Import took 0.040437 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000264 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Entrance 1.dae
+  artifactKey: Guid(0b3034fd1a5bb254d8e081e8634d075f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Tunnel Entrance 1.dae using Guid(0b3034fd1a5bb254d8e081e8634d075f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f38664c618bc516f5f4d12945e879e52') in 0.150882 seconds 
+  Import took 0.156315 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000208 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Center 2.dae
+  artifactKey: Guid(76b865b0d72af07469dfd0128ca936bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Center 2.dae using Guid(76b865b0d72af07469dfd0128ca936bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '52b9687f7ebc0f0db6beb5c921f546a5') in 0.188126 seconds 
+  Import took 0.230585 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000172 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Corner 2.dae
+  artifactKey: Guid(e7dfa1315d7d3164fb4e39956f2357ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Corner 2.dae using Guid(e7dfa1315d7d3164fb4e39956f2357ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9355be219644eb9fc4061f52b6dfb66') in 0.149267 seconds 
+  Import took 0.154707 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000275 seconds.
+  path: Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Center 1.dae
+  artifactKey: Guid(ea3f0b0f36c78ca4282e2e49f378cef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/BrokenVector/LowPolyRoadPack/Models/Parkinglot Center 1.dae using Guid(ea3f0b0f36c78ca4282e2e49f378cef1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f6fb5f833174f53354ca2487f8615c79') in 0.172558 seconds 
+  Import took 0.187517 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 31.499375 seconds.
+  path: Assets/StarterParticles/Materials/CopperSpark.mat
+  artifactKey: Guid(fcc145699d3464fa187899b93a68bffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/StarterParticles/Materials/CopperSpark.mat using Guid(fcc145699d3464fa187899b93a68bffd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2dc03c3aeb1681efc889fe08cecd6b5') in 0.031159 seconds 
+  Import took 0.058179 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.004901 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\Local Account\Documents\GitHub\GAD181-Team-2\Library\PackageCache\com.unity.visualscripting@1.6.1\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Refreshing native plugins compatible for Editor in 0.95 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.042 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1043ms)
+		BeginReloadAssembly (111ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (4ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (874ms)
+			LoadAssemblies (84ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (302ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (359ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (78ms)
+				ProcessInitializeOnLoadAttributes (264ms)
+				ProcessInitializeOnLoadMethodAttributes (3ms)
+				AfterProcessingInitializeOnLoad (7ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3289 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 146.6 MB.
+System memory in use after: 146.6 MB.
+
+Unloading 22 unused Assets to reduce memory usage. Loaded Objects now: 3846.
+Total: 3.102400 ms (FindLiveObjects: 0.285300 ms CreateObjectMapping: 0.148600 ms MarkObjects: 2.539400 ms  DeleteObjects: 0.128400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+AssetImportWorkerClient::OnTransportError - code=2 error=End of file
