@@ -53,6 +53,9 @@ public class SetRandomDestination : MonoBehaviour
     public AudioSource pizzaLaunched;
     public AudioSource pizzaDelivered;
     public AudioSource deliveryCheer;
+    public AudioSource sfxStrike;
+    public AudioSource collision;
+    
 
     //gameover chances
     bool strike1, strike2, strike3;
@@ -152,26 +155,35 @@ public class SetRandomDestination : MonoBehaviour
         //Below is if the timer runs out three times the Game is over
         if (temp <= 0 && !strike1)
         {
+            
             strike1 = true;
+            sfxStrike.Play();
             Debug.Log("strike 1");
             strikeUIList[0].SetActive(true);
             SetDestination();
+            
         }
 
         if (temp <= 0 && strike1 && !strike2)
         {
+            
             strike2 = true;
+            sfxStrike.Play();
             Debug.Log("strike 2");
             strikeUIList[1].SetActive(true);
             SetDestination();
+            
         }
 
         if (temp <= 0 && strike2 && !strike3)
         {
+           
             strike3 = true;
+            sfxStrike.Play();
             Debug.Log("strike 3");
             strikeUIList[2].SetActive(true);
             SetDestination();
+            
         }
 
         if (temp <= 0 && strike1 && strike2 && strike3)
@@ -300,5 +312,13 @@ public class SetRandomDestination : MonoBehaviour
         //    TriggeringObj = other.gameObject;
         //    Destroy(TriggeringObj);
         //}
+    }
+
+     void OnCollisionEnter(Collision other)
+    {
+        if (!other.gameObject.CompareTag("Grass"))
+        {
+            collision.Play();
+        }
     }
 }
