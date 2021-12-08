@@ -19,11 +19,12 @@ public class SetRandomDestination : MonoBehaviour
     [SerializeField] Material  originalDestinationMaterial, originalArrowMaterial;
 
     [Header("Destination Finding and Delivery Complete Variables")]
-    [SerializeField] public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter, numOfDeliveries; // look radius
+    [SerializeField] public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter; // look radius
     [SerializeField] public bool destinationSet, destinationInRange, playerFeedback, deliveryLimit; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
     [SerializeField] public LayerMask destinationLayer;
     [SerializeField] public Vector3 distanceToDestination;
 
+    public float numOfDeliveries = 1;
 
     [Header("Projectile Variables")]
     [SerializeField] public Transform shootPos;

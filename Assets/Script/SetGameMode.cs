@@ -4,29 +4,42 @@ using UnityEngine;
 
 public class SetGameMode : MonoBehaviour
 {
+
+    public SetRandomDestination setrandom;
+    public SpawnCarAI AIcar;
+    public SpawnCivAI AIciv;
+
+    public void Start()
+    {
+        setrandom = FindObjectOfType<SetRandomDestination>();
+        AIcar = FindObjectOfType<SpawnCarAI>();
+        AIciv = FindObjectOfType<SpawnCivAI>();
+    }
+
+
     public void SetGameModeEasy()
     {
-        GetComponent<SetRandomDestination>().numOfDeliveries = 10;
-        GetComponent<SpawnCarAI>().hubCarNum = 10;
-        GetComponent<SpawnCivAI>().pedestrianNum = 10;
+        setrandom.numOfDeliveries = 10;
+        AIcar.hubCarNum = 10;
+        AIciv.pedestrianNum = 10;
     }
 
     public void SetModeMedium()
     {
-        GetComponent<SetRandomDestination>().numOfDeliveries = 15;
-        GetComponent<SpawnCarAI>().hubCarNum = 20;
-        GetComponent<SpawnCivAI>().pedestrianNum = 20;
+        setrandom.numOfDeliveries = 15;
+        AIcar.hubCarNum = 20;
+        AIciv.pedestrianNum = 20;
     }
     public void SetModeHard()
     {
-        GetComponent<SetRandomDestination>().numOfDeliveries = 20;
-        GetComponent<SpawnCarAI>().hubCarNum = 35;
-        GetComponent<SpawnCivAI>().pedestrianNum = 35;
+        setrandom.numOfDeliveries = 20;
+        AIcar.hubCarNum = 35;
+        AIciv.pedestrianNum = 35;
     }
     public void SetModeEndless()
     {
-        GetComponent<SetRandomDestination>().numOfDeliveries = float.PositiveInfinity;
-        GetComponent<SpawnCarAI>().hubCarNum = 30;
-        GetComponent<SpawnCivAI>().pedestrianNum = 30;
+        setrandom.numOfDeliveries = 100000000000;
+        AIcar.hubCarNum = 30;
+        AIciv.pedestrianNum = 30;
     }
 }
