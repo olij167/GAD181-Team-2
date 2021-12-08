@@ -53,7 +53,12 @@ public class Condition : MonoBehaviour
             }
             playerFeedback = true;
         }
-        mytext.text = condition.ToString();
+        else if (collision.gameObject.CompareTag("Extra"))
+        {
+            condition = condition - 5;
+            conditionImage.fillAmount = conditionImage.fillAmount - 0.05f;
+        }
+            mytext.text = condition.ToString();
     }
     private void Update()
     {
