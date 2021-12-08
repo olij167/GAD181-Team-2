@@ -75,10 +75,16 @@ public class MainControl : MonoBehaviour
 
     [Header("level to load")]
     public string _newgamelevel;
+    public string _Tutorial;
 
     public void NewGameDialogYes()
     {
         SceneManager.LoadScene(_newgamelevel);
+    }
+
+    public void TutorialDialogYes()
+    {
+        SceneManager.LoadScene(_Tutorial);
     }
 
     public void QuitButton()
