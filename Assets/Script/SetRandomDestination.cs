@@ -65,7 +65,7 @@ public class SetRandomDestination : MonoBehaviour
     //points
     public int points = 0;
     private GameObject TriggeringObj;
-    public Text text; 
+    public TextMeshProUGUI text; 
 
 
     void Start()
