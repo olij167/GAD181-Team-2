@@ -4,19 +4,18 @@ using UnityEngine;
 
 public class CarCollisionSound : MonoBehaviour
 {
-    public AudioClip impact;
-    AudioSource audioSource;
+    public AudioSource collision;
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+      
     }
 
     void OnCollisionEnter(Collision other)
     {
         if (!other.gameObject.CompareTag("Grass"))
         {
-            audioSource.PlayOneShot(impact, 0.7F);
+            collision.Play();
         }
         
    
