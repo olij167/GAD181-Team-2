@@ -48126,11 +48126,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -198.86626
+      value: -201.78
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.534
+      value: 70.7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ba4896b7cb5e2af46a055b830ffc593b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -51790,15 +51790,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -198.8862
+      value: -201.89
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 70.46478
+      value: 70.72
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -85.56575
+      value: -88.18
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
       propertyPath: m_LocalRotation.w
@@ -65250,6 +65250,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c85ba223e186cb849af9af8c140d2457, type: 3}
+--- !u!1 &2031896464 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 1937bbcfb7d222142b5bf5fbfd7cd059, type: 3}
+  m_PrefabInstance: {fileID: 1620125829}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2031896467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2031896464}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.000046, y: 2.9999995, z: 20}
+  m_Center: {x: -9.999977, y: -1.4999998, z: -10}
 --- !u!1 &2033537625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 8b8dbe4e5d200294a987091552c38c9d, type: 3}
