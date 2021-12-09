@@ -63,7 +63,7 @@ Domain Reload Profiling:
 			RebuildScriptCaches (26ms)
 			SetupLoadedEditorAssemblies (224ms)
 				LogAssemblyErrors (0ms)
-				InitializePlatformSupportModulesInManaged (4ms)
+				InitializePlatformSupportModulesInManaged (5ms)
 				SetLoadedEditorAssemblies (0ms)
 				RefreshPlugins (113ms)
 				BeforeProcessingInitializeOnLoad (14ms)
