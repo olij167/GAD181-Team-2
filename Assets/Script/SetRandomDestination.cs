@@ -55,6 +55,8 @@ public class SetRandomDestination : MonoBehaviour
     [SerializeField] public AudioSource pizzaLaunched;
     [SerializeField] public AudioSource pizzaDelivered;
     [SerializeField] public AudioSource deliveryCheer;
+    [SerializeField] public AudioSource strikeSfx;
+    [SerializeField] public AudioSource collisionSfx;
 
     [Header("Gameover Chances")]
     [SerializeField] bool strike1, strike2, strike3;
@@ -157,6 +159,7 @@ public class SetRandomDestination : MonoBehaviour
         if (temp <= 0 && !strike1)
         {
             strike1 = true;
+            strikeSfx.Play();
             Debug.Log("strike 1");
             strikeUIList[0].SetActive(true);
             SetDestination();
@@ -167,6 +170,7 @@ public class SetRandomDestination : MonoBehaviour
         if (temp <= 0 && strike1 && !strike2)
         {
             strike2 = true;
+            strikeSfx.Play();
             Debug.Log("strike 2");
             strikeUIList[1].SetActive(true);
             SetDestination();
@@ -177,6 +181,7 @@ public class SetRandomDestination : MonoBehaviour
         if (temp <= 0 && strike2 && !strike3)
         {
             strike3 = true;
+            strikeSfx.Play();
             Debug.Log("strike 3");
             strikeUIList[2].SetActive(true);
             SetDestination();
@@ -331,6 +336,12 @@ public class SetRandomDestination : MonoBehaviour
             points = points + 50;
             text.text = points.ToString();
         }
+
+        if (!other.gameObject.CompareTag("Grass"))
+        {
+            collisionSfx.Play();
+        }
+
     }
 
 }
