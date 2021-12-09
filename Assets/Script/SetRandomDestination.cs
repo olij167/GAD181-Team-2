@@ -64,7 +64,7 @@ public class SetRandomDestination : MonoBehaviour
     [Header("Points")]
     [SerializeField] public int points = 0;
     [SerializeField] private GameObject TriggeringObj;
-    [SerializeField] public Text text; 
+    [SerializeField] public TextMeshProUGUI text; 
 
 
 
