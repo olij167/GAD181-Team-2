@@ -26,6 +26,7 @@ public class SetRandomDestination : MonoBehaviour
 
     public float numOfDeliveries = 1;
 
+
     [Header("Projectile Variables")]
     [SerializeField] public Transform shootPos;
     [SerializeField] public GameObject pizza;
@@ -96,6 +97,7 @@ public class SetRandomDestination : MonoBehaviour
         }
 
         SetDestination();
+
     }
 
     // Update is called once per frame

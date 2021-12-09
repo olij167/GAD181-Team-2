@@ -74,12 +74,27 @@ public class MainControl : MonoBehaviour
 
 
     [Header("level to load")]
-    public string _newgamelevel;
+    public string __EasyLevel;
     public string _Tutorial;
+    public string _Mediumlevel;
+    public string _HardLevel;
+    public string _EndlessLevel;
 
-    public void NewGameDialogYes()
+    public void EasyLevelDialogYes()
     {
-        SceneManager.LoadScene(_newgamelevel);
+        SceneManager.LoadScene(__EasyLevel);
+    }
+    public void MediumlevelDialogYes()
+    {
+        SceneManager.LoadScene(_Mediumlevel);
+    }
+    public void HardLevelDialogYes()
+    {
+        SceneManager.LoadScene(_HardLevel);
+    }
+    public void EndlessLevelDialogYes()
+    {
+        SceneManager.LoadScene(_EndlessLevel);
     }
 
     public void TutorialDialogYes()
