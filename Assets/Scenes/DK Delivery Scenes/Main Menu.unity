@@ -7854,7 +7854,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1148649240
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8289,6 +8289,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 466265886}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9332,7 +9344,6 @@ GameObject:
   - component: {fileID: 1371682659}
   - component: {fileID: 1371682658}
   - component: {fileID: 1371682661}
-  - component: {fileID: 1371682662}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -9508,17 +9519,16 @@ MonoBehaviour:
 
     -V O E - Giants [NCS Release]
 
-    Netrum &
-    Halvorsen - Shivers [NCS Release]
+    Netrum & Halvorsen
+    - Shivers [NCS Release]
 
-    -Driving Rock Sport by Infraction [No
-    Copyright Music]  Drift Line
+    -Driving Rock Sport by Infraction [No Copyright
+    Music]  Drift Line
 
-    -Upbeat Funk Rock by Infraction [No Copyright
-    Music]  Saturday
+    -Upbeat Funk Rock by Infraction [No Copyright Music] 
+    Saturday
 
-    -Sport Rock Action by Infraction [No Copyright Music]
-    _ Hard Rave'
+    -Sport Rock Action by Infraction [No Copyright Music] _ Hard Rave'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -14476,7 +14486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1929714052
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15592,6 +15602,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 466265886}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
