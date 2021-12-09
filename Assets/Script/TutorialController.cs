@@ -361,7 +361,19 @@ public class TutorialController : MonoBehaviour
         tutorialTextList[5].SetActive(true);
         tutorialTextList[6].SetActive(true);
         tutorialBodyTextList[2].SetActive(true);
+
+        tutorialTextList[10].SetActive(true);
+        tutorialTextList[11].SetActive(true);
+        tutorialTextList[12].SetActive(true);
+        tutorialTextList[13].SetActive(true);
+        tutorialBodyTextList[6].SetActive(true);
+        tutorialBodyTextList[7].SetActive(true);
+        tutorialBodyTextList[8].SetActive(true);
+        tutorialBodyTextList[9].SetActive(true);
+
         destinationActive = true;
+
+
 
     }
     void FindDestination()
@@ -405,6 +417,16 @@ public class TutorialController : MonoBehaviour
         tutorialInputsList[3].SetActive(true);
         tutorialBodyTextList[3].SetActive(true);
         tutorialBodyTextList[5].SetActive(true);
+
+        tutorialTextList[10].SetActive(true);
+        tutorialTextList[11].SetActive(true);
+        tutorialTextList[12].SetActive(true);
+        tutorialTextList[13].SetActive(true);
+        tutorialBodyTextList[6].SetActive(true);
+        tutorialBodyTextList[7].SetActive(true);
+        tutorialBodyTextList[8].SetActive(true);
+        tutorialBodyTextList[9].SetActive(true);
+
         launcherActive = true;
     }
     void PizzaLauncher()
@@ -447,6 +469,16 @@ public class TutorialController : MonoBehaviour
         tutorialTextList[8].SetActive(true);
         tutorialInputsList[4].SetActive(true);
         tutorialBodyTextList[4].SetActive(true);
+
+        tutorialTextList[10].SetActive(true);
+        tutorialTextList[14].SetActive(true);
+        tutorialBodyTextList[10].SetActive(true);
+        tutorialBodyTextList[11].SetActive(true);
+        tutorialBodyTextList[12].SetActive(true);
+        tutorialBodyTextList[13].SetActive(true);
+        tutorialBodyTextList[14].SetActive(true);
+        tutorialBodyTextList[15].SetActive(true);
+
         returnActive = true;
     }
 

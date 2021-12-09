@@ -22,7 +22,7 @@ TagManager:
   - Footpath
   - Restaurant
   - PizzaUI
-  - Extra
+  - Extra Buildings
   layers:
   - Default
   - TransparentFX

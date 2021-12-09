@@ -9,63 +9,62 @@ using UnityEngine.ParticleSystemJobs;
 
 public class SetRandomDestination : MonoBehaviour
 {
-    public Material carColour;
+    [Header("Colour")]
+    [SerializeField] public Material carColour;
 
-    // destination indicator variables
-    public GameObject[] destinationArray; // all potential destinations
-    public GameObject destination, arrow; // selected destination
-    public Material highlightedDestination;
-    Material  originalDestinationMaterial, originalArrowMaterial;
+    [Header("Destination Indicator Variables")]
+    [SerializeField] public GameObject[] destinationArray; // all potential destinations
+    [SerializeField] public GameObject destination, arrow; // selected destination
+    [SerializeField] public Material highlightedDestination;
+    [SerializeField] Material  originalDestinationMaterial, originalArrowMaterial;
 
-    //destination finding and delivery complete variables
-    public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter, numOfDeliveries; // look radius
-    public bool destinationSet, destinationInRange, playerFeedback, deliveryLimit; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
-    public LayerMask destinationLayer;
-    public Vector3 distanceToDestination;
+    [Header("Destination Finding and Delivery Complete Variables")]
+    [SerializeField] public float deliveryRange, feedbackTimer, feedbackTimerReset, deliveryCounter; // look radius
+    [SerializeField] public bool destinationSet, destinationInRange, playerFeedback, deliveryLimit; //check if destination is set, check if destination is in range, check if delivery complete, check if player requires feedback
+    [SerializeField] public LayerMask destinationLayer;
+    [SerializeField] public Vector3 distanceToDestination;
 
+    public float numOfDeliveries = 1;
 
-    // projectile variables
-    public Transform shootPos;
-    public GameObject pizza;
-    public List<GameObject> pizzaList; // control pizzas
-    public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
-    public bool launcherActive;
+    [Header("Projectile Variables")]
+    [SerializeField] public Transform shootPos;
+    [SerializeField] public GameObject pizza;
+    [SerializeField] public List<GameObject> pizzaList; // control pizzas
+    [SerializeField] public float shotPower, stopDistance; // pizza speed, pizza delivered proximity
+    [SerializeField] public bool launcherActive;
+    [SerializeField] int destinationNum;
 
-    int destinationNum;
+    [Header("Delivery Complete Placeholder UI")]
+    [SerializeField] public TextMeshProUGUI deliveriesCompleteUI, deliveryNumUI, pizzaLauncherText, engagedText, distanceToDestinationText;
+    [SerializeField] public Image pizzaEngagedBackground, pizzaEngagedBorder;
+    [SerializeField] public Material goodFeedback;
 
-    // delivery complete placeholder UI
-    public TextMeshProUGUI deliveriesCompleteUI, deliveryNumUI, pizzaLauncherText, engagedText, distanceToDestinationText;
-    public Image pizzaEngagedBackground, pizzaEngagedBorder;
-    public Material goodFeedback;
-    
     //public GameObject deliveryCompleteParticles;
 
-    //temp variables
-    public float temp, resetTemp;
-    public TextMeshProUGUI tempUIValue;
-    public Image tempBar;
+    [Header("Temp Variables")]
+    [SerializeField] public float temp, resetTemp;
+    [SerializeField] public TextMeshProUGUI tempUIValue;
+    [SerializeField] public Image tempBar;
     [HideInInspector] public Color hot, warm, cold;
 
     //condition ui variables
 
 
-    // audio variables
-    public AudioSource pizzaLaunched;
-    public AudioSource pizzaDelivered;
-    public AudioSource deliveryCheer;
-    public AudioSource sfxStrike;
-    public AudioSource collision;
-    
+    [Header("Audio Variables")]
+    [SerializeField] public AudioSource pizzaLaunched;
+    [SerializeField] public AudioSource pizzaDelivered;
+    [SerializeField] public AudioSource deliveryCheer;
 
-    //gameover chances
-    bool strike1, strike2, strike3;
-    public List<GameObject> strikeUIList;
-  
+    [Header("Gameover Chances")]
+    [SerializeField] bool strike1, strike2, strike3;
+    [SerializeField] public List<GameObject> strikeUIList;
 
-    //points
-    public int points = 0;
-    private GameObject TriggeringObj;
-    public Text text; 
+
+    [Header("Points")]
+    [SerializeField] public int points = 0;
+    [SerializeField] private GameObject TriggeringObj;
+    [SerializeField] public Text text; 
+
 
 
     void Start()
@@ -155,35 +154,26 @@ public class SetRandomDestination : MonoBehaviour
         //Below is if the timer runs out three times the Game is over
         if (temp <= 0 && !strike1)
         {
-            
             strike1 = true;
-            sfxStrike.Play();
             Debug.Log("strike 1");
             strikeUIList[0].SetActive(true);
             SetDestination();
-            
         }
 
         if (temp <= 0 && strike1 && !strike2)
         {
-            
             strike2 = true;
-            sfxStrike.Play();
             Debug.Log("strike 2");
             strikeUIList[1].SetActive(true);
             SetDestination();
-            
         }
 
         if (temp <= 0 && strike2 && !strike3)
         {
-           
             strike3 = true;
-            sfxStrike.Play();
             Debug.Log("strike 3");
             strikeUIList[2].SetActive(true);
             SetDestination();
-            
         }
 
         if (temp <= 0 && strike1 && strike2 && strike3)
@@ -314,11 +304,5 @@ public class SetRandomDestination : MonoBehaviour
         //}
     }
 
-     void OnCollisionEnter(Collision other)
-    {
-        if (!other.gameObject.CompareTag("Grass"))
-        {
-            collision.Play();
-        }
-    }
 }
+
