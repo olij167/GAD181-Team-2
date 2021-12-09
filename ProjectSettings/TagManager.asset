@@ -23,6 +23,8 @@ TagManager:
   - Restaurant
   - PizzaUI
   - Extra Buildings
+  - Extra
+  - Developer
   layers:
   - Default
   - TransparentFX

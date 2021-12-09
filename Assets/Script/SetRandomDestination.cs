@@ -160,6 +160,8 @@ public class SetRandomDestination : MonoBehaviour
             Debug.Log("strike 1");
             strikeUIList[0].SetActive(true);
             SetDestination();
+            points = points - 25;
+            text.text = points.ToString();
         }
 
         if (temp <= 0 && strike1 && !strike2)
@@ -168,6 +170,8 @@ public class SetRandomDestination : MonoBehaviour
             Debug.Log("strike 2");
             strikeUIList[1].SetActive(true);
             SetDestination();
+            points = points - 25;
+            text.text = points.ToString();
         }
 
         if (temp <= 0 && strike2 && !strike3)
@@ -176,6 +180,8 @@ public class SetRandomDestination : MonoBehaviour
             Debug.Log("strike 3");
             strikeUIList[2].SetActive(true);
             SetDestination();
+            points = points - 25;
+            text.text = points.ToString();
         }
 
         if (temp <= 0 && strike1 && strike2 && strike3)
@@ -288,6 +294,8 @@ public class SetRandomDestination : MonoBehaviour
         {
             SceneManager.LoadScene("LoseScreen");    //-- this should be going to a win scene
         }
+        points = points + 100;
+        text.text = points.ToString();
         
     }
     void OnDrawGizmosSelected()
@@ -296,14 +304,33 @@ public class SetRandomDestination : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, deliveryRange);
     }
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
-        //if (other.tag == "Fuel")
-        //{
-        //    points = points + 50;
-        //    TriggeringObj = other.gameObject;
-        //    Destroy(TriggeringObj);
-        //}
+        if (other.gameObject.CompareTag("HubWorldCar"))
+        {
+            points = points - 10;
+            text.text = points.ToString();
+        }
+        else if (other.gameObject.CompareTag("Pedestrian"))
+        {
+            points = points - 1;
+            text.text = points.ToString();
+        }
+        else if (other.gameObject.CompareTag("Building"))
+        {
+            points = points - 10;
+            text.text = points.ToString();
+        }
+        else if (other.gameObject.CompareTag("Extra"))
+        {
+            points = points - 5;
+            text.text = points.ToString();
+        }
+        else if (other.gameObject.CompareTag("Developer"))
+        {
+            points = points + 50;
+            text.text = points.ToString();
+        }
     }
 
 }
