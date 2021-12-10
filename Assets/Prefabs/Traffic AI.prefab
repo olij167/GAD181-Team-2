@@ -164,7 +164,7 @@ MonoBehaviour:
   walkPointTimerReset: 10
   roadMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
 --- !u!114 &3908361231380891887
 MonoBehaviour:
   m_ObjectHideFlags: 0
