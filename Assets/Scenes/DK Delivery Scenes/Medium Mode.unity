@@ -69162,6 +69162,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1545116031}
     - target: {fileID: 8997552303208710932, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
+      propertyPath: strikeSfx
+      value: 
+      objectReference: {fileID: 1545116031}
+    - target: {fileID: 8997552303208710932, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: engagedText
       value: 
       objectReference: {fileID: 1868758021}
@@ -69169,6 +69173,10 @@ PrefabInstance:
       propertyPath: tempUIValue
       value: 
       objectReference: {fileID: 106246631}
+    - target: {fileID: 8997552303208710932, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
+      propertyPath: collisionSfx
+      value: 
+      objectReference: {fileID: 1182114856}
     - target: {fileID: 8997552303208710932, guid: d8c7840fda6d3894a89d147d2546480a, type: 3}
       propertyPath: deliveryCheer
       value: 
