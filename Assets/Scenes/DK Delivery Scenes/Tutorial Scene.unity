@@ -1396,7 +1396,6 @@ MonoBehaviour:
   - {fileID: 627789618}
   - {fileID: 114121809}
   - {fileID: 771280231}
-  - {fileID: 0}
   tutorialBodyTextList:
   - {fileID: 1268610726}
   - {fileID: 1370877666}
